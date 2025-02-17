@@ -1,0 +1,73 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:orphan:
+
+API documentation of *caravel.nextcloud*
+=========================================
+
+caravel.nextcloud
+^^^^^^^^^^^^^^^^^
+
+NextCloud Python API from https://github.com/matejak/nextcloud-API.git.
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.nextcloud.NextCloud <caravel.nextcloud.nextcloud.NextCloud.html>`_
+    * `caravel.nextcloud.Permission <caravel.nextcloud.base.Permission.html>`_
+    * `caravel.nextcloud.ShareType <caravel.nextcloud.base.ShareType.html>`_
+
+caravel.nextcloud.nextcloud
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.nextcloud.nextcloud.NextCloud <caravel.nextcloud.nextcloud.NextCloud.html>`_
+
+caravel.nextcloud.base
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.nextcloud.base.OCSCode <caravel.nextcloud.base.OCSCode.html>`_
+    * `caravel.nextcloud.base.Permission <caravel.nextcloud.base.Permission.html>`_
+    * `caravel.nextcloud.base.ShareType <caravel.nextcloud.base.ShareType.html>`_
+    * `caravel.nextcloud.base.WithRequester <caravel.nextcloud.base.WithRequester.html>`_
+
+  **Functions**:
+    * `caravel.nextcloud.base.datetime_to_expire_date <caravel.nextcloud.base.datetime_to_expire_date.html>`_
+
+caravel.nextcloud.requester
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.nextcloud.requester.NextCloudConnectionError <caravel.nextcloud.requester.NextCloudConnectionError.html>`_
+    * `caravel.nextcloud.requester.OCSRequester <caravel.nextcloud.requester.OCSRequester.html>`_
+    * `caravel.nextcloud.requester.Requester <caravel.nextcloud.requester.Requester.html>`_
+    * `caravel.nextcloud.requester.WebDAVRequester <caravel.nextcloud.requester.WebDAVRequester.html>`_
+
+  **Functions**:
+    * `caravel.nextcloud.requester.catch_connection_error <caravel.nextcloud.requester.catch_connection_error.html>`_
+
+caravel.nextcloud.response
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.nextcloud.response.NextCloudResponse <caravel.nextcloud.response.NextCloudResponse.html>`_
+    * `caravel.nextcloud.response.OCSResponse <caravel.nextcloud.response.OCSResponse.html>`_
+    * `caravel.nextcloud.response.WebDAVResponse <caravel.nextcloud.response.WebDAVResponse.html>`_
+

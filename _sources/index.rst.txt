@@ -1,0 +1,14 @@
+..  caravel documentation master file
+
+
+This module is designed to simplify continuous integration (CI) of data from multiple projects. 
+
+
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    generated/installation
+    generated/documentation
+    generated/search
+

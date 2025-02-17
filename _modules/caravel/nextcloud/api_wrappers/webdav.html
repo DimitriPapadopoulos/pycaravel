@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+		<!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>caravel</title>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../../../_static/css/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="../../../../_static/css/animate.css">
+        <link rel="stylesheet" href="../../../../_static/css/style.css">
+        <link rel="stylesheet" href="../../../../_static/css/jquery.mosaic.css">
+        <link rel="stylesheet" href="../../../../_static/gallery.css">
+        <link rel="stylesheet" href="../../../../_static/css/media-queries.css">
+        <link rel="stylesheet" href="../../../../_static/css/pygment.css">
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="../../../../_static/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../_static/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../_static/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../_static/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../../../../_static/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+    <body>
+
+		<!-- Wrapper -->
+    	<div class="wrapper">
+
+			<!-- Sidebar -->
+			<nav class="sidebar">
+				
+				<!-- close sidebar menu -->
+				<div class="dismiss">
+					<i class="fas fa-arrow-left"></i>
+				</div>
+				
+				<div class="logo"">
+					<h3><a href="../../../../index.html">Sidebar Menu</a></h3>
+				</div>
+
+                <!-- info setup -->
+                    <p class="doc-version">
+                        This documentation is for caravel <strong>version 1.0.0</strong>
+                    </p>
+                <p class="citing">
+                    If you use the software, please do not hesitate to 
+                    <a &mdash; <a href="https://github.com/neurospincloud-ci/pycaravel">
+                    Report a Bug</a>.
+                </p>
+				
+                <!-- links -->
+                
+                
+				<ul class="list-unstyled menu-elements">
+					<li class="active">
+						<a href="../../../../index.html"><i class="fas fa-home"></i> Home</a>
+					</li>
+					<li>
+						<a href="../../../../generated/installation.html"><i class="fas fa-cog"></i> Installation</a>
+					</li>
+					<li>
+						<a href="../../../../auto_gallery/index.html"><i class="fas fa-eye"></i> Gallery</a>
+					</li>
+					<li>
+						<a href="../../../../generated/documentation.html"><i class="fas fa-pencil-alt"></i> API documentation</a>
+					</li>
+					<li>
+						<a href="../../../../generated/search.html"><i class="fas fa-search"></i> Search</a>
+					</li>
+					<li>
+						<a href="http://joliot.cea.fr/drf/joliot/Pages/Entites_de_recherche/NeuroSpin.aspx"><i class="fas fa-external-link-alt"></i> NeuroSpin webPage</a>
+					</li>
+					<li>
+						<a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">
+							<i class="fas fa-sync"></i>Sections Shortcuts
+						</a>
+						<ul class="collapse list-unstyled" id="otherSections">
+                            
+                            
+                            <li>API</li>
+                            <li><a href="../../../../generated/caravel.html">caravel</a></li><li><a href="../../../../generated/caravel.loaders.html">caravel.loaders</a></li><li><a href="../../../../generated/caravel.nextcloud.html">caravel.nextcloud</a></li><li><a href="../../../../generated/caravel.nextcloud.api_wrappers.html">caravel.nextcloud.api_wrappers</a></li><li><a href="../../../../generated/caravel.parsers.html">caravel.parsers</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+                <!-- go top page -->
+				<div class="to-top">
+					<a class="btn btn-primary btn-customized-3" href="#" role="button">
+	                    <i class="fas fa-arrow-up"></i> Top
+	                </a>
+				</div>
+			
+                <!-- change color -->
+				<div class="dark-light-buttons">
+					<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
+					<a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
+				</div>
+			
+			</nav>
+			<!-- End sidebar -->
+			
+			<!-- Dark overlay -->
+    		<div class="overlay"></div>
+
+			<!-- Content -->
+			<div class="content">
+			
+				<!-- open sidebar menu -->
+				<a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+                    <i class="fas fa-align-left"></i> <span>Menu</span>
+                </a>
+
+		        <!-- Top content -->
+		        <div class="top-content section-container" id="top-content">
+			        <div class="container">
+			            <div class="row">
+                            <div class="col-md-3 section-5-box banner-logo">
+                                <img alt="Logo" src="../../../../_static/caravel.png">
+                            </div>
+			                <div class="col-md-7 section-5-box">
+			                	<h1 class="wow fadeIn">    <p>pycaravel:  This module is designed to simplify continuous integration (CI) of
+    data from multiple projects.</p></h1>
+			                </div>
+			            </div>
+			        </div>
+		        </div>
+                    
+                    <div class="document">
+                        <h1>Source code for caravel.nextcloud.api_wrappers.webdav</h1><div class='divider-1 wow fadeInUp'><span></span></div><div class="highlight"><pre>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xml.etree.ElementTree</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ET</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..base</span><span class="w"> </span><span class="kn">import</span> <span class="n">WithRequester</span>
+
+
+<div class="viewcode-block" id="WebDAV"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.webdav.WebDAV.html#caravel.nextcloud.api_wrappers.WebDAV">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">WebDAV</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
+    <span class="n">API_URL</span> <span class="o">=</span> <span class="s2">&quot;/remote.php/dav/files&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">json_output</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;json_output&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="WebDAV.list_folders"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.webdav.WebDAV.html#caravel.nextcloud.api_wrappers.WebDAV.list_folders">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">list_folders</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">all_properties</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Get path files list with files properties for given user, with</span>
+<span class="sd">        given depth.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">all_properties</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="s2">                &lt;d:propfind xmlns:d=&quot;DAV:&quot; xmlns:oc=&quot;http://owncloud.org/ns&quot;</span>
+<span class="s2">                            xmlns:nc=&quot;http://nextcloud.org/ns&quot;&gt;</span>
+<span class="s2">                  &lt;d:prop&gt;</span>
+<span class="s2">                        &lt;d:getlastmodified /&gt;</span>
+<span class="s2">                        &lt;d:getetag /&gt;</span>
+<span class="s2">                        &lt;d:getcontenttype /&gt;</span>
+<span class="s2">                        &lt;d:resourcetype /&gt;</span>
+<span class="s2">                        &lt;oc:fileid /&gt;</span>
+<span class="s2">                        &lt;oc:permissions /&gt;</span>
+<span class="s2">                        &lt;oc:size /&gt;</span>
+<span class="s2">                        &lt;d:getcontentlength /&gt;</span>
+<span class="s2">                        &lt;nc:has-preview /&gt;</span>
+<span class="s2">                        &lt;oc:favorite /&gt;</span>
+<span class="s2">                        &lt;oc:comments-unread /&gt;</span>
+<span class="s2">                        &lt;oc:owner-display-name /&gt;</span>
+<span class="s2">                        &lt;oc:share-types /&gt;</span>
+<span class="s2">                  &lt;/d:prop&gt;</span>
+<span class="s2">                &lt;/d:propfind&gt;</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">additional_url</span> <span class="o">=</span> <span class="n">uid</span>
+        <span class="k">if</span> <span class="n">path</span><span class="p">:</span>
+            <span class="n">additional_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">additional_url</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">propfind</span><span class="p">(</span><span class="n">additional_url</span><span class="o">=</span><span class="n">additional_url</span><span class="p">,</span>
+                                       <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Depth&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">depth</span><span class="p">)},</span>
+                                       <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">resp</span><span class="o">.</span><span class="n">is_ok</span><span class="p">:</span>
+            <span class="n">resp</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">return</span> <span class="n">resp</span>
+        <span class="n">response_data</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">response_xml_data</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">response_data</span><span class="p">)</span>
+        <span class="n">files_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">File</span><span class="p">(</span><span class="n">single_file</span><span class="p">)</span> <span class="k">for</span> <span class="n">single_file</span> <span class="ow">in</span> <span class="n">response_xml_data</span><span class="p">]</span>
+        <span class="n">resp</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">files_data</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">json_output</span>
+                     <span class="k">else</span> <span class="p">[</span><span class="n">each</span><span class="o">.</span><span class="n">as_dict</span><span class="p">()</span> <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">files_data</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">resp</span></div>
+
+<div class="viewcode-block" id="WebDAV.isfile"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.webdav.WebDAV.html#caravel.nextcloud.api_wrappers.WebDAV.isfile">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">isfile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Check file of given user exists.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dirname</span><span class="p">,</span> <span class="n">basename</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">_dirs</span><span class="p">,</span> <span class="n">files</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lsdir</span><span class="p">(</span><span class="n">uid</span><span class="p">,</span> <span class="n">dirname</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">basename</span> <span class="ow">in</span> <span class="p">(</span><span class="n">files</span> <span class="ow">or</span> <span class="p">[])</span></div>
+
+<div class="viewcode-block" id="WebDAV.isdir"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.webdav.WebDAV.html#caravel.nextcloud.api_wrappers.WebDAV.isdir">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">isdir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Check dir of given user exists.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dirname</span><span class="p">,</span> <span class="n">basename</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">dirs</span><span class="p">,</span> <span class="n">_files</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lsdir</span><span class="p">(</span><span class="n">uid</span><span class="p">,</span> <span class="n">dirname</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">basename</span> <span class="ow">in</span> <span class="p">(</span><span class="n">dirs</span> <span class="ow">or</span> <span class="p">[])</span></div>
+
+<div class="viewcode-block" id="WebDAV.lsdir"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.webdav.WebDAV.html#caravel.nextcloud.api_wrappers.WebDAV.lsdir">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">lsdir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; List directory of a given user.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">path</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">path</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">list_folders</span><span class="p">(</span><span class="n">uid</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">resp</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+            <span class="k">if</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;resource_type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;collection&quot;</span><span class="p">:</span>
+                <span class="n">dirs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">item</span><span class="p">[</span><span class="s2">&quot;resource_type&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unknown resource type!&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span></div>
+
+<div class="viewcode-block" id="WebDAV.download_file"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.webdav.WebDAV.html#caravel.nextcloud.api_wrappers.WebDAV.download_file">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">download_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Download file of given user by path.</span>
+
+<span class="sd">        File will be saved to working directory path argument must be valid</span>
+<span class="sd">        file path</span>
+<span class="sd">        Exception will be raised if path doesn&#39;t exist, path is a directory,</span>
+<span class="sd">        file with same name already exists in working directory.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">additional_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;/&#39;</span> <span class="ow">in</span> <span class="n">path</span> <span class="k">else</span> <span class="n">path</span>
+        <span class="n">file_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">list_folders</span><span class="p">(</span><span class="n">uid</span><span class="o">=</span><span class="n">uid</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">file_data</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Given path doesn&#39;t exist&quot;</span><span class="p">)</span>
+        <span class="n">file_resource_type</span> <span class="o">=</span> <span class="p">(</span><span class="n">file_data</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;resource_type&#39;</span><span class="p">)</span>
+                              <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">json_output</span>
+                              <span class="k">else</span> <span class="n">file_data</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">resource_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">file_resource_type</span> <span class="o">==</span> <span class="n">File</span><span class="o">.</span><span class="n">COLLECTION_RESOURCE_TYPE</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;This is a collection, please specify file path&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;File with such name already exists in this directory&quot;</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">additional_url</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">data</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="WebDAV.upload_file"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.webdav.WebDAV.html#caravel.nextcloud.api_wrappers.WebDAV.upload_file">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">upload_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">local_filepath</span><span class="p">,</span> <span class="n">remote_filepath</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Upload file to Nextcloud storage.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">local_filepath</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">file_content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">additional_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">remote_filepath</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">additional_url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">file_content</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="WebDAV.create_folder"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.webdav.WebDAV.html#caravel.nextcloud.api_wrappers.WebDAV.create_folder">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">create_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">folder_path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Create folder on Nextcloud storage.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">make_collection</span><span class="p">(</span>
+            <span class="n">additional_url</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">folder_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="WebDAV.delete_path"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.webdav.WebDAV.html#caravel.nextcloud.api_wrappers.WebDAV.delete_path">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">delete_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Delete file or folder with all content of given user by path.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="WebDAV.move_path"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.webdav.WebDAV.html#caravel.nextcloud.api_wrappers.WebDAV.move_path">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">move_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">destination_path</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Move file or folder to destination.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">destination_path_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">destination_path</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">move</span><span class="p">(</span>
+            <span class="n">url</span><span class="o">=</span><span class="n">path_url</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="n">destination_path_url</span><span class="p">,</span>
+            <span class="n">overwrite</span><span class="o">=</span><span class="n">overwrite</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="WebDAV.copy_path"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.webdav.WebDAV.html#caravel.nextcloud.api_wrappers.WebDAV.copy_path">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">copy_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">destination_path</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Copy file or folder to destination.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">destination_path_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">destination_path</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span>
+            <span class="n">url</span><span class="o">=</span><span class="n">path_url</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="n">destination_path_url</span><span class="p">,</span>
+            <span class="n">overwrite</span><span class="o">=</span><span class="n">overwrite</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="WebDAV.set_favorites"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.webdav.WebDAV.html#caravel.nextcloud.api_wrappers.WebDAV.set_favorites">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">set_favorites</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Set files of a user favorite.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="s2">        &lt;d:propertyupdate xmlns:d=&quot;DAV:&quot; xmlns:oc=&quot;http://owncloud.org/ns&quot;&gt;</span>
+<span class="s2">          &lt;d:set&gt;</span>
+<span class="s2">                &lt;d:prop&gt;</span>
+<span class="s2">                  &lt;oc:favorite&gt;1&lt;/oc:favorite&gt;</span>
+<span class="s2">                &lt;/d:prop&gt;</span>
+<span class="s2">          &lt;/d:set&gt;</span>
+<span class="s2">        &lt;/d:propertyupdate&gt;</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">proppatch</span><span class="p">(</span><span class="n">additional_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="WebDAV.list_favorites"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.webdav.WebDAV.html#caravel.nextcloud.api_wrappers.WebDAV.list_favorites">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">list_favorites</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Set files of a user favorite.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="s2">        &lt;oc:filter-files xmlns:d=&quot;DAV:&quot;</span>
+<span class="s2">                         xmlns:oc=&quot;http://owncloud.org/ns&quot;</span>
+<span class="s2">                         xmlns:nc=&quot;http://nextcloud.org/ns&quot;&gt;</span>
+<span class="s2">                 &lt;oc:filter-rules&gt;</span>
+<span class="s2">                         &lt;oc:favorite&gt;1&lt;/oc:favorite&gt;</span>
+<span class="s2">                 &lt;/oc:filter-rules&gt;</span>
+<span class="s2">         &lt;/oc:filter-files&gt;</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="n">additional_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">res</span><span class="o">.</span><span class="n">is_ok</span><span class="p">:</span>
+            <span class="n">res</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">return</span> <span class="n">res</span>
+        <span class="n">response_xml_data</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">files_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">File</span><span class="p">(</span><span class="n">single_file</span><span class="p">)</span> <span class="k">for</span> <span class="n">single_file</span> <span class="ow">in</span> <span class="n">response_xml_data</span><span class="p">]</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">files_data</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">json_output</span>
+                    <span class="k">else</span> <span class="p">[</span><span class="n">each</span><span class="o">.</span><span class="n">as_dict</span><span class="p">()</span> <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">files_data</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">res</span></div></div>
+
+
+<div class="viewcode-block" id="File"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.webdav.File.html#caravel.nextcloud.api_wrappers.File">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">File</span><span class="p">:</span>
+
+    <span class="n">SUCCESS_STATUS</span> <span class="o">=</span> <span class="s1">&#39;HTTP/1.1 200 OK&#39;</span>
+
+    <span class="c1"># key is NextCloud property, value is python variable name</span>
+    <span class="n">FILE_PROPERTIES</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="c1"># d:</span>
+        <span class="s2">&quot;getlastmodified&quot;</span><span class="p">:</span> <span class="s2">&quot;last_modified&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;getetag&quot;</span><span class="p">:</span> <span class="s2">&quot;etag&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;getcontenttype&quot;</span><span class="p">:</span> <span class="s2">&quot;content_type&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;resourcetype&quot;</span><span class="p">:</span> <span class="s2">&quot;resource_type&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;getcontentlength&quot;</span><span class="p">:</span> <span class="s2">&quot;content_length&quot;</span><span class="p">,</span>
+        <span class="c1"># oc:</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fileid&quot;</span><span class="p">:</span> <span class="s2">&quot;file_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;favorite&quot;</span><span class="p">:</span> <span class="s2">&quot;favorite&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;comments-href&quot;</span><span class="p">:</span> <span class="s2">&quot;comments_href&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;comments-count&quot;</span><span class="p">:</span> <span class="s2">&quot;comments_count&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;comments-unread&quot;</span><span class="p">:</span> <span class="s2">&quot;comments_unread&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;owner-id&quot;</span><span class="p">:</span> <span class="s2">&quot;owner_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;owner-display-name&quot;</span><span class="p">:</span> <span class="s2">&quot;owner_display_name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;share-types&quot;</span><span class="p">:</span> <span class="s2">&quot;share_types&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;checksums&quot;</span><span class="p">:</span> <span class="s2">&quot;check_sums&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="s2">&quot;size&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;href&quot;</span><span class="p">,</span>
+        <span class="c1"># nc:</span>
+        <span class="s2">&quot;has-preview&quot;</span><span class="p">:</span> <span class="s2">&quot;has_preview&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">xml_namespaces_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;d&quot;</span><span class="p">:</span> <span class="s2">&quot;DAV:&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;oc&quot;</span><span class="p">:</span> <span class="s2">&quot;http://owncloud.org/ns&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;nc&quot;</span><span class="p">:</span> <span class="s2">&quot;http://nextcloud.org/ns&quot;</span>
+    <span class="p">}</span>
+    <span class="n">COLLECTION_RESOURCE_TYPE</span> <span class="o">=</span> <span class="s1">&#39;collection&#39;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xml_data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">href</span> <span class="o">=</span> <span class="n">xml_data</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;d:href&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">xml_namespaces_map</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+        <span class="k">for</span> <span class="n">propstat</span> <span class="ow">in</span> <span class="n">xml_data</span><span class="o">.</span><span class="n">iter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{DAV:}</span><span class="s1">propstat&#39;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">propstat</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;d:status&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">xml_namespaces_map</span><span class="p">)</span><span class="o">.</span><span class="n">text</span> <span class="o">!=</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">SUCCESS_STATUS</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="k">for</span> <span class="n">file_property</span> <span class="ow">in</span> <span class="n">propstat</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;d:prop&#39;</span><span class="p">,</span>
+                                               <span class="bp">self</span><span class="o">.</span><span class="n">xml_namespaces_map</span><span class="p">):</span>
+                <span class="n">file_property_name</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;{.*}&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">file_property</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">file_property_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">FILE_PROPERTIES</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="k">if</span> <span class="n">file_property_name</span> <span class="o">==</span> <span class="s1">&#39;resourcetype&#39;</span><span class="p">:</span>
+                    <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extract_resource_type</span><span class="p">(</span><span class="n">file_property</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">value</span> <span class="o">=</span> <span class="n">file_property</span><span class="o">.</span><span class="n">text</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">FILE_PROPERTIES</span><span class="p">[</span><span class="n">file_property_name</span><span class="p">],</span> <span class="n">value</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_extract_resource_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_property</span><span class="p">):</span>
+        <span class="n">file_type</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">file_property</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">file_type</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;{.*}&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">file_type</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">as_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span>
+                <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">FILE_PROPERTIES</span><span class="o">.</span><span class="n">values</span><span class="p">()}</span></div>
+
+
+<div class="viewcode-block" id="WebDAVStatusCodes"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.webdav.WebDAVStatusCodes.html#caravel.nextcloud.api_wrappers.WebDAVStatusCodes">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">WebDAVStatusCodes</span><span class="p">:</span>
+    <span class="n">CREATED_CODE</span> <span class="o">=</span> <span class="mi">201</span>
+    <span class="n">NO_CONTENT_CODE</span> <span class="o">=</span> <span class="mi">204</span>
+    <span class="n">MULTISTATUS_CODE</span> <span class="o">=</span> <span class="mi">207</span>
+    <span class="n">ALREADY_EXISTS_CODE</span> <span class="o">=</span> <span class="mi">405</span>
+    <span class="n">PRECONDITION_FAILED_CODE</span> <span class="o">=</span> <span class="mi">412</span></div>
+</pre></div>
+                    </div>
+                <div class="spacer"></div>
+		        
+		        <!-- Footer -->
+		        <div class="section-6-container section-container section-container-image-bg" id="section-6">
+			        <div class="container">
+			            <div class="row">
+		                    <div class="col-md-5 offset-md-1 section-6-box wow fadeInDown">
+                                <div class="section-6-title">
+		                    	    <p>Follow us</p>
+                                </div>
+		                    	<div class="section-6-social">
+			                    	<a href="https://www.facebook.com/pages/NeuroSpin/171075046414933"><i class="fab fa-facebook-f"></i></a>
+									<a href="https://www.youtube.com/CEASaclay"><i class="fab fa-youtube"></i></a>
+									<a href="https://twitter.com/neurospin_91"><i class="fab fa-twitter"></i></a>
+									<a href="https://github.com/AGrigis/pysphinxdoc"><i class="fab fa-github"></i></a>
+                                    <p>&copy; 2025, 
+Antoine Grigis <antoine.grigis@cea.fr>
+ <antoine.grigis@cea.fr></p>
+		                    	</div>
+		                    </div>
+			            </div>
+			        </div>
+                </div>
+	        
+	        </div>
+	        <!-- End content -->
+        
+        </div>
+        <!-- End wrapper -->
+
+        <!-- Javascript -->
+		<script src="../../../../_static/js/jquery-3.3.1.min.js"></script>
+		<script src="../../../../_static/js/jquery-migrate-3.0.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="../../../../_static/js/jquery.backstretch.min.js"></script>
+        <script src="../../../../_static/js/wow.min.js"></script>
+        <script src="../../../../_static/js/jquery.waypoints.min.js"></script>
+        <script src="../../../../_static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../../../../_static/js/scripts.js"></script>
+        <script src="../../../../_static/js/jquery.mosaic.js"></script>
+        <script src="../../../../_static/js/search.js"></script>
+        <script type="text/javascript">
+	        $('.top-content').backstretch("../../../../_static/img/backgrounds/banner1.png");
+            $('.section-6-container').backstretch("../../../../_static/img/backgrounds/footer1.png");
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+		<!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>caravel</title>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../_static/css/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="../../_static/css/animate.css">
+        <link rel="stylesheet" href="../../_static/css/style.css">
+        <link rel="stylesheet" href="../../_static/css/jquery.mosaic.css">
+        <link rel="stylesheet" href="../../_static/gallery.css">
+        <link rel="stylesheet" href="../../_static/css/media-queries.css">
+        <link rel="stylesheet" href="../../_static/css/pygment.css">
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="../../_static/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../_static/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../_static/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../_static/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../../_static/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+    <body>
+
+		<!-- Wrapper -->
+    	<div class="wrapper">
+
+			<!-- Sidebar -->
+			<nav class="sidebar">
+				
+				<!-- close sidebar menu -->
+				<div class="dismiss">
+					<i class="fas fa-arrow-left"></i>
+				</div>
+				
+				<div class="logo"">
+					<h3><a href="../../index.html">Sidebar Menu</a></h3>
+				</div>
+
+                <!-- info setup -->
+                    <p class="doc-version">
+                        This documentation is for caravel <strong>version 1.0.0</strong>
+                    </p>
+                <p class="citing">
+                    If you use the software, please do not hesitate to 
+                    <a &mdash; <a href="https://github.com/neurospincloud-ci/pycaravel">
+                    Report a Bug</a>.
+                </p>
+				
+                <!-- links -->
+                
+                
+				<ul class="list-unstyled menu-elements">
+					<li class="active">
+						<a href="../../index.html"><i class="fas fa-home"></i> Home</a>
+					</li>
+					<li>
+						<a href="../../generated/installation.html"><i class="fas fa-cog"></i> Installation</a>
+					</li>
+					<li>
+						<a href="../../auto_gallery/index.html"><i class="fas fa-eye"></i> Gallery</a>
+					</li>
+					<li>
+						<a href="../../generated/documentation.html"><i class="fas fa-pencil-alt"></i> API documentation</a>
+					</li>
+					<li>
+						<a href="../../generated/search.html"><i class="fas fa-search"></i> Search</a>
+					</li>
+					<li>
+						<a href="http://joliot.cea.fr/drf/joliot/Pages/Entites_de_recherche/NeuroSpin.aspx"><i class="fas fa-external-link-alt"></i> NeuroSpin webPage</a>
+					</li>
+					<li>
+						<a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">
+							<i class="fas fa-sync"></i>Sections Shortcuts
+						</a>
+						<ul class="collapse list-unstyled" id="otherSections">
+                            
+                            
+                            <li>API</li>
+                            <li><a href="../../generated/caravel.html">caravel</a></li><li><a href="../../generated/caravel.loaders.html">caravel.loaders</a></li><li><a href="../../generated/caravel.nextcloud.html">caravel.nextcloud</a></li><li><a href="../../generated/caravel.nextcloud.api_wrappers.html">caravel.nextcloud.api_wrappers</a></li><li><a href="../../generated/caravel.parsers.html">caravel.parsers</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+                <!-- go top page -->
+				<div class="to-top">
+					<a class="btn btn-primary btn-customized-3" href="#" role="button">
+	                    <i class="fas fa-arrow-up"></i> Top
+	                </a>
+				</div>
+			
+                <!-- change color -->
+				<div class="dark-light-buttons">
+					<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
+					<a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
+				</div>
+			
+			</nav>
+			<!-- End sidebar -->
+			
+			<!-- Dark overlay -->
+    		<div class="overlay"></div>
+
+			<!-- Content -->
+			<div class="content">
+			
+				<!-- open sidebar menu -->
+				<a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+                    <i class="fas fa-align-left"></i> <span>Menu</span>
+                </a>
+
+		        <!-- Top content -->
+		        <div class="top-content section-container" id="top-content">
+			        <div class="container">
+			            <div class="row">
+                            <div class="col-md-3 section-5-box banner-logo">
+                                <img alt="Logo" src="../../_static/caravel.png">
+                            </div>
+			                <div class="col-md-7 section-5-box">
+			                	<h1 class="wow fadeIn">    <p>pycaravel:  This module is designed to simplify continuous integration (CI) of
+    data from multiple projects.</p></h1>
+			                </div>
+			            </div>
+			        </div>
+		        </div>
+                    
+                    <div class="document">
+                        <h1>Source code for caravel.parser</h1><div class='divider-1 wow fadeInUp'><span></span></div><div class="highlight"><pre>
+<span></span><span class="c1">##########################################################################</span>
+<span class="c1"># NSAp - Copyright (C) CEA, 2019</span>
+<span class="c1"># Distributed under the terms of the CeCILL-B license, as published by</span>
+<span class="c1"># the CEA-CNRS-INRIA. Refer to the LICENSE file or to</span>
+<span class="c1"># http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.html</span>
+<span class="c1"># for details.</span>
+<span class="c1">##########################################################################</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module contains the generic parser definition.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># Imports</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">string</span><span class="w"> </span><span class="kn">import</span> <span class="n">Formatter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">product</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.parsers</span><span class="w"> </span><span class="kn">import</span> <span class="n">BIDSParser</span>
+
+
+<span class="c1"># Global parameters</span>
+<span class="c1"># &gt; define all the available parsers</span>
+<span class="n">PARSERS</span> <span class="o">=</span> <span class="p">[</span><span class="n">BIDSParser</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="get_parser"><a class="viewcode-back" href="../../generated/caravel.parser.get_parser.html#caravel.get_parser">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">get_parser</span><span class="p">(</span><span class="n">project</span><span class="p">,</span> <span class="n">confdir</span><span class="p">,</span> <span class="n">layoutdir</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Method to return the appropriate parser for your study.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    project: str</span>
+<span class="sd">        the name of the project you are working on.</span>
+<span class="sd">    confdir: str</span>
+<span class="sd">        the locations of the configuration file of the current project.</span>
+<span class="sd">    layoutdir: str</span>
+<span class="sd">        the location of the pre-generated parsing representations. If None</span>
+<span class="sd">        switch to managers mode.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    parser: obj</span>
+<span class="sd">        the dataset appropriate parser.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">parser_class</span> <span class="ow">in</span> <span class="n">PARSERS</span><span class="p">:</span>
+        <span class="n">parser</span> <span class="o">=</span> <span class="n">parser_class</span><span class="p">(</span><span class="n">project</span><span class="p">,</span> <span class="n">confdir</span><span class="p">,</span> <span class="n">layoutdir</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">parser</span><span class="o">.</span><span class="n">can_load</span><span class="p">():</span>
+            <span class="k">return</span> <span class="n">parser</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No loader available for &#39;</span><span class="si">{</span><span class="n">project</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="listify"><a class="viewcode-back" href="../../generated/caravel.parser.listify.html#caravel.listify">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">listify</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Wraps all non-list or tuple objects in a list.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">obj</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">)))</span> <span class="k">else</span> <span class="p">[</span><span class="n">obj</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="_expand_keys"><a class="viewcode-back" href="../../generated/caravel.parser._expand_keys.html#caravel._expand_keys">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">_expand_keys</span><span class="p">(</span><span class="n">entities</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Generate multiple replacement queries based on all combinations</span>
+<span class="sd">    of values.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; entities = {&#39;subject&#39;: [&#39;01&#39;, &#39;02&#39;], &#39;session&#39;: [&#39;1&#39;, &#39;2&#39;],</span>
+<span class="sd">                    &#39;task&#39;: [&#39;rest&#39;, &#39;finger&#39;]}</span>
+<span class="sd">    &gt;&gt;&gt; out = _expand_entities(entities)</span>
+<span class="sd">    &gt;&gt;&gt; len(out)</span>
+<span class="sd">    8</span>
+<span class="sd">    &gt;&gt;&gt; {&#39;subject&#39;: &#39;01&#39;, &#39;session&#39;: &#39;1&#39;, &#39;task&#39;: &#39;rest&#39;} in out</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; {&#39;subject&#39;: &#39;02&#39;, &#39;session&#39;: &#39;1&#39;, &#39;task&#39;: &#39;rest&#39;} in out</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; {&#39;subject&#39;: &#39;01&#39;, &#39;session&#39;: &#39;2&#39;, &#39;task&#39;: &#39;rest&#39;} in out</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; {&#39;subject&#39;: &#39;02&#39;, &#39;session&#39;: &#39;2&#39;, &#39;task&#39;: &#39;rest&#39;} in out</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; {&#39;subject&#39;: &#39;01&#39;, &#39;session&#39;: &#39;1&#39;, &#39;task&#39;: &#39;finger&#39;} in out</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; {&#39;subject&#39;: &#39;02&#39;, &#39;session&#39;: &#39;1&#39;, &#39;task&#39;: &#39;finger&#39;} in out</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; {&#39;subject&#39;: &#39;01&#39;, &#39;session&#39;: &#39;2&#39;, &#39;task&#39;: &#39;finger&#39;} in out</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; {&#39;subject&#39;: &#39;02&#39;, &#39;session&#39;: &#39;2&#39;, &#39;task&#39;: &#39;finger&#39;} in out</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">entities</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">product</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">entities</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">combs</span><span class="p">))</span> <span class="k">for</span> <span class="n">combs</span> <span class="ow">in</span> <span class="n">values</span><span class="p">]</span></div>
+
+
+<span class="n">_PATTERN_FIND</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s2">&quot;({([\w\d]*?)(?:&lt;([^&gt;]+)&gt;)?(?:\|((?:\.?[\w])+))?\})&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="build_path"><a class="viewcode-back" href="../../generated/caravel.parser.build_path.html#caravel.build_path">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">build_path</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">path_patterns</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Constructs a path given a set of keys and a list of potential filename</span>
+<span class="sd">    patterns to use.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    keys: dict</span>
+<span class="sd">        A dictionary mapping key names to key values.</span>
+<span class="sd">        None key or empty-string key will be removed.</span>
+<span class="sd">        Otherwise, kets will be cast to string values, therefore</span>
+<span class="sd">        if any format is expected (e.g., zero-padded integers), the</span>
+<span class="sd">        value should be formatted.</span>
+<span class="sd">    path_patterns: str or list of str</span>
+<span class="sd">        One or more filename patterns to write the file to.</span>
+<span class="sd">        Keys should be represented by the name surrounded by curly braces.</span>
+<span class="sd">        Optional portions of the patterns should be denoted by square brackets.</span>
+<span class="sd">        Keys that require a specific value for the pattern to match can pass</span>
+<span class="sd">        them inside angle brackets.</span>
+<span class="sd">    strict: bool</span>
+<span class="sd">        If True, all passed keys must be matched inside a pattern in order to</span>
+<span class="sd">        be a valid match.</span>
+<span class="sd">        If False, extra keys will be ignored so long as all mandatory keys are</span>
+<span class="sd">        found.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    path: str</span>
+<span class="sd">        A constructed path for this file based on the provided patterns, or</span>
+<span class="sd">        None if no path was built given the combination of keys and patterns.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">path_patterns</span> <span class="o">=</span> <span class="n">listify</span><span class="p">(</span><span class="n">path_patterns</span><span class="p">)</span>
+    <span class="n">keys</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">listify</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">keys</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">val</span> <span class="ow">or</span> <span class="n">val</span> <span class="o">==</span> <span class="mi">0</span><span class="p">}</span>
+
+    <span class="c1"># Loop over available patterns, return first one that matches all</span>
+    <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">path_patterns</span><span class="p">:</span>
+        <span class="n">keys_matched</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">_PATTERN_FIND</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">))</span>
+        <span class="n">defined</span> <span class="o">=</span> <span class="p">[</span><span class="n">elem</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">keys_matched</span><span class="p">]</span>
+
+        <span class="c1"># If strict, all keys must be contained in the pattern</span>
+        <span class="k">if</span> <span class="n">strict</span> <span class="ow">and</span> <span class="nb">set</span><span class="p">(</span><span class="n">keys</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">defined</span><span class="p">):</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># Iterate through the provided path patterns</span>
+        <span class="n">new_path</span> <span class="o">=</span> <span class="n">pattern</span>
+        <span class="c1"># Expand options within valid values and</span>
+        <span class="c1"># check whether keys provided have acceptable value</span>
+        <span class="n">tmp_keys</span> <span class="o">=</span> <span class="n">keys</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">fmt</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">valid</span><span class="p">,</span> <span class="n">defval</span> <span class="ow">in</span> <span class="n">keys_matched</span><span class="p">:</span>
+            <span class="n">valid_expanded</span> <span class="o">=</span> <span class="n">valid</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">valid_expanded</span> <span class="ow">and</span> <span class="n">defval</span> <span class="ow">and</span> <span class="n">defval</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">valid_expanded</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pattern &#39;</span><span class="si">{</span><span class="n">fmt</span><span class="si">}</span><span class="s2">&#39; is inconsistent as it defines &quot;</span>
+                              <span class="s2">&quot;an invalid default value.&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">valid_expanded</span> <span class="ow">and</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">keys</span> <span class="ow">and</span>
+                    <span class="nb">set</span><span class="p">(</span><span class="n">keys</span><span class="p">[</span><span class="n">name</span><span class="p">])</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">valid_expanded</span><span class="p">)):</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">defval</span> <span class="ow">and</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tmp_keys</span><span class="p">:</span>
+                <span class="n">tmp_keys</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">defval</span><span class="p">]</span>
+
+            <span class="c1"># At this point, valid &amp; default values are checked &amp;</span>
+            <span class="c1"># set - simplify pattern</span>
+            <span class="n">new_path</span> <span class="o">=</span> <span class="n">new_path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">fmt</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="se">{{</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="se">}}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="n">optional_patterns</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\[.*?\])&#39;</span><span class="p">,</span> <span class="n">new_path</span><span class="p">)</span>
+        <span class="c1"># Optional patterns with selector are cast to mandatory or removed</span>
+        <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">optional_patterns</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">ent_name</span> <span class="ow">in</span> <span class="p">{</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">keys</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="p">(</span><span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
+                             <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">])}:</span>
+                <span class="k">if</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">{{</span><span class="si">{</span><span class="n">ent_name</span><span class="si">}</span><span class="se">}}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">op</span><span class="p">:</span>
+                    <span class="n">new_path</span> <span class="o">=</span> <span class="n">new_path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+                    <span class="k">continue</span>
+
+            <span class="c1"># Surviving optional patterns are removed</span>
+            <span class="n">new_path</span> <span class="o">=</span> <span class="n">new_path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="c1"># Replace keys</span>
+        <span class="n">fields</span> <span class="o">=</span> <span class="p">{</span><span class="n">pat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">pat</span> <span class="ow">in</span> <span class="n">Formatter</span><span class="p">()</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">new_path</span><span class="p">)</span>
+                  <span class="k">if</span> <span class="n">pat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">pat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()}</span>
+        <span class="k">if</span> <span class="n">fields</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">tmp_keys</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+            <span class="k">continue</span>
+
+        <span class="n">tmp_keys</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">tmp_keys</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                    <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">fields</span><span class="p">}</span>
+        <span class="n">new_path</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">new_path</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">e</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">_expand_keys</span><span class="p">(</span><span class="n">tmp_keys</span><span class="p">)</span>
+        <span class="p">]</span>
+        <span class="k">if</span> <span class="n">new_path</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_path</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">new_path</span> <span class="o">=</span> <span class="n">new_path</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">new_path</span>
+
+    <span class="k">return</span> <span class="kc">None</span></div>
+</pre></div>
+                    </div>
+                <div class="spacer"></div>
+		        
+		        <!-- Footer -->
+		        <div class="section-6-container section-container section-container-image-bg" id="section-6">
+			        <div class="container">
+			            <div class="row">
+		                    <div class="col-md-5 offset-md-1 section-6-box wow fadeInDown">
+                                <div class="section-6-title">
+		                    	    <p>Follow us</p>
+                                </div>
+		                    	<div class="section-6-social">
+			                    	<a href="https://www.facebook.com/pages/NeuroSpin/171075046414933"><i class="fab fa-facebook-f"></i></a>
+									<a href="https://www.youtube.com/CEASaclay"><i class="fab fa-youtube"></i></a>
+									<a href="https://twitter.com/neurospin_91"><i class="fab fa-twitter"></i></a>
+									<a href="https://github.com/AGrigis/pysphinxdoc"><i class="fab fa-github"></i></a>
+                                    <p>&copy; 2025, 
+Antoine Grigis <antoine.grigis@cea.fr>
+ <antoine.grigis@cea.fr></p>
+		                    	</div>
+		                    </div>
+			            </div>
+			        </div>
+                </div>
+	        
+	        </div>
+	        <!-- End content -->
+        
+        </div>
+        <!-- End wrapper -->
+
+        <!-- Javascript -->
+		<script src="../../_static/js/jquery-3.3.1.min.js"></script>
+		<script src="../../_static/js/jquery-migrate-3.0.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="../../_static/js/jquery.backstretch.min.js"></script>
+        <script src="../../_static/js/wow.min.js"></script>
+        <script src="../../_static/js/jquery.waypoints.min.js"></script>
+        <script src="../../_static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../../_static/js/scripts.js"></script>
+        <script src="../../_static/js/jquery.mosaic.js"></script>
+        <script src="../../_static/js/search.js"></script>
+        <script type="text/javascript">
+	        $('.top-content').backstretch("../../_static/img/backgrounds/banner1.png");
+            $('.section-6-container').backstretch("../../_static/img/backgrounds/footer1.png");
+        </script>
+
+    </body>
+
+</html>
