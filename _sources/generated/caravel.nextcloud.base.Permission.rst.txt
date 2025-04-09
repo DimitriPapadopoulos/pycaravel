@@ -9,7 +9,7 @@
 .. autoclass:: caravel.nextcloud.base.Permission
      :members:
 
-.. minigallery:: caravel.nextcloud.base.Permission caravel.nextcloud.Permission
+.. minigallery:: caravel.nextcloud.Permission caravel.nextcloud.base.Permission
     :add-heading: Examples
     :heading-level: -
 

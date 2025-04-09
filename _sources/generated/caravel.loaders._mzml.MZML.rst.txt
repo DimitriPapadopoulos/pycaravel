@@ -9,7 +9,7 @@
 .. autoclass:: caravel.loaders._mzml.MZML
      :members:
 
-.. minigallery:: caravel.loaders.MZML caravel.loaders._mzml.MZML
+.. minigallery:: caravel.loaders._mzml.MZML caravel.loaders.MZML
     :add-heading: Examples
     :heading-level: -
 

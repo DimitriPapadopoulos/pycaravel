@@ -9,7 +9,7 @@
 .. autoclass:: caravel.nextcloud.nextcloud.NextCloud
      :members:
 
-.. minigallery:: caravel.nextcloud.NextCloud caravel.nextcloud.nextcloud.NextCloud
+.. minigallery:: caravel.nextcloud.nextcloud.NextCloud caravel.nextcloud.NextCloud
     :add-heading: Examples
     :heading-level: -
 

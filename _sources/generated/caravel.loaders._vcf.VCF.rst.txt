@@ -9,7 +9,7 @@
 .. autoclass:: caravel.loaders._vcf.VCF
      :members:
 
-.. minigallery:: caravel.loaders.VCF caravel.loaders._vcf.VCF
+.. minigallery:: caravel.loaders._vcf.VCF caravel.loaders.VCF
     :add-heading: Examples
     :heading-level: -
 
