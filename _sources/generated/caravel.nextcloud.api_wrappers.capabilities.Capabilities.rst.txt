@@ -9,7 +9,7 @@
 .. autoclass:: caravel.nextcloud.api_wrappers.capabilities.Capabilities
      :members:
 
-.. minigallery:: caravel.nextcloud.api_wrappers.capabilities.Capabilities caravel.nextcloud.api_wrappers.Capabilities
+.. minigallery:: caravel.nextcloud.api_wrappers.Capabilities caravel.nextcloud.api_wrappers.capabilities.Capabilities
     :add-heading: Examples
     :heading-level: -
 

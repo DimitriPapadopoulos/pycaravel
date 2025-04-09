@@ -106,7 +106,10 @@ Search in API documentation of CARAVEL
         <li><a href='caravel.parsers.bids.BIDSParser.html'>caravel.parsers.BIDSParser</a></li>
         <li><a href='caravel.parsers.bids.BIDSParser.html'>caravel.parsers.bids.BIDSParser</a></li>
         <li><a href='caravel.parsers.parser_base.ParserBase.html'>caravel.parsers.parser_base.ParserBase</a></li>
+        <li><a href='caravel.utils.clean_logs_dir.html'>caravel.utils.clean_logs_dir</a></li>
         <li><a href='caravel.utils.export_report.html'>caravel.utils.export_report</a></li>
+        <li><a href='caravel.utils.get_logs_to_remove.html'>caravel.utils.get_logs_to_remove</a></li>
+        <li><a href='caravel.utils.monitor.html'>caravel.utils.monitor</a></li>
         <li><a href='caravel.validation.MetaRegister.html'>caravel.validation.MetaRegister</a></li>
         <li><a href='caravel.validation.ValidationBase.html'>caravel.validation.ValidationBase</a></li>
         <li><a href='caravel.validation.ValidationDecorator.html'>caravel.validation.ValidationDecorator</a></li>

@@ -40,7 +40,7 @@ Installing the current version
 
 **Clone the project**
 
->>> git clone https://github.com/neurospincloud-ci/pycaravel
+>>> git clone https://github.com/neurospin-cloud/pycaravel
 
 **Install in the package directory created by the previous step**
 

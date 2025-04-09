@@ -18,11 +18,10 @@ import os
 from pprint import pprint
 
 import ensemble
-from ensemble.validation import get_validators
-from ensemble.validation import ValidationBase
+from ensemble.validation import ValidationBase, get_validators
 
-from caravel.validation import run_validation
 import caravel
+from caravel.validation import run_validation
 
 print(caravel.__version__)
 print(caravel.info())

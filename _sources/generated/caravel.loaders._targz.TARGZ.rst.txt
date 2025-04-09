@@ -9,7 +9,7 @@
 .. autoclass:: caravel.loaders._targz.TARGZ
      :members:
 
-.. minigallery:: caravel.loaders.TARGZ caravel.loaders._targz.TARGZ
+.. minigallery:: caravel.loaders._targz.TARGZ caravel.loaders.TARGZ
     :add-heading: Examples
     :heading-level: -
 

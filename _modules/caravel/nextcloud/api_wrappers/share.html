@@ -53,7 +53,7 @@
                     </p>
                 <p class="citing">
                     If you use the software, please do not hesitate to 
-                    <a &mdash; <a href="https://github.com/neurospincloud-ci/pycaravel">
+                    <a &mdash; <a href="https://github.com/neurospin-cloud/pycaravel">
                     Report a Bug</a>.
                 </p>
 				
@@ -136,7 +136,7 @@
                     
                     <div class="document">
                         <h1>Source code for caravel.nextcloud.api_wrappers.share</h1><div class='divider-1 wow fadeInUp'><span></span></div><div class="highlight"><pre>
-<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">..base</span><span class="w"> </span><span class="kn">import</span> <span class="n">WithRequester</span><span class="p">,</span> <span class="n">ShareType</span>
+<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">..base</span><span class="w"> </span><span class="kn">import</span> <span class="n">ShareType</span><span class="p">,</span> <span class="n">WithRequester</span>
 
 
 <div class="viewcode-block" id="Share"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">Share</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
@@ -153,13 +153,14 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">validate_share_parameters</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">share_type</span><span class="p">,</span> <span class="n">share_with</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Check if share parameters make sense.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">path</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">share_type</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span>
-                <span class="n">share_with</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
-                <span class="n">share_type</span> <span class="ow">in</span> <span class="p">[</span><span class="n">ShareType</span><span class="o">.</span><span class="n">GROUP</span><span class="p">,</span> <span class="n">ShareType</span><span class="o">.</span><span class="n">USER</span><span class="p">,</span>
-                               <span class="n">ShareType</span><span class="o">.</span><span class="n">FEDERATED_CLOUD_SHARE</span><span class="p">,</span>
-                               <span class="n">ShareType</span><span class="o">.</span><span class="n">CIRCLE</span><span class="p">])):</span>
-            <span class="k">return</span> <span class="kc">False</span>
-        <span class="k">return</span> <span class="kc">True</span></div>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="n">path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span>
+            <span class="nb">isinstance</span><span class="p">(</span><span class="n">share_type</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span>
+            <span class="p">(</span><span class="n">share_with</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">share_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span>
+                <span class="n">ShareType</span><span class="o">.</span><span class="n">GROUP</span><span class="p">,</span> <span class="n">ShareType</span><span class="o">.</span><span class="n">USER</span><span class="p">,</span>
+                <span class="n">ShareType</span><span class="o">.</span><span class="n">FEDERATED_CLOUD_SHARE</span><span class="p">,</span> <span class="n">ShareType</span><span class="o">.</span><span class="n">CIRCLE</span>
+            <span class="p">})</span>
+        <span class="p">)</span></div>
 
 <div class="viewcode-block" id="Share.get_shares"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share.get_shares">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_shares</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Get all shares from the user.</span>
@@ -234,8 +235,8 @@
             <span class="n">params</span><span class="p">[</span><span class="s2">&quot;publicUpload&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;false&quot;</span>
 
         <span class="c1"># check if only one param specified</span>
-        <span class="n">specified_params_count</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span>
-            <span class="nb">int</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="n">each</span><span class="p">))</span> <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">values</span><span class="p">()])</span>
+        <span class="n">specified_params_count</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span>
+            <span class="nb">int</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="n">each</span><span class="p">))</span> <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
         <span class="k">if</span> <span class="n">specified_params_count</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Only one parameter for update can be specified &quot;</span>
                              <span class="s2">&quot;per request&quot;</span><span class="p">)</span>

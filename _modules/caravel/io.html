@@ -53,7 +53,7 @@
                     </p>
                 <p class="citing">
                     If you use the software, please do not hesitate to 
-                    <a &mdash; <a href="https://github.com/neurospincloud-ci/pycaravel">
+                    <a &mdash; <a href="https://github.com/neurospin-cloud/pycaravel">
                     Report a Bug</a>.
                 </p>
 				
@@ -149,20 +149,22 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="c1"># Package import</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">TSV</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">NIFTI</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">JSON</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">DWI</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">TARGZ</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">PNG</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">CSV</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">XLSX</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">PDF</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">PLINK</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">VCF</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">MP4</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">EDF</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">MZML</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.loaders</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">CSV</span><span class="p">,</span>
+    <span class="n">DWI</span><span class="p">,</span>
+    <span class="n">EDF</span><span class="p">,</span>
+    <span class="n">JSON</span><span class="p">,</span>
+    <span class="n">MP4</span><span class="p">,</span>
+    <span class="n">MZML</span><span class="p">,</span>
+    <span class="n">NIFTI</span><span class="p">,</span>
+    <span class="n">PDF</span><span class="p">,</span>
+    <span class="n">PLINK</span><span class="p">,</span>
+    <span class="n">PNG</span><span class="p">,</span>
+    <span class="n">TARGZ</span><span class="p">,</span>
+    <span class="n">TSV</span><span class="p">,</span>
+    <span class="n">VCF</span><span class="p">,</span>
+    <span class="n">XLSX</span><span class="p">,</span>
+<span class="p">)</span>
 
 <span class="c1"># Global parameters</span>
 <span class="c1"># &gt; define all the available loaders</span>

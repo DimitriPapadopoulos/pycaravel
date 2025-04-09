@@ -15,16 +15,6 @@ This module defines common parsers for imaging-genetic resources.
   **Classes**:
     * `caravel.parsers.BIDSParser <caravel.parsers.bids.BIDSParser.html>`_
 
-caravel.parsers.bids
-^^^^^^^^^^^^^^^^^^^^
-
-This module contains the BIDS parser definition.
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.parsers.bids.BIDSParser <caravel.parsers.bids.BIDSParser.html>`_
-
 caravel.parsers.parser_base
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -34,4 +24,14 @@ This module contains the generic parser definition.
 
   **Classes**:
     * `caravel.parsers.parser_base.ParserBase <caravel.parsers.parser_base.ParserBase.html>`_
+
+caravel.parsers.bids
+^^^^^^^^^^^^^^^^^^^^
+
+This module contains the BIDS parser definition.
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.parsers.bids.BIDSParser <caravel.parsers.bids.BIDSParser.html>`_
 

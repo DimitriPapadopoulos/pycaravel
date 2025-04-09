@@ -17,6 +17,7 @@ check the package version.
 """
 
 import os
+
 import caravel
 
 print(caravel.__version__)

@@ -32,7 +32,7 @@ First checks
 In order to test if pycaravel package is installed on your machine, you can
 check the package version.
 
-.. GENERATED FROM PYTHON SOURCE LINES 16-30
+.. GENERATED FROM PYTHON SOURCE LINES 16-29
 
 .. code-block:: default
 
@@ -41,17 +41,16 @@ check the package version.
     from pprint import pprint
 
     import ensemble
-    from ensemble.validation import get_validators
-    from ensemble.validation import ValidationBase
+    from ensemble.validation import ValidationBase, get_validators
 
-    from caravel.validation import run_validation
     import caravel
+    from caravel.validation import run_validation
 
     print(caravel.__version__)
     print(caravel.info())
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-36
+.. GENERATED FROM PYTHON SOURCE LINES 30-35
 
 Load the validators
 -------------------
@@ -59,7 +58,7 @@ Load the validators
 First load the validators of the 'ensemble' project that only check the
 VIDEO data.
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-44
+.. GENERATED FROM PYTHON SOURCE LINES 35-43
 
 .. code-block:: default
 
@@ -72,14 +71,14 @@ VIDEO data.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 45-49
+.. GENERATED FROM PYTHON SOURCE LINES 44-48
 
 Apply validators
 ----------------
 
 Apply the loaded validators and generate a report.
 
-.. GENERATED FROM PYTHON SOURCE LINES 49-63
+.. GENERATED FROM PYTHON SOURCE LINES 48-62
 
 .. code-block:: default
 

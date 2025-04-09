@@ -53,7 +53,7 @@
                     </p>
                 <p class="citing">
                     If you use the software, please do not hesitate to 
-                    <a &mdash; <a href="https://github.com/neurospincloud-ci/pycaravel">
+                    <a &mdash; <a href="https://github.com/neurospin-cloud/pycaravel">
                     Report a Bug</a>.
                 </p>
 				
@@ -151,10 +151,10 @@
 <span class="c1"># Imports</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">string</span><span class="w"> </span><span class="kn">import</span> <span class="n">Formatter</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">product</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.parsers</span><span class="w"> </span><span class="kn">import</span> <span class="n">BIDSParser</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">string</span><span class="w"> </span><span class="kn">import</span> <span class="n">Formatter</span>
 
+<span class="kn">from</span><span class="w"> </span><span class="nn">caravel.parsers</span><span class="w"> </span><span class="kn">import</span> <span class="n">BIDSParser</span>
 
 <span class="c1"># Global parameters</span>
 <span class="c1"># &gt; define all the available parsers</span>
@@ -295,7 +295,7 @@
         <span class="c1"># Optional patterns with selector are cast to mandatory or removed</span>
         <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">optional_patterns</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">ent_name</span> <span class="ow">in</span> <span class="p">{</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">keys</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="p">(</span><span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
-                             <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">])}:</span>
+                             <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">])}:</span>  <span class="c1"># noqa: SIM202 FIXME?</span>
                 <span class="k">if</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">{{</span><span class="si">{</span><span class="n">ent_name</span><span class="si">}</span><span class="se">}}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">op</span><span class="p">:</span>
                     <span class="n">new_path</span> <span class="o">=</span> <span class="n">new_path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
                     <span class="k">continue</span>

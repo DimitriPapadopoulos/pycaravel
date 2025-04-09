@@ -8,7 +8,7 @@
 
 .. autofunction:: caravel.parser.get_parser
 
-.. minigallery:: caravel.parser.get_parser caravel.get_parser
+.. minigallery:: caravel.get_parser caravel.parser.get_parser
     :add-heading: Examples
     :heading-level: -
 

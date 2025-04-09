@@ -53,7 +53,7 @@
                     </p>
                 <p class="citing">
                     If you use the software, please do not hesitate to 
-                    <a &mdash; <a href="https://github.com/neurospincloud-ci/pycaravel">
+                    <a &mdash; <a href="https://github.com/neurospin-cloud/pycaravel">
                     Report a Bug</a>.
                 </p>
 				
@@ -195,17 +195,17 @@
                                     
 						                <li> <a href='#caravel'>Caravel</a> </li>                                    
                                     
+						                <li> <a href='#caravel-mail'>Caravel.mail</a> </li>                                    
+                                    
 						                <li> <a href='#caravel-configure'>Caravel.configure</a> </li>                                    
                                     
-						                <li> <a href='#caravel-mail'>Caravel.mail</a> </li>                                    
+						                <li> <a href='#caravel-utils'>Caravel.utils</a> </li>                                    
                                     
 						                <li> <a href='#caravel-validation'>Caravel.validation</a> </li>                                    
                                     
-						                <li> <a href='#caravel-parser'>Caravel.parser</a> </li>                                    
-                                    
 						                <li> <a href='#caravel-io'>Caravel.io</a> </li>                                    
                                     
-						                <li> <a href='#caravel-utils'>Caravel.utils</a> </li>                                    
+						                <li> <a href='#caravel-parser'>Caravel.parser</a> </li>                                    
                                     
                                 
                             
@@ -272,6 +272,16 @@
 </dd>
 </dl>
 </div>
+<div class="section" id="caravel-mail">
+<h2>caravel.mail<a class="headerlink" href="#caravel-mail" title="Permalink to this headline">¶</a><i class='fas fa-angle-right'></i></h2>
+<p>A module to simplify email sending.</p>
+<dl class="documentation-contents simple">
+<dt><strong>Classes</strong>:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="caravel.mail.EmailManager.html">caravel.mail.EmailManager</a></p></li>
+</ul>
+</dd>
+</dl>
+</div>
 <div class="section" id="caravel-configure">
 <h2>caravel.configure<a class="headerlink" href="#caravel-configure" title="Permalink to this headline">¶</a><i class='fas fa-angle-right'></i></h2>
 <p>This module provides tools to check that all the dependencies are installed
@@ -284,12 +294,15 @@ properly.</p>
 </dd>
 </dl>
 </div>
-<div class="section" id="caravel-mail">
-<h2>caravel.mail<a class="headerlink" href="#caravel-mail" title="Permalink to this headline">¶</a><i class='fas fa-angle-right'></i></h2>
-<p>A module to simplify email sending.</p>
+<div class="section" id="caravel-utils">
+<h2>caravel.utils<a class="headerlink" href="#caravel-utils" title="Permalink to this headline">¶</a><i class='fas fa-angle-right'></i></h2>
+<p>This module provides common utilities.</p>
 <dl class="documentation-contents simple">
-<dt><strong>Classes</strong>:</dt><dd><ul class="simple">
-<li><p><a class="reference external" href="caravel.mail.EmailManager.html">caravel.mail.EmailManager</a></p></li>
+<dt><strong>Functions</strong>:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="caravel.utils.clean_logs_dir.html">caravel.utils.clean_logs_dir</a></p></li>
+<li><p><a class="reference external" href="caravel.utils.export_report.html">caravel.utils.export_report</a></p></li>
+<li><p><a class="reference external" href="caravel.utils.get_logs_to_remove.html">caravel.utils.get_logs_to_remove</a></p></li>
+<li><p><a class="reference external" href="caravel.utils.monitor.html">caravel.utils.monitor</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -313,23 +326,6 @@ the validation stage.</p>
 </dd>
 </dl>
 </div>
-<div class="section" id="caravel-parser">
-<h2>caravel.parser<a class="headerlink" href="#caravel-parser" title="Permalink to this headline">¶</a><i class='fas fa-angle-right'></i></h2>
-<p>This module contains the generic parser definition.</p>
-<dl class="documentation-contents simple">
-<dt><strong>Classes</strong>:</dt><dd><ul class="simple">
-<li><p><a class="reference external" href="caravel.parsers.bids.BIDSParser.html">caravel.parser.BIDSParser</a></p></li>
-</ul>
-</dd>
-<dt><strong>Functions</strong>:</dt><dd><ul class="simple">
-<li><p><a class="reference external" href="caravel.parser._expand_keys.html">caravel.parser._expand_keys</a></p></li>
-<li><p><a class="reference external" href="caravel.parser.build_path.html">caravel.parser.build_path</a></p></li>
-<li><p><a class="reference external" href="caravel.parser.get_parser.html">caravel.parser.get_parser</a></p></li>
-<li><p><a class="reference external" href="caravel.parser.listify.html">caravel.parser.listify</a></p></li>
-</ul>
-</dd>
-</dl>
-</div>
 <div class="section" id="caravel-io">
 <h2>caravel.io<a class="headerlink" href="#caravel-io" title="Permalink to this headline">¶</a><i class='fas fa-angle-right'></i></h2>
 <p>This module contains generic functions to load/save a dataset.</p>
@@ -343,12 +339,19 @@ the validation stage.</p>
 </dd>
 </dl>
 </div>
-<div class="section" id="caravel-utils">
-<h2>caravel.utils<a class="headerlink" href="#caravel-utils" title="Permalink to this headline">¶</a><i class='fas fa-angle-right'></i></h2>
-<p>This module provides common utilities.</p>
+<div class="section" id="caravel-parser">
+<h2>caravel.parser<a class="headerlink" href="#caravel-parser" title="Permalink to this headline">¶</a><i class='fas fa-angle-right'></i></h2>
+<p>This module contains the generic parser definition.</p>
 <dl class="documentation-contents simple">
+<dt><strong>Classes</strong>:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="caravel.parsers.bids.BIDSParser.html">caravel.parser.BIDSParser</a></p></li>
+</ul>
+</dd>
 <dt><strong>Functions</strong>:</dt><dd><ul class="simple">
-<li><p><a class="reference external" href="caravel.utils.export_report.html">caravel.utils.export_report</a></p></li>
+<li><p><a class="reference external" href="caravel.parser._expand_keys.html">caravel.parser._expand_keys</a></p></li>
+<li><p><a class="reference external" href="caravel.parser.build_path.html">caravel.parser.build_path</a></p></li>
+<li><p><a class="reference external" href="caravel.parser.get_parser.html">caravel.parser.get_parser</a></p></li>
+<li><p><a class="reference external" href="caravel.parser.listify.html">caravel.parser.listify</a></p></li>
 </ul>
 </dd>
 </dl>

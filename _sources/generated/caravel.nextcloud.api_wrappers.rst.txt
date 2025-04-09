@@ -27,7 +27,7 @@ NextCloud Python API from https://github.com/matejak/nextcloud-API.git.
     * `caravel.nextcloud.api_wrappers.WEBDAV_CLASS <caravel.nextcloud.api_wrappers.webdav.WEBDAV_CLASS.html>`_
     * `caravel.nextcloud.api_wrappers.WebDAV <caravel.nextcloud.api_wrappers.webdav.WebDAV.html>`_
 
-caravel.nextcloud.api_wrappers.group
+caravel.nextcloud.api_wrappers.share
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
@@ -35,29 +35,7 @@ caravel.nextcloud.api_wrappers.group
 .. rst-class:: documentation-contents
 
   **Classes**:
-    * `caravel.nextcloud.api_wrappers.group.Group <caravel.nextcloud.api_wrappers.group.Group.html>`_
-
-caravel.nextcloud.api_wrappers.webdav
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.nextcloud.api_wrappers.webdav.File <caravel.nextcloud.api_wrappers.webdav.File.html>`_
-    * `caravel.nextcloud.api_wrappers.webdav.WebDAV <caravel.nextcloud.api_wrappers.webdav.WebDAV.html>`_
-    * `caravel.nextcloud.api_wrappers.webdav.WebDAVStatusCodes <caravel.nextcloud.api_wrappers.webdav.WebDAVStatusCodes.html>`_
-
-caravel.nextcloud.api_wrappers.activity
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.nextcloud.api_wrappers.activity.Activity <caravel.nextcloud.api_wrappers.activity.Activity.html>`_
+    * `caravel.nextcloud.api_wrappers.share.Share <caravel.nextcloud.api_wrappers.share.Share.html>`_
 
 caravel.nextcloud.api_wrappers.notifications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -69,7 +47,17 @@ caravel.nextcloud.api_wrappers.notifications
   **Classes**:
     * `caravel.nextcloud.api_wrappers.notifications.Notifications <caravel.nextcloud.api_wrappers.notifications.Notifications.html>`_
 
-caravel.nextcloud.api_wrappers.apps
+caravel.nextcloud.api_wrappers.federated_cloudshares
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.nextcloud.api_wrappers.federated_cloudshares.FederatedCloudShare <caravel.nextcloud.api_wrappers.federated_cloudshares.FederatedCloudShare.html>`_
+
+caravel.nextcloud.api_wrappers.user
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
@@ -77,7 +65,37 @@ caravel.nextcloud.api_wrappers.apps
 .. rst-class:: documentation-contents
 
   **Classes**:
-    * `caravel.nextcloud.api_wrappers.apps.Apps <caravel.nextcloud.api_wrappers.apps.Apps.html>`_
+    * `caravel.nextcloud.api_wrappers.user.User <caravel.nextcloud.api_wrappers.user.User.html>`_
+
+caravel.nextcloud.api_wrappers.capabilities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.nextcloud.api_wrappers.capabilities.Capabilities <caravel.nextcloud.api_wrappers.capabilities.Capabilities.html>`_
+
+caravel.nextcloud.api_wrappers.forms
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.nextcloud.api_wrappers.forms.Forms <caravel.nextcloud.api_wrappers.forms.Forms.html>`_
+
+caravel.nextcloud.api_wrappers.group
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.nextcloud.api_wrappers.group.Group <caravel.nextcloud.api_wrappers.group.Group.html>`_
 
 caravel.nextcloud.api_wrappers.user_ldap
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -93,6 +111,18 @@ caravel.nextcloud.api_wrappers.user_ldap
     * `caravel.nextcloud.api_wrappers.user_ldap.getter_method <caravel.nextcloud.api_wrappers.user_ldap.getter_method.html>`_
     * `caravel.nextcloud.api_wrappers.user_ldap.setter_method <caravel.nextcloud.api_wrappers.user_ldap.setter_method.html>`_
 
+caravel.nextcloud.api_wrappers.webdav
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.nextcloud.api_wrappers.webdav.File <caravel.nextcloud.api_wrappers.webdav.File.html>`_
+    * `caravel.nextcloud.api_wrappers.webdav.WebDAV <caravel.nextcloud.api_wrappers.webdav.WebDAV.html>`_
+    * `caravel.nextcloud.api_wrappers.webdav.WebDAVStatusCodes <caravel.nextcloud.api_wrappers.webdav.WebDAVStatusCodes.html>`_
+
 caravel.nextcloud.api_wrappers.group_folders
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -103,17 +133,17 @@ caravel.nextcloud.api_wrappers.group_folders
   **Classes**:
     * `caravel.nextcloud.api_wrappers.group_folders.GroupFolders <caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html>`_
 
-caravel.nextcloud.api_wrappers.capabilities
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+caravel.nextcloud.api_wrappers.activity
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 
 .. rst-class:: documentation-contents
 
   **Classes**:
-    * `caravel.nextcloud.api_wrappers.capabilities.Capabilities <caravel.nextcloud.api_wrappers.capabilities.Capabilities.html>`_
+    * `caravel.nextcloud.api_wrappers.activity.Activity <caravel.nextcloud.api_wrappers.activity.Activity.html>`_
 
-caravel.nextcloud.api_wrappers.user
+caravel.nextcloud.api_wrappers.apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
@@ -121,35 +151,5 @@ caravel.nextcloud.api_wrappers.user
 .. rst-class:: documentation-contents
 
   **Classes**:
-    * `caravel.nextcloud.api_wrappers.user.User <caravel.nextcloud.api_wrappers.user.User.html>`_
-
-caravel.nextcloud.api_wrappers.federated_cloudshares
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.nextcloud.api_wrappers.federated_cloudshares.FederatedCloudShare <caravel.nextcloud.api_wrappers.federated_cloudshares.FederatedCloudShare.html>`_
-
-caravel.nextcloud.api_wrappers.forms
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.nextcloud.api_wrappers.forms.Forms <caravel.nextcloud.api_wrappers.forms.Forms.html>`_
-
-caravel.nextcloud.api_wrappers.share
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.nextcloud.api_wrappers.share.Share <caravel.nextcloud.api_wrappers.share.Share.html>`_
+    * `caravel.nextcloud.api_wrappers.apps.Apps <caravel.nextcloud.api_wrappers.apps.Apps.html>`_
 

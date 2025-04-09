@@ -43,6 +43,18 @@ caravel.nextcloud.base
   **Functions**:
     * `caravel.nextcloud.base.datetime_to_expire_date <caravel.nextcloud.base.datetime_to_expire_date.html>`_
 
+caravel.nextcloud.response
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.nextcloud.response.NextCloudResponse <caravel.nextcloud.response.NextCloudResponse.html>`_
+    * `caravel.nextcloud.response.OCSResponse <caravel.nextcloud.response.OCSResponse.html>`_
+    * `caravel.nextcloud.response.WebDAVResponse <caravel.nextcloud.response.WebDAVResponse.html>`_
+
 caravel.nextcloud.requester
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -58,16 +70,4 @@ caravel.nextcloud.requester
 
   **Functions**:
     * `caravel.nextcloud.requester.catch_connection_error <caravel.nextcloud.requester.catch_connection_error.html>`_
-
-caravel.nextcloud.response
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.nextcloud.response.NextCloudResponse <caravel.nextcloud.response.NextCloudResponse.html>`_
-    * `caravel.nextcloud.response.OCSResponse <caravel.nextcloud.response.OCSResponse.html>`_
-    * `caravel.nextcloud.response.WebDAVResponse <caravel.nextcloud.response.WebDAVResponse.html>`_
 

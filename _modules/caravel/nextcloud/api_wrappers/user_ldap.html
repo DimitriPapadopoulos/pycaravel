@@ -53,7 +53,7 @@
                     </p>
                 <p class="citing">
                     If you use the software, please do not hesitate to 
-                    <a &mdash; <a href="https://github.com/neurospincloud-ci/pycaravel">
+                    <a &mdash; <a href="https://github.com/neurospin-cloud/pycaravel">
                     Report a Bug</a>.
                 </p>
 				
@@ -137,6 +137,7 @@
                     <div class="document">
                         <h1>Source code for caravel.nextcloud.api_wrappers.user_ldap</h1><div class='divider-1 wow fadeInUp'><span></span></div><div class="highlight"><pre>
 <span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+
 <span class="kn">from</span><span class="w"> </span><span class="nn">..base</span><span class="w"> </span><span class="kn">import</span> <span class="n">WithRequester</span>
 
 
@@ -224,7 +225,7 @@
 
 
 <span class="k">for</span> <span class="n">ldap_key</span> <span class="ow">in</span> <span class="n">UserLDAP</span><span class="o">.</span><span class="n">CONFIG_KEYS</span><span class="p">:</span>
-    <span class="n">key_name</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;ldap&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ldap_key</span><span class="p">)</span>
+    <span class="n">key_name</span> <span class="o">=</span> <span class="n">ldap_key</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ldap&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
     <span class="n">key_name</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;([a-z0-9])([A-Z])&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\1_\2&#39;</span><span class="p">,</span> <span class="n">key_name</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 
     <span class="c1"># create and add getter method</span>

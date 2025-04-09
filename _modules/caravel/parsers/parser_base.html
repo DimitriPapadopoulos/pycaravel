@@ -53,7 +53,7 @@
                     </p>
                 <p class="citing">
                     If you use the software, please do not hesitate to 
-                    <a &mdash; <a href="https://github.com/neurospincloud-ci/pycaravel">
+                    <a &mdash; <a href="https://github.com/neurospin-cloud/pycaravel">
                     Report a Bug</a>.
                 </p>
 				
@@ -149,11 +149,11 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="c1"># System import</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
 
 <span class="c1"># Third party import</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -185,8 +185,8 @@
         <span class="n">_conf</span> <span class="o">=</span> <span class="n">ParserBase</span><span class="o">.</span><span class="n">_get_conf</span><span class="p">(</span><span class="n">confdir</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">project</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_conf</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                <span class="s2">&quot;Unknown configuration for project &#39;</span><span class="si">{}</span><span class="s2">&#39;. Available projects &quot;</span>
-                <span class="s2">&quot;are: </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">project</span><span class="p">,</span> <span class="n">_conf</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+                <span class="sa">f</span><span class="s2">&quot;Unknown configuration for project &#39;</span><span class="si">{</span><span class="n">project</span><span class="si">}</span><span class="s2">&#39;. Available projects &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;are: </span><span class="si">{</span><span class="n">_conf</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">conf</span> <span class="o">=</span> <span class="n">_conf</span><span class="p">[</span><span class="n">project</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">layoutdir</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">_repr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_repr</span><span class="p">(</span><span class="n">layoutdir</span><span class="p">)</span>
@@ -246,8 +246,8 @@
                 <span class="n">representations</span><span class="p">[</span><span class="n">project</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
             <span class="n">representations</span><span class="p">[</span><span class="n">project</span><span class="p">]</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
                 <span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="n">timestamp</span><span class="p">,</span> <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="n">path</span><span class="p">})</span>
-        <span class="k">for</span> <span class="n">project</span><span class="p">,</span> <span class="n">project_data</span> <span class="ow">in</span> <span class="n">representations</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">name_data</span> <span class="ow">in</span> <span class="n">project_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">project_data</span> <span class="ow">in</span> <span class="n">representations</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">name_data</span> <span class="ow">in</span> <span class="n">project_data</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
                 <span class="n">name_data</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span>
                     <span class="n">x</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">],</span> <span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">representations</span>

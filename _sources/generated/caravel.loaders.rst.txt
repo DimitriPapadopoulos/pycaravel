@@ -28,6 +28,106 @@ This module defines common loaders for imaging-genetic datasets.
     * `caravel.loaders.VCF <caravel.loaders._vcf.VCF.html>`_
     * `caravel.loaders.XLSX <caravel.loaders._xlsx.XLSX.html>`_
 
+caravel.loaders.loader_base
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This module defines the loader base class.
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.loaders.loader_base.LoaderBase <caravel.loaders.loader_base.LoaderBase.html>`_
+
+caravel.loaders._mzml
+^^^^^^^^^^^^^^^^^^^^^
+
+This module defines the mzml dataset loader.
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.loaders._mzml.MZML <caravel.loaders._mzml.MZML.html>`_
+
+caravel.loaders._vcf
+^^^^^^^^^^^^^^^^^^^^
+
+This module defines the CSV dataset loader.
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.loaders._vcf.VCF <caravel.loaders._vcf.VCF.html>`_
+
+caravel.loaders._targz
+^^^^^^^^^^^^^^^^^^^^^^
+
+This module defines the TARGZ dataset tester.
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.loaders._targz.TARGZ <caravel.loaders._targz.TARGZ.html>`_
+
+caravel.loaders._csv
+^^^^^^^^^^^^^^^^^^^^
+
+This module defines the CSV dataset loader.
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.loaders._csv.CSV <caravel.loaders._csv.CSV.html>`_
+
+caravel.loaders._nifti
+^^^^^^^^^^^^^^^^^^^^^^
+
+This module defines the NIFTI dataset loader.
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.loaders._nifti.NIFTI <caravel.loaders._nifti.NIFTI.html>`_
+
+caravel.loaders._xlsx
+^^^^^^^^^^^^^^^^^^^^^
+
+This module defines the XLSX dataset loader.
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.loaders._xlsx.XLSX <caravel.loaders._xlsx.XLSX.html>`_
+
+caravel.loaders._json
+^^^^^^^^^^^^^^^^^^^^^
+
+This module defines the JSON dataset loader.
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.loaders._json.JSON <caravel.loaders._json.JSON.html>`_
+
+caravel.loaders._png
+^^^^^^^^^^^^^^^^^^^^
+
+This module defines the png dataset loader.
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.loaders._png.PNG <caravel.loaders._png.PNG.html>`_
+
+caravel.loaders._pdf
+^^^^^^^^^^^^^^^^^^^^
+
+This module defines the PDF dataset loader.
+
+.. rst-class:: documentation-contents
+
+  **Classes**:
+    * `caravel.loaders._pdf.PDF <caravel.loaders._pdf.PDF.html>`_
+
 caravel.loaders._edf
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -58,26 +158,6 @@ This module defines the DWI bvec/bval dataset loader.
   **Classes**:
     * `caravel.loaders._dwi.DWI <caravel.loaders._dwi.DWI.html>`_
 
-caravel.loaders._png
-^^^^^^^^^^^^^^^^^^^^
-
-This module defines the png dataset loader.
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.loaders._png.PNG <caravel.loaders._png.PNG.html>`_
-
-caravel.loaders.loader_base
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This module defines the loader base class.
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.loaders.loader_base.LoaderBase <caravel.loaders.loader_base.LoaderBase.html>`_
-
 caravel.loaders._mp4
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -97,84 +177,4 @@ This module defines the CSV dataset loader.
 
   **Classes**:
     * `caravel.loaders._plink.PLINK <caravel.loaders._plink.PLINK.html>`_
-
-caravel.loaders._xlsx
-^^^^^^^^^^^^^^^^^^^^^
-
-This module defines the XLSX dataset loader.
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.loaders._xlsx.XLSX <caravel.loaders._xlsx.XLSX.html>`_
-
-caravel.loaders._json
-^^^^^^^^^^^^^^^^^^^^^
-
-This module defines the JSON dataset loader.
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.loaders._json.JSON <caravel.loaders._json.JSON.html>`_
-
-caravel.loaders._vcf
-^^^^^^^^^^^^^^^^^^^^
-
-This module defines the CSV dataset loader.
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.loaders._vcf.VCF <caravel.loaders._vcf.VCF.html>`_
-
-caravel.loaders._pdf
-^^^^^^^^^^^^^^^^^^^^
-
-This module defines the PDF dataset loader.
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.loaders._pdf.PDF <caravel.loaders._pdf.PDF.html>`_
-
-caravel.loaders._csv
-^^^^^^^^^^^^^^^^^^^^
-
-This module defines the CSV dataset loader.
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.loaders._csv.CSV <caravel.loaders._csv.CSV.html>`_
-
-caravel.loaders._targz
-^^^^^^^^^^^^^^^^^^^^^^
-
-This module defines the TARGZ dataset tester.
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.loaders._targz.TARGZ <caravel.loaders._targz.TARGZ.html>`_
-
-caravel.loaders._nifti
-^^^^^^^^^^^^^^^^^^^^^^
-
-This module defines the NIFTI dataset loader.
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.loaders._nifti.NIFTI <caravel.loaders._nifti.NIFTI.html>`_
-
-caravel.loaders._mzml
-^^^^^^^^^^^^^^^^^^^^^
-
-This module defines the mzml dataset loader.
-
-.. rst-class:: documentation-contents
-
-  **Classes**:
-    * `caravel.loaders._mzml.MZML <caravel.loaders._mzml.MZML.html>`_
 
