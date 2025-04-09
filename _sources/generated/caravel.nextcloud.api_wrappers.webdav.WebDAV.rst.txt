@@ -9,7 +9,7 @@
 .. autoclass:: caravel.nextcloud.api_wrappers.webdav.WebDAV
      :members:
 
-.. minigallery:: caravel.nextcloud.api_wrappers.webdav.WebDAV caravel.nextcloud.api_wrappers.WebDAV
+.. minigallery:: caravel.nextcloud.api_wrappers.WebDAV caravel.nextcloud.api_wrappers.webdav.WebDAV
     :add-heading: Examples
     :heading-level: -
 

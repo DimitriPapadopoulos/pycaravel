@@ -9,7 +9,7 @@
 .. autoclass:: caravel.loaders._mp4.MP4
      :members:
 
-.. minigallery:: caravel.loaders._mp4.MP4 caravel.loaders.MP4
+.. minigallery:: caravel.loaders.MP4 caravel.loaders._mp4.MP4
     :add-heading: Examples
     :heading-level: -
 

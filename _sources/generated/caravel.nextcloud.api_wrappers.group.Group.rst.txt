@@ -9,7 +9,7 @@
 .. autoclass:: caravel.nextcloud.api_wrappers.group.Group
      :members:
 
-.. minigallery:: caravel.nextcloud.api_wrappers.group.Group caravel.nextcloud.api_wrappers.Group
+.. minigallery:: caravel.nextcloud.api_wrappers.Group caravel.nextcloud.api_wrappers.group.Group
     :add-heading: Examples
     :heading-level: -
 

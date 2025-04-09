@@ -9,7 +9,7 @@
 .. autoclass:: caravel.loaders._xlsx.XLSX
      :members:
 
-.. minigallery:: caravel.loaders.XLSX caravel.loaders._xlsx.XLSX
+.. minigallery:: caravel.loaders._xlsx.XLSX caravel.loaders.XLSX
     :add-heading: Examples
     :heading-level: -
 
