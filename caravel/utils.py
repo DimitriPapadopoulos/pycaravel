@@ -71,7 +71,7 @@ def get_logs_to_remove(log_dir, cut_date=None):
         path to the directory to clean.
     cut_date: str or None
         date from before which files are returned. If None,
-        return files than are older than one year old.  
+        return files than are older than one year old.
         Should be formatted %Y-%m-%d (e.g. 2024-08-06).
     """
 
@@ -99,14 +99,14 @@ def get_logs_to_remove(log_dir, cut_date=None):
 
 def clean_logs_dir(log_dir, cut_date=None):
     """ Remove all files that are older than cut_date.
-    
+
     Parameters
     ----------
     log_dir: str
         path to the directory to clean.
     cut_date:
         date from before which files are suppressed. If None,
-        remove files than are older than one year old.  
+        remove files than are older than one year old.
         Should be formatted %Y-%m-%d (e.g. 2024-08-06).
     """
 

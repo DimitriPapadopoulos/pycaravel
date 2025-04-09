@@ -53,7 +53,7 @@ jobs:
         cd ../..
     - name: Upload documentation as an artifact
       uses: actions/upload-artifact@v4
-      with: 
+      with:
         name: html-documentation
         retention-days: 15
         path: |
