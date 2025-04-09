@@ -9,7 +9,7 @@
 .. autoclass:: caravel.loaders._json.JSON
      :members:
 
-.. minigallery:: caravel.loaders.JSON caravel.loaders._json.JSON
+.. minigallery:: caravel.loaders._json.JSON caravel.loaders.JSON
     :add-heading: Examples
     :heading-level: -
 

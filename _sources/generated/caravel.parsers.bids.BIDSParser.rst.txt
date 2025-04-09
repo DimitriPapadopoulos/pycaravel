@@ -9,7 +9,7 @@
 .. autoclass:: caravel.parsers.bids.BIDSParser
      :members:
 
-.. minigallery:: caravel.parsers.BIDSParser caravel.parsers.bids.BIDSParser
+.. minigallery:: caravel.parsers.bids.BIDSParser caravel.parsers.BIDSParser
     :add-heading: Examples
     :heading-level: -
 

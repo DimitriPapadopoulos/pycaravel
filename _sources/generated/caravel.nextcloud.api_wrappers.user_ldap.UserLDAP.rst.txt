@@ -9,7 +9,7 @@
 .. autoclass:: caravel.nextcloud.api_wrappers.user_ldap.UserLDAP
      :members:
 
-.. minigallery:: caravel.nextcloud.api_wrappers.user_ldap.UserLDAP caravel.nextcloud.api_wrappers.UserLDAP
+.. minigallery:: caravel.nextcloud.api_wrappers.UserLDAP caravel.nextcloud.api_wrappers.user_ldap.UserLDAP
     :add-heading: Examples
     :heading-level: -
 

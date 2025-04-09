@@ -9,7 +9,7 @@
 .. autoclass:: caravel.loaders._edf.EDF
      :members:
 
-.. minigallery:: caravel.loaders.EDF caravel.loaders._edf.EDF
+.. minigallery:: caravel.loaders._edf.EDF caravel.loaders.EDF
     :add-heading: Examples
     :heading-level: -
 

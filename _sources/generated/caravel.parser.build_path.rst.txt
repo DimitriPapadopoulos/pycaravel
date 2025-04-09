@@ -8,7 +8,7 @@
 
 .. autofunction:: caravel.parser.build_path
 
-.. minigallery:: caravel.build_path caravel.parser.build_path
+.. minigallery:: caravel.parser.build_path caravel.build_path
     :add-heading: Examples
     :heading-level: -
 

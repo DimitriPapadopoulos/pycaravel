@@ -9,7 +9,7 @@
 .. autoclass:: caravel.loaders._pdf.PDF
      :members:
 
-.. minigallery:: caravel.loaders.PDF caravel.loaders._pdf.PDF
+.. minigallery:: caravel.loaders._pdf.PDF caravel.loaders.PDF
     :add-heading: Examples
     :heading-level: -
 
