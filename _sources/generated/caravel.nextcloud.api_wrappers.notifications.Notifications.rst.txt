@@ -9,7 +9,7 @@
 .. autoclass:: caravel.nextcloud.api_wrappers.notifications.Notifications
      :members:
 
-.. minigallery:: caravel.nextcloud.api_wrappers.notifications.Notifications caravel.nextcloud.api_wrappers.Notifications
+.. minigallery:: caravel.nextcloud.api_wrappers.Notifications caravel.nextcloud.api_wrappers.notifications.Notifications
     :add-heading: Examples
     :heading-level: -
 

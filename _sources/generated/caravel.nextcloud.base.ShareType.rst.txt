@@ -9,7 +9,7 @@
 .. autoclass:: caravel.nextcloud.base.ShareType
      :members:
 
-.. minigallery:: caravel.nextcloud.ShareType caravel.nextcloud.base.ShareType
+.. minigallery:: caravel.nextcloud.base.ShareType caravel.nextcloud.ShareType
     :add-heading: Examples
     :heading-level: -
 

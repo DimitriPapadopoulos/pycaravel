@@ -9,7 +9,7 @@
 .. autoclass:: caravel.loaders._dwi.DWI
      :members:
 
-.. minigallery:: caravel.loaders.DWI caravel.loaders._dwi.DWI
+.. minigallery:: caravel.loaders._dwi.DWI caravel.loaders.DWI
     :add-heading: Examples
     :heading-level: -
 
