@@ -18,12 +18,12 @@ from .loader_base import LoaderBase
 
 
 class MZML(LoaderBase):
-    """ Define the MZML loader.
-    """
+    """Define the MZML loader."""
+
     allowed_extensions = [".mzML"]
 
     def load(self, path):
-        """ A method that load the table data.
+        """A method that load the table data.
 
         Parameters
         ----------

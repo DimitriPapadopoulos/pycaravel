@@ -25,7 +25,7 @@ from tqdm import tqdm
 
 
 def export_report(report, timestamp, outfile):
-    """ Export the report in docx format.
+    """Export the report in docx format.
 
     Parameters
     ----------
@@ -43,14 +43,16 @@ def export_report(report, timestamp, outfile):
     paragraph.text = f"NeuroSpin\tReporting\t{timestamp}"
     paragraph = document.add_paragraph(
         f"\n\n\n\nYou will find below the report generated on '{timestamp}'. "
-        "If you have any questions please use the contact mail: rlink@cea.fr.")
+        "If you have any questions please use the contact mail: rlink@cea.fr."
+    )
     for family, family_item in report.items():
         document.add_heading(family.replace(".", " ").title())
         for validator, validator_item in family_item.items():
             split_validator = re.findall(r"[A-Z][^A-Z]*", validator)
             document.add_heading(" ".join(split_validator))
             paragraph = document.add_paragraph(
-                "\n\n Below the table summarizing the errors.\n\n")
+                "\n\n Below the table summarizing the errors.\n\n"
+            )
             for key, values in validator_item.items():
                 table = document.add_table(rows=len(values), cols=2)
                 cell = table.cell(0, 0)
@@ -62,7 +64,7 @@ def export_report(report, timestamp, outfile):
 
 
 def get_logs_to_remove(log_dir, cut_date=None):
-    """ Return all files that are older than cut_date
+    """Return all files that are older than cut_date
     according to their name.
 
     Parameters
@@ -71,7 +73,7 @@ def get_logs_to_remove(log_dir, cut_date=None):
         path to the directory to clean.
     cut_date: str or None
         date from before which files are returned. If None,
-        return files than are older than one year old.  
+        return files than are older than one year old.
         Should be formatted %Y-%m-%d (e.g. 2024-08-06).
     """
 
@@ -86,11 +88,10 @@ def get_logs_to_remove(log_dir, cut_date=None):
     files2remove = []
 
     for filename in os.listdir(log_dir):
-        date_regex = r'20\d\d-(0|1)\d-(0|1|2|3)\d'
+        date_regex = r"20\d\d-(0|1)\d-(0|1|2|3)\d"
         file_date = re.search(date_regex, filename)
         if file_date is not None:
-            file_date = datetime.strptime(file_date.group(0),
-                                          '%Y-%m-%d').date()
+            file_date = datetime.strptime(file_date.group(0), "%Y-%m-%d").date()
             if file_date <= cut_date:
                 files2remove.append(filename)
 
@@ -98,15 +99,15 @@ def get_logs_to_remove(log_dir, cut_date=None):
 
 
 def clean_logs_dir(log_dir, cut_date=None):
-    """ Remove all files that are older than cut_date.
-    
+    """Remove all files that are older than cut_date.
+
     Parameters
     ----------
     log_dir: str
         path to the directory to clean.
     cut_date:
         date from before which files are suppressed. If None,
-        remove files than are older than one year old.  
+        remove files than are older than one year old.
         Should be formatted %Y-%m-%d (e.g. 2024-08-06).
     """
 
@@ -118,7 +119,7 @@ def clean_logs_dir(log_dir, cut_date=None):
 
 
 def monitor(func):
-    """ A decorator to monitor function and log its status in a root directory.
+    """A decorator to monitor function and log its status in a root directory.
     The input function parameters must be set via the 'CARAVEL_ROOT'
     and 'CARAVEL_NAME' environment variables.
     """
@@ -134,20 +135,16 @@ def monitor(func):
             tic = time.time()
             res = func(*args, **kwargs)
             toc = time.time()
-            info = {
-                "status": "healthy",
-                "duration": toc - tic
-            }
+            info = {"status": "healthy", "duration": toc - tic}
             if is_monitor:
                 with open(os.path.join(root, f"{name}.json"), "wt") as of:
                     json.dump(info, of, indent=4)
             return res
         except Exception as e:
-            info = {
-                "status": "dead"
-            }
+            info = {"status": "dead"}
             if is_monitor:
                 with open(os.path.join(root, f"{name}.json"), "wt") as of:
                     json.dump(info, of, indent=4)
             raise e
+
     return decorated

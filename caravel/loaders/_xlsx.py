@@ -18,12 +18,12 @@ from .loader_base import LoaderBase
 
 
 class XLSX(LoaderBase):
-    """ Define the XLSX loader.
-    """
+    """Define the XLSX loader."""
+
     allowed_extensions = [".xlsx"]
 
     def load(self, path):
-        """ A method that load the table data.
+        """A method that load the table data.
 
         Parameters
         ----------
@@ -39,7 +39,7 @@ class XLSX(LoaderBase):
         return pd.read_excel(path)
 
     def save(self, data, outpath):
-        """ A method that save the table.
+        """A method that save the table.
 
         Parameters
         ----------

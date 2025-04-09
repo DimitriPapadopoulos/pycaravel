@@ -18,12 +18,12 @@ from .loader_base import LoaderBase
 
 
 class MP4(LoaderBase):
-    """ Define the mp4 loader.
-    """
+    """Define the mp4 loader."""
+
     allowed_extensions = [".mp4"]
 
     def load(self, path):
-        """ A method that load the mp4 data.
+        """A method that load the mp4 data.
 
         Parameters
         ----------
@@ -35,10 +35,10 @@ class MP4(LoaderBase):
         data: imageio numpy array
             the loaded image.
         """
-        return imageio.get_reader(path,  'ffmpeg')
+        return imageio.get_reader(path, "ffmpeg")
 
     def save(self, data, outpath, fps=24):
-        """ A method that save the image in mp4.
+        """A method that save the image in mp4.
 
         Parameters
         ----------
@@ -50,6 +50,6 @@ class MP4(LoaderBase):
 
         writer = imageio.get_writer(outpath, fps)
         for png_path in data:
-            im = imageio.imread(png_path),
+            im = (imageio.imread(png_path),)
             writer.append_data(im[:, :, 1])
         writer.close()

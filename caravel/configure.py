@@ -11,13 +11,12 @@ This module provides tools to check that all the dependencies are installed
 properly.
 """
 
-
 # Imports
 from .info import __version__
 
 
 def logo():
-    """ pySAP logo is ascii art using fender font.
+    """pySAP logo is ascii art using fender font.
 
     Returns
     -------
@@ -36,7 +35,7 @@ _|'''''|_| ''''|_|'''''|_|'''''|_|'''''|_|'''''|_|'''''|_|'''''|_|'''''|
 
 
 def info():
-    """ Display some useful information about the package.
+    """Display some useful information about the package.
 
     Returns
     -------

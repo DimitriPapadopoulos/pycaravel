@@ -26,12 +26,12 @@ logger = logging.getLogger("caravel")
 
 
 class MetaRegister(type):
-    """ Simple Python metaclass registry pattern.
-    """
+    """Simple Python metaclass registry pattern."""
+
     REGISTRY = {}
 
     def __new__(cls, name, bases, attrs):
-        """ Allocation.
+        """Allocation.
 
         Parameters
         ----------
@@ -44,22 +44,21 @@ class MetaRegister(type):
         """
         new_cls = type.__new__(cls, name, bases, attrs)
         if name in cls.REGISTRY:
-            raise ValueError(
-                f"'{name}' name already used in registry.")
+            raise ValueError(f"'{name}' name already used in registry.")
         if name != "ValidationBase":
             cls.REGISTRY[name] = new_cls
         return new_cls
 
 
 class ValidationBase(metaclass=MetaRegister):
-    """ A validation test must inherit from this base class.
-    """
+    """A validation test must inherit from this base class."""
+
     LEVELS = {
         "debug": logging.DEBUG,
         "info": logging.INFO,
         "warning": logging.WARNING,
         "error": logging.ERROR,
-        "critical": logging.CRITICAL
+        "critical": logging.CRITICAL,
     }
     __family__ = "default"
     __priority__ = 7
@@ -67,13 +66,12 @@ class ValidationBase(metaclass=MetaRegister):
     __level__ = "error"
 
     def __init__(self):
-        """ Initialize the ValidationBase class.
-        """
+        """Initialize the ValidationBase class."""
         ValidationBase.setup_logging()
 
     @classmethod
     def setup_logging(cls, logfile=None):
-        """ Setup the logging.
+        """Setup the logging.
 
         Parameters
         ----------
@@ -81,8 +79,9 @@ class ValidationBase(metaclass=MetaRegister):
             the log file.
         """
         logging_format = logging.Formatter(
-            "[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - "
-            "%(message)s", "%Y-%m-%d %H:%M:%S")
+            "[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s",
+            "%Y-%m-%d %H:%M:%S",
+        )
         while len(logging.root.handlers) > 0:
             logging.root.removeHandler(logging.root.handlers[-1])
         while len(logger.handlers) > 0:
@@ -104,26 +103,29 @@ class ValidationBase(metaclass=MetaRegister):
             warnings.simplefilter("ignore", DeprecationWarning)
 
     def __call__(self, data):
-        """ The method to run the test.
+        """The method to run the test.
 
         Parameters
         ----------
         data: dict
             the input data for the test.
         """
-        logger.info(f"running '{self.__function__.__name__}' "
-                    f"with version '{__version__}' of pycaravel")
+        logger.info(
+            f"running '{self.__function__.__name__}' "
+            f"with version '{__version__}' of pycaravel"
+        )
         return self.__function__(**data)
 
 
 class ValidationDecorator:
-    """ Dynamically create a validator.
+    """Dynamically create a validator.
 
     In order to make the class publicly accessible, we assign the result of
     the function to a variable dynamically using globals().
     """
+
     def __init__(self, family="default", priority=7):
-        """ Initialize the ValidationDecorator class.
+        """Initialize the ValidationDecorator class.
 
         Parameters
         ----------
@@ -137,29 +139,29 @@ class ValidationDecorator:
         self.priority = priority
 
     def __call__(self, function, *args, **kwargs):
-        """ Create the validator.
+        """Create the validator.
 
         Parameters
         ----------
         function: callable
             the function that perform the test.
         """
-        class_name = function.__name__.replace(
-            "_", " ").title().replace(" ", "")
+        class_name = function.__name__.replace("_", " ").title().replace(" ", "")
         mod_name = self.destination_module_globals["__name__"]
         class_parameters = {
             "__module__": mod_name,
-            "_id":  mod_name + "." + class_name,
+            "_id": mod_name + "." + class_name,
             "__function__": function,
             "__family__": self.family,
-            "__priority__": self.priority
+            "__priority__": self.priority,
         }
-        self.destination_module_globals[class_name] = (
-            type(class_name, (ValidationBase, ), class_parameters))
+        self.destination_module_globals[class_name] = type(
+            class_name, (ValidationBase,), class_parameters
+        )
 
 
 def get_validators(family=None):
-    """ List/sort all available validators.
+    """List/sort all available validators.
 
     Parameters
     ----------
@@ -189,7 +191,7 @@ def get_validators(family=None):
 
 
 def listify(validators):
-    """ Sort the validators by priority level.
+    """Sort the validators by priority level.
 
     Parameters
     ----------
@@ -204,17 +206,20 @@ def listify(validators):
     Validator = namedtuple("Validator", "name priority instance")
     sorted_validators = []
     for key, instances in validators.items():
-        sorted_validators.extend([
-            Validator(name=key, priority=instance.__priority__,
-                      instance=instance) for instance in instances])
+        sorted_validators.extend(
+            [
+                Validator(name=key, priority=instance.__priority__, instance=instance)
+                for instance in instances
+            ]
+        )
     sorted_validators = sorted(
-        sorted_validators,
-        key=itemgetter(Validator._fields.index("priority")))
+        sorted_validators, key=itemgetter(Validator._fields.index("priority"))
+    )
     return sorted_validators
 
 
 def run_validation(data, validators=None, logfile=None):
-    """ Safely run a validation plane.
+    """Safely run a validation plane.
 
     Parameters
     ----------

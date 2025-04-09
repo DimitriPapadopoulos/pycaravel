@@ -22,8 +22,18 @@ if "PYTHONPATH" in env:
     env["PYTHONPATH"] = env["PYTHONPATH"] + ":" + installdir
 else:
     env["PYTHONPATH"] = installdir
-cmd = ["sphinxdoc", "-v 2", "-p",  installdir, "-n", "caravel", "-o", "..",
-       "-i", "pycaravel"]
+cmd = [
+    "sphinxdoc",
+    "-v 2",
+    "-p",
+    installdir,
+    "-n",
+    "caravel",
+    "-o",
+    "..",
+    "-i",
+    "pycaravel",
+]
 subprocess.check_call(cmd, env=env)
 sys.path.insert(0, installdir)
 
@@ -35,13 +45,16 @@ if LooseVersion(sphinx.__version__) < LooseVersion("1.8"):
 else:
     sphinx_math = "sphinx.ext.imgmath"
 
+
 def skip(app, what, name, obj, would_skip, options):
     if name == "__init__":
         return False
     return would_skip
 
+
 def setup(app):
     app.connect("autodoc-skip-member", skip)
+
 
 # -- General configuration --------------------------------------------------
 
@@ -59,7 +72,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     "sphinx.ext.coverage",
-#     sphinx_math,
+    #     sphinx_math,
     "sphinx.ext.ifconfig",
     "sphinx.ext.autosummary",
     "sphinx.ext.viewcode",
@@ -67,7 +80,8 @@ extensions = [
     "custom_ext.hidden_code_block",
     "custom_ext.hidden_technical_block",
     "custom_ext.link_to_block",
-    "sphinx_gallery.gen_gallery"]
+    "sphinx_gallery.gen_gallery",
+]
 
 # Configure gallery
 sphinx_gallery_conf = {
@@ -75,7 +89,8 @@ sphinx_gallery_conf = {
     "backreferences_dir": os.path.join("caravel", "gallery"),
     "examples_dirs": os.path.join(os.pardir, "examples"),
     "gallery_dirs": "auto_gallery",
-    "reference_url": {"caravel": None}}
+    "reference_url": {"caravel": None},
+}
 
 # Remove some numpy-linked warnings
 numpydoc_show_class_members = False
@@ -86,7 +101,8 @@ autosummary_generate = True
 # Add any paths that contain templates here, relative to this directory.
 templates_path = [
     os.path.join(sphinx_dirname, "templates"),
-    os.path.join("generated", "_templates")]
+    os.path.join("generated", "_templates"),
+]
 
 # The suffix of source filenames.
 source_suffix = ".rst"
@@ -99,7 +115,9 @@ master_doc = "index"
 
 # General information about the project.
 project = "pycaravel"
-copyright = f"""{datetime.date.today().year}, pycaravel developers <antoine.grigis@cea.fr>"""
+copyright = (
+    f"""{datetime.date.today().year}, pycaravel developers <antoine.grigis@cea.fr>"""
+)
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -129,7 +147,8 @@ exclude_patterns = [
     "examples",
     templates_path[0],
     templates_path[1],
-    os.path.join("scikit-learn", "static", "ML_MAPS_README.rst")]
+    os.path.join("scikit-learn", "static", "ML_MAPS_README.rst"),
+]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -171,11 +190,11 @@ html_theme_options = {
     "collapsiblesidebar": True,
     "google_analytics": True,
     "surveybanner": False,
-    "sprintbanner": True}
+    "sprintbanner": True,
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = [
-    os.path.join(sphinx_dirname, "themes")]
+html_theme_path = [os.path.join(sphinx_dirname, "themes")]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -196,9 +215,7 @@ html_short_title = "pycaravel"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = [
-    "_static"
-]
+html_static_path = ["_static"]
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -251,8 +268,13 @@ htmlhelp_basename = "pycaravel"
 # (source start file, target name, title, author, documentclass
 # [howto/manual]).
 latex_documents = [
-    ("index", "pycaravel.tex", "pycaravel Documentation", """pycaravel developers""",
-     "manual"),
+    (
+        "index",
+        "pycaravel.tex",
+        "pycaravel Documentation",
+        """pycaravel developers""",
+        "manual",
+    ),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

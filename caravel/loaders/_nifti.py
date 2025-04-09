@@ -18,12 +18,12 @@ from .loader_base import LoaderBase
 
 
 class NIFTI(LoaderBase):
-    """ Define the Nifti loader.
-    """
+    """Define the Nifti loader."""
+
     allowed_extensions = [".nii", ".nii.gz"]
 
     def load(self, path):
-        """ A method that load the image.
+        """A method that load the image.
 
         Parameters
         ----------
@@ -38,7 +38,7 @@ class NIFTI(LoaderBase):
         return nibabel.load(path)
 
     def save(self, data, outpath):
-        """ A method that save the image.
+        """A method that save the image.
 
         Parameters
         ----------

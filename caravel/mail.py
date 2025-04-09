@@ -10,7 +10,6 @@
 A module to simplify email sending.
 """
 
-
 # System import
 import mimetypes
 import os
@@ -22,10 +21,10 @@ from email.mime.text import MIMEText
 
 
 class EmailManager:
-    """ Define a class to simplify emails sending.
-    """
+    """Define a class to simplify emails sending."""
+
     def __init__(self, smtp_host, smtp_port):
-        """ Initialize the EmailManager class.
+        """Initialize the EmailManager class.
 
         Parameters
         ----------
@@ -37,9 +36,10 @@ class EmailManager:
         self.host = smtp_host
         self.port = smtp_port
 
-    def send_mail(self, to_addrs, subject, body, from_addr="noreply@cea.fr",
-                  files=None):
-        """ Send an email.
+    def send_mail(
+        self, to_addrs, subject, body, from_addr="noreply@cea.fr", files=None
+    ):
+        """Send an email.
 
         Parameters
         ----------
@@ -79,7 +79,5 @@ class EmailManager:
             attachment.set_payload(fp.read())
         encoders.encode_base64(attachment)
         filename = os.path.basename(path)
-        attachment.add_header(
-            "Content-Disposition", "attachment", filename=filename
-        )
+        attachment.add_header("Content-Disposition", "attachment", filename=filename)
         return attachment

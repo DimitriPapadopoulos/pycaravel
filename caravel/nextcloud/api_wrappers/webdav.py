@@ -10,10 +10,10 @@ class WebDAV(WithRequester):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args)
-        self.json_output = kwargs.get('json_output')
+        self.json_output = kwargs.get("json_output")
 
     def list_folders(self, uid, path=None, depth=1, all_properties=False):
-        """ Get path files list with files properties for given user, with
+        """Get path files list with files properties for given user, with
         given depth.
         """
         if all_properties:
@@ -42,36 +42,36 @@ class WebDAV(WithRequester):
         additional_url = uid
         if path:
             additional_url = f"{additional_url}/{path}"
-        resp = self.requester.propfind(additional_url=additional_url,
-                                       headers={"Depth": str(depth)},
-                                       data=data)
+        resp = self.requester.propfind(
+            additional_url=additional_url, headers={"Depth": str(depth)}, data=data
+        )
         if not resp.is_ok:
             resp.data = None
             return resp
         response_data = resp.data
         response_xml_data = ET.fromstring(response_data)
         files_data = [File(single_file) for single_file in response_xml_data]
-        resp.data = (files_data if not self.json_output
-                     else [each.as_dict() for each in files_data])
+        resp.data = (
+            files_data
+            if not self.json_output
+            else [each.as_dict() for each in files_data]
+        )
         return resp
 
     def isfile(self, uid, path):
-        """ Check file of given user exists.
-        """
+        """Check file of given user exists."""
         dirname, basename = path.rsplit("/", 1)
         _dirs, files = self.lsdir(uid, dirname)
         return basename in (files or [])
 
     def isdir(self, uid, path):
-        """ Check dir of given user exists.
-        """
+        """Check dir of given user exists."""
         dirname, basename = path.rsplit("/", 1)
         dirs, _files = self.lsdir(uid, dirname)
         return basename in (dirs or [])
 
     def lsdir(self, uid, path):
-        """ List directory of a given user.
-        """
+        """List directory of a given user."""
         assert path == "" or path.startswith("/")
         resp = self.list_folders(uid, path=path, depth=1)
         dirs, files = [], []
@@ -87,7 +87,7 @@ class WebDAV(WithRequester):
         return dirs, files
 
     def download_file(self, uid, path):
-        """ Download file of given user by path.
+        """Download file of given user by path.
 
         File will be saved to working directory path argument must be valid
         file path
@@ -95,63 +95,57 @@ class WebDAV(WithRequester):
         file with same name already exists in working directory.
         """
         additional_url = f"{uid}/{path}"
-        filename = path.split('/')[-1] if '/' in path else path
+        filename = path.split("/")[-1] if "/" in path else path
         file_data = self.list_folders(uid=uid, path=path, depth=0)
         if not file_data:
             raise ValueError("Given path doesn't exist")
-        file_resource_type = (file_data.data[0].get('resource_type')
-                              if self.json_output
-                              else file_data.data[0].resource_type)
+        file_resource_type = (
+            file_data.data[0].get("resource_type")
+            if self.json_output
+            else file_data.data[0].resource_type
+        )
         if file_resource_type == File.COLLECTION_RESOURCE_TYPE:
             raise ValueError("This is a collection, please specify file path")
-        if filename in os.listdir('./'):
-            raise ValueError(
-                "File with such name already exists in this directory")
+        if filename in os.listdir("./"):
+            raise ValueError("File with such name already exists in this directory")
         res = self.requester.download(additional_url)
-        with open(filename, 'wb') as f:
+        with open(filename, "wb") as f:
             f.write(res.data)
 
     def upload_file(self, uid, local_filepath, remote_filepath):
-        """ Upload file to Nextcloud storage.
-        """
-        with open(local_filepath, 'rb') as f:
+        """Upload file to Nextcloud storage."""
+        with open(local_filepath, "rb") as f:
             file_content = f.read()
         additional_url = f"{uid}/{remote_filepath}"
         return self.requester.put(additional_url, data=file_content)
 
     def create_folder(self, uid, folder_path):
-        """ Create folder on Nextcloud storage.
-        """
-        return self.requester.make_collection(
-            additional_url=f"{uid}/{folder_path}")
+        """Create folder on Nextcloud storage."""
+        return self.requester.make_collection(additional_url=f"{uid}/{folder_path}")
 
     def delete_path(self, uid, path):
-        """ Delete file or folder with all content of given user by path.
-        """
+        """Delete file or folder with all content of given user by path."""
         url = f"{uid}/{path}"
         return self.requester.delete(url=url)
 
     def move_path(self, uid, path, destination_path, overwrite=False):
-        """ Move file or folder to destination.
-        """
+        """Move file or folder to destination."""
         path_url = f"{uid}/{path}"
         destination_path_url = f"{uid}/{destination_path}"
         return self.requester.move(
-            url=path_url, destination=destination_path_url,
-            overwrite=overwrite)
+            url=path_url, destination=destination_path_url, overwrite=overwrite
+        )
 
     def copy_path(self, uid, path, destination_path, overwrite=False):
-        """ Copy file or folder to destination.
-        """
+        """Copy file or folder to destination."""
         path_url = f"{uid}/{path}"
         destination_path_url = f"{uid}/{destination_path}"
         return self.requester.copy(
-            url=path_url, destination=destination_path_url,
-            overwrite=overwrite)
+            url=path_url, destination=destination_path_url, overwrite=overwrite
+        )
 
     def set_favorites(self, uid, path):
-        """ Set files of a user favorite.
-        """
+        """Set files of a user favorite."""
         data = """<?xml version="1.0"?>
         <d:propertyupdate xmlns:d="DAV:" xmlns:oc="http://owncloud.org/ns">
           <d:set>
@@ -165,8 +159,7 @@ class WebDAV(WithRequester):
         return self.requester.proppatch(additional_url=url, data=data)
 
     def list_favorites(self, uid, path=""):
-        """ Set files of a user favorite.
-        """
+        """Set files of a user favorite."""
         data = """<?xml version="1.0"?>
         <oc:filter-files xmlns:d="DAV:"
                          xmlns:oc="http://owncloud.org/ns"
@@ -183,14 +176,16 @@ class WebDAV(WithRequester):
             return res
         response_xml_data = ET.fromstring(res.data)
         files_data = [File(single_file) for single_file in response_xml_data]
-        res.data = (files_data if not self.json_output
-                    else [each.as_dict() for each in files_data])
+        res.data = (
+            files_data
+            if not self.json_output
+            else [each.as_dict() for each in files_data]
+        )
         return res
 
 
 class File:
-
-    SUCCESS_STATUS = 'HTTP/1.1 200 OK'
+    SUCCESS_STATUS = "HTTP/1.1 200 OK"
 
     # key is NextCloud property, value is python variable name
     FILE_PROPERTIES = {
@@ -219,22 +214,23 @@ class File:
     xml_namespaces_map = {
         "d": "DAV:",
         "oc": "http://owncloud.org/ns",
-        "nc": "http://nextcloud.org/ns"
+        "nc": "http://nextcloud.org/ns",
     }
-    COLLECTION_RESOURCE_TYPE = 'collection'
+    COLLECTION_RESOURCE_TYPE = "collection"
 
     def __init__(self, xml_data):
-        self.href = xml_data.find('d:href', self.xml_namespaces_map).text
-        for propstat in xml_data.iter('{DAV:}propstat'):
-            if (propstat.find('d:status', self.xml_namespaces_map).text !=
-                    self.SUCCESS_STATUS):
+        self.href = xml_data.find("d:href", self.xml_namespaces_map).text
+        for propstat in xml_data.iter("{DAV:}propstat"):
+            if (
+                propstat.find("d:status", self.xml_namespaces_map).text
+                != self.SUCCESS_STATUS
+            ):
                 continue
-            for file_property in propstat.find('d:prop',
-                                               self.xml_namespaces_map):
+            for file_property in propstat.find("d:prop", self.xml_namespaces_map):
                 file_property_name = re.sub(r"{.*}", "", file_property.tag)
                 if file_property_name not in self.FILE_PROPERTIES:
                     continue
-                if file_property_name == 'resourcetype':
+                if file_property_name == "resourcetype":
                     value = self._extract_resource_type(file_property)
                 else:
                     value = file_property.text
@@ -247,9 +243,11 @@ class File:
         return None
 
     def as_dict(self):
-        return {key: value
-                for key, value in self.__dict__.items()
-                if key in self.FILE_PROPERTIES.values()}
+        return {
+            key: value
+            for key, value in self.__dict__.items()
+            if key in self.FILE_PROPERTIES.values()
+        }
 
 
 class WebDAVStatusCodes:

@@ -30,12 +30,26 @@ from caravel.loaders import (
 
 # Global parameters
 # > define all the available loaders
-LOADERS = [MP4, EDF, PNG, TSV, CSV, NIFTI, JSON, DWI, TARGZ, XLSX, PDF,
-           PLINK, VCF, MZML]
+LOADERS = [
+    MP4,
+    EDF,
+    PNG,
+    TSV,
+    CSV,
+    NIFTI,
+    JSON,
+    DWI,
+    TARGZ,
+    XLSX,
+    PDF,
+    PLINK,
+    VCF,
+    MZML,
+]
 
 
 def load(path, **kwargs):
-    """ Load the data.
+    """Load the data.
 
     Parameters
     ----------
@@ -52,7 +66,7 @@ def load(path, **kwargs):
 
 
 def save(data, path, **kwargs):
-    """ Save the data.
+    """Save the data.
 
     Parameters
     ----------
@@ -66,7 +80,7 @@ def save(data, path, **kwargs):
 
 
 def get_loader(path):
-    """ Search for a suitable loader in the declared loaders.
+    """Search for a suitable loader in the declared loaders.
     Raise an exception if no loader is found.
 
     Parameters
@@ -87,7 +101,7 @@ def get_loader(path):
 
 
 def get_saver(path):
-    """ Search for a suitable saver in the declared savers.
+    """Search for a suitable saver in the declared savers.
     Raise an exception if no saver is found.
 
     Parameters

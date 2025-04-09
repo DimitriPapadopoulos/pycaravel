@@ -35,8 +35,8 @@ print(caravel.info())
 
 cwdir = os.path.dirname(os.path.realpath(__file__))
 parser = caravel.get_parser(
-    project="hbn", confdir=os.path.join(cwdir, os.pardir, "conf"),
-    layoutdir=None)
+    project="hbn", confdir=os.path.join(cwdir, os.pardir, "conf"), layoutdir=None
+)
 
 #############################################################################
 # Create representation of your BIDS directory
@@ -49,19 +49,14 @@ parser = caravel.get_parser(
 # the subfolder name to be parsed (sourcedata, derivatives, phenotype, ...).
 # This name must have a conresponding configuration file.
 
-parser.pickling_layout(
-    bids_root="/neurospin/psy/hbn",
-    name="sourcedata",
-    outdir=cwdir)
+parser.pickling_layout(bids_root="/neurospin/psy/hbn", name="sourcedata", outdir=cwdir)
 print(parser.list_keys("sourcedata"))
 parser.pickling_layout(
     bids_root="/neurospin/psy/hbn/",
     name="derivatives",
     subset=["tbss_stats", "scalars"],
-    outdir=cwdir)
+    outdir=cwdir,
+)
 print(parser.list_keys("derivatives"))
-parser.pickling_layout(
-    bids_root="/neurospin/psy/hbn",
-    name="phenotype",
-    outdir=cwdir)
+parser.pickling_layout(bids_root="/neurospin/psy/hbn", name="phenotype", outdir=cwdir)
 print(parser.list_keys("phenotype"))

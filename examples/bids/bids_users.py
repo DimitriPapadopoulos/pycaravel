@@ -33,8 +33,8 @@ print(caravel.info())
 
 cwdir = os.path.dirname(os.path.realpath(__file__))
 parser = caravel.get_parser(
-    project="hbn", confdir=os.path.join(cwdir, os.pardir, "conf"),
-    layoutdir=cwdir)
+    project="hbn", confdir=os.path.join(cwdir, os.pardir, "conf"), layoutdir=cwdir
+)
 
 #############################################################################
 # You can now list the available configurations for your project, and the
@@ -57,8 +57,9 @@ print(parser.export_layout("sourcedata"))
 print(parser.list_keys("sourcedata"))
 print(parser.list_values("sourcedata", "subject"))
 print(parser.list_values("sourcedata", "modality"))
-search1 = parser.filter_layout("sourcedata", subject="NDARLU606ZDD",
-                               modality="anat|func")
+search1 = parser.filter_layout(
+    "sourcedata", subject="NDARLU606ZDD", modality="anat|func"
+)
 print(search1)
 search2 = parser.filter_layout("sourcedata", extension="tsv")
 print(search2)
@@ -84,13 +85,11 @@ if not search2.empty:
 print(parser.export_layout("derivatives"))
 print(parser.list_keys("derivatives"))
 print(parser.list_values("derivatives", "process"))
-search3 = parser.filter_layout("derivatives", subject="NDARAE199TDD",
-                               process="scalars")
+search3 = parser.filter_layout("derivatives", subject="NDARAE199TDD", process="scalars")
 print(search3)
 data3 = parser.load_data("derivatives", search3)
 pprint(data3)
-search3bis = parser.filter_layout("derivatives", process="tbss_stats",
-                                  extension="tsv")
+search3bis = parser.filter_layout("derivatives", process="tbss_stats", extension="tsv")
 print(search3bis)
 data3bis = parser.load_data("derivatives", search3bis)
 pprint(data3bis)

@@ -12,12 +12,12 @@ This module defines the loader base class.
 
 
 class LoaderBase:
-    """ Base class for all loaders.
-    """
+    """Base class for all loaders."""
+
     allowed_extensions = []
 
     def can_load(self, path):
-        """ A method checking the file extension.
+        """A method checking the file extension.
 
         Parameters
         ----------
@@ -32,7 +32,7 @@ class LoaderBase:
         return any(path.endswith(ext) for ext in self.allowed_extensions)
 
     def load(self, path):
-        """ A method that load the data and associated metadata.
+        """A method that load the data and associated metadata.
 
         Parameters
         ----------
@@ -45,10 +45,11 @@ class LoaderBase:
             the loaded data.
         """
         raise NotImplementedError(
-            "The 'load' method must be implemented in subclasses.")
+            "The 'load' method must be implemented in subclasses."
+        )
 
     def can_save(self, outpath):
-        """ A method checking the output file extension.
+        """A method checking the output file extension.
 
         Parameters
         ----------
@@ -63,7 +64,7 @@ class LoaderBase:
         return any(outpath.endswith(ext) for ext in self.allowed_extensions)
 
     def save(self, data, outpath):
-        """ A method that save the data and associated metadata.
+        """A method that save the data and associated metadata.
 
         Parameters
         ----------
@@ -73,4 +74,5 @@ class LoaderBase:
             the path where the the data will be saved.
         """
         raise NotImplementedError(
-            "The 'save' method must be implemented in subclasses.")
+            "The 'save' method must be implemented in subclasses."
+        )

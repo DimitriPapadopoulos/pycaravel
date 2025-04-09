@@ -46,15 +46,14 @@ print(validators)
 datadir = "/neurospin/rlink/workspace/ci_toy/rlink-mri-upload"
 projectdir = os.path.dirname(os.path.realpath(rlink.__file__))
 parser = caravel.get_parser(
-    project="rlink-mri", confdir=os.path.join(projectdir, "conf"),
-    layoutdir=None)
-parser.pickling_layout(
-    bids_root=datadir, name="sourcedata", outdir=datadir)
-parser.pickling_layout(
-    bids_root=datadir, name="rawdata", outdir=datadir)
+    project="rlink-mri", confdir=os.path.join(projectdir, "conf"), layoutdir=None
+)
+parser.pickling_layout(bids_root=datadir, name="sourcedata", outdir=datadir)
+parser.pickling_layout(bids_root=datadir, name="rawdata", outdir=datadir)
 data = {
     "layoutdir": datadir,
     "confdir": os.path.join(projectdir, "conf"),
-    "project": "rlink-mri"}
+    "project": "rlink-mri",
+}
 report = run_validation(data, validators=validators, logfile=None)
 pprint(report)

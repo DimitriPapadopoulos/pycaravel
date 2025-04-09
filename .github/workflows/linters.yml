@@ -34,4 +34,5 @@ jobs:
         pip install --progress-bar off .
     - name: Lint with Ruff
       run: |
-        ruff check --diff caravel
+        ruff check --diff
+        ruff format

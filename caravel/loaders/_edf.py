@@ -18,12 +18,12 @@ from .loader_base import LoaderBase
 
 
 class EDF(LoaderBase):
-    """ Define the mp4 loader.
-    """
+    """Define the mp4 loader."""
+
     allowed_extensions = [".edf"]
 
     def load(self, path):
-        """ A method that load the edf data.
+        """A method that load the edf data.
 
         Parameters
         ----------
@@ -37,9 +37,7 @@ class EDF(LoaderBase):
         return pyedflib.EdfReader(path)
 
     def save(self, path, signals, signal_headers, header=None):
-        """ A method that save the image in edf.
-        """
-        pyedflib.highlevel.write_edf(path,
-                                     signals=signals,
-                                     signal_headers=signal_headers,
-                                     header=header)
+        """A method that save the image in edf."""
+        pyedflib.highlevel.write_edf(
+            path, signals=signals, signal_headers=signal_headers, header=header
+        )

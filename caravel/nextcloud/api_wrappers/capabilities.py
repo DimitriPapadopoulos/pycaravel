@@ -6,6 +6,5 @@ class Capabilities(WithRequester):
     SUCCESS_CODE = 100
 
     def get_capabilities(self):
-        """ Obtain capabilities provided by the Nextcloud server and its apps.
-        """
+        """Obtain capabilities provided by the Nextcloud server and its apps."""
         return self.requester.get()

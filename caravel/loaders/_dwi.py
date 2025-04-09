@@ -18,12 +18,12 @@ from .loader_base import LoaderBase
 
 
 class DWI(LoaderBase):
-    """ Define the DWI bvec bval loader.
-    """
+    """Define the DWI bvec bval loader."""
+
     allowed_extensions = [".bval", ".bvec"]
 
     def load(self, path):
-        """ A method that load a bvec/bvel file.
+        """A method that load a bvec/bvel file.
 
         Parameters
         ----------
@@ -38,7 +38,7 @@ class DWI(LoaderBase):
         return np.loadtxt(path)
 
     def save(self, data, outpath):
-        """ A method that save the data in a bvec/bval file.
+        """A method that save the data in a bvec/bval file.
 
         Parameters
         ----------

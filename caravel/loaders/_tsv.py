@@ -18,12 +18,12 @@ from .loader_base import LoaderBase
 
 
 class TSV(LoaderBase):
-    """ Define the TSV loader.
-    """
+    """Define the TSV loader."""
+
     allowed_extensions = [".tsv"]
 
     def load(self, path):
-        """ A method that load the table data.
+        """A method that load the table data.
 
         Parameters
         ----------
@@ -35,10 +35,10 @@ class TSV(LoaderBase):
         data: pandas DataFrame
             the loaded table.
         """
-        return pd.read_table(path, sep="\t", dtype={'participant_id': object})
+        return pd.read_table(path, sep="\t", dtype={"participant_id": object})
 
     def save(self, data, outpath):
-        """ A method that save the table.
+        """A method that save the table.
 
         Parameters
         ----------

@@ -23,13 +23,13 @@ from .parser_base import ParserBase
 
 
 class BIDSParser(ParserBase):
-    """ Object to retrieve data from a BIDS directory.
-    """
+    """Object to retrieve data from a BIDS directory."""
+
     BASE_ENTITIES = ["subject", "session", "task", "run", "suffix"]
     EXT = ".pkl"
 
     def export_layout(self, name):
-        """ Export a layout as a pandas DataFrame.
+        """Export a layout as a pandas DataFrame.
 
         Parameters
         ----------
@@ -45,7 +45,7 @@ class BIDSParser(ParserBase):
         return layout.as_data_frame()
 
     def list_keys(self, name):
-        """ List all the filtering keys available in the layout.
+        """List all the filtering keys available in the layout.
 
         Parameters
         ----------
@@ -58,11 +58,10 @@ class BIDSParser(ParserBase):
             the layout keys.
         """
         layout = self._load_layout(name)
-        return [elem.replace(f"{name}.", "")
-                for elem in layout.entities]
+        return [elem.replace(f"{name}.", "") for elem in layout.entities]
 
     def list_values(self, name, key):
-        """ List all the filtering key values available in the layout.
+        """List all the filtering key values available in the layout.
 
         Parameters
         ----------
@@ -83,7 +82,7 @@ class BIDSParser(ParserBase):
         return list(layout.unique(_key))
 
     def filter_layout(self, name, extension=None, **kwargs):
-        """ Filter the layout by using a combination of key-values rules.
+        """Filter the layout by using a combination of key-values rules.
 
         Parameters
         ----------
@@ -118,7 +117,7 @@ class BIDSParser(ParserBase):
         return df
 
     def pickling_layout(self, bids_root, name, outdir, subset=None):
-        """ Load the requested BIDS layout and save it as a pickle.
+        """Load the requested BIDS layout and save it as a pickle.
 
         Parameters
         ----------
@@ -144,14 +143,16 @@ class BIDSParser(ParserBase):
         if subset is None:
             layout = Layout([(layout_root, self.conf[name])])
         else:
-            layout = Layout([
-                (os.path.join(layout_root, dirname), self.conf[name])
-                for dirname in subset])
+            layout = Layout(
+                [
+                    (os.path.join(layout_root, dirname), self.conf[name])
+                    for dirname in subset
+                ]
+            )
         self.layouts[name] = layout
         now = datetime.datetime.now()
         timestamp = f"{now.year}-{now.month}-{now.day}"
-        outfile = os.path.join(
-            outdir, f"{self.project}_{name}_{timestamp}.pkl")
+        outfile = os.path.join(outdir, f"{self.project}_{name}_{timestamp}.pkl")
         with open(outfile, "wb") as open_file:
             pickle.dump(layout, open_file, -1)
         return outfile

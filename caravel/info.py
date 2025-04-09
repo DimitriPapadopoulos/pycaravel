@@ -15,11 +15,13 @@ version_micro = 0
 __version__ = f"{version_major}.{version_minor}.{version_micro}"
 
 # Expected by setup.py: the status of the project
-CLASSIFIERS = ["Development Status :: 1 - Planning",
-               "Environment :: Console",
-               "Operating System :: OS Independent",
-               "Programming Language :: Python",
-               "Topic :: Scientific/Engineering"]
+CLASSIFIERS = [
+    "Development Status :: 1 - Planning",
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Topic :: Scientific/Engineering",
+]
 
 # Project descriptions
 description = """
@@ -38,7 +40,8 @@ SUMMARY = """
 """
 long_description = (
     "This module is designed to simplify continuous integration (CI) "
-    "of data from multiple projects. ")
+    "of data from multiple projects. "
+)
 
 # Main setup parameters
 NAME = "pycaravel"
@@ -48,8 +51,7 @@ MAINTAINER_EMAIL = "antoine.grigis@cea.fr"
 DESCRIPTION = description
 LONG_DESCRIPTION = long_description
 EXTRANAME = "NeuroSpin webPage"
-EXTRAURL = ("http://joliot.cea.fr/drf/joliot/Pages/Entites_de_recherche/"
-            "NeuroSpin.aspx")
+EXTRAURL = "http://joliot.cea.fr/drf/joliot/Pages/Entites_de_recherche/NeuroSpin.aspx"
 URL = "https://github.com/neurospin-cloud/pycaravel"
 DOWNLOAD_URL = "https://github.com/neurospin-cloud/pycaravel"
 LICENSE = "CeCILL-B"
@@ -76,9 +78,7 @@ REQUIRES = [
     "requests",
     "python-docx",
     "fire",
-    "pymzml"
+    "pymzml",
 ]
 EXTRA_REQUIRES = {}
-SCRIPTS = [
-    "caravel/scripts/project-ci"
-]
+SCRIPTS = ["caravel/scripts/project-ci"]

@@ -18,12 +18,12 @@ from .loader_base import LoaderBase
 
 
 class PLINK(LoaderBase):
-    """ Define the TSV loader.
-    """
+    """Define the TSV loader."""
+
     allowed_extensions = [".bed"]
 
     def load(self, path):
-        """ A method that load the table data.
+        """A method that load the table data.
 
         Parameters
         ----------

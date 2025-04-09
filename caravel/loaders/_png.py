@@ -18,12 +18,12 @@ from .loader_base import LoaderBase
 
 
 class PNG(LoaderBase):
-    """ Define the PNG loader.
-    """
+    """Define the PNG loader."""
+
     allowed_extensions = [".png"]
 
     def load(self, path):
-        """ A method that load the png data.
+        """A method that load the png data.
 
         Parameters
         ----------
@@ -38,7 +38,7 @@ class PNG(LoaderBase):
         return imageio.imread(path)
 
     def save(self, data, outpath):
-        """ A method that save the image in png.
+        """A method that save the image in png.
 
         Parameters
         ----------

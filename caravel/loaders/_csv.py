@@ -18,13 +18,20 @@ from .loader_base import LoaderBase
 
 
 class CSV(LoaderBase):
-    """ Define the CSV loader.
-    """
+    """Define the CSV loader."""
+
     allowed_extensions = [".csv"]
 
-    def load(self, path, separator=",", header_type="infer", nrows=None,
-             skiprows=None, usecols=None):
-        """ A method that load the table data.
+    def load(
+        self,
+        path,
+        separator=",",
+        header_type="infer",
+        nrows=None,
+        skiprows=None,
+        usecols=None,
+    ):
+        """A method that load the table data.
 
         Parameters
         ----------
@@ -38,11 +45,17 @@ class CSV(LoaderBase):
             the loaded table.
         """
 
-        return pd.read_csv(path, header=header_type, sep=separator,
-                           usecols=usecols, nrows=nrows, skiprows=skiprows)
+        return pd.read_csv(
+            path,
+            header=header_type,
+            sep=separator,
+            usecols=usecols,
+            nrows=nrows,
+            skiprows=skiprows,
+        )
 
     def save(self, data, outpath):
-        """ A method that save the table.
+        """A method that save the table.
 
         Parameters
         ----------

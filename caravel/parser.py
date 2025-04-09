@@ -24,7 +24,7 @@ PARSERS = [BIDSParser]
 
 
 def get_parser(project, confdir, layoutdir):
-    """ Method to return the appropriate parser for your study.
+    """Method to return the appropriate parser for your study.
 
     Parameters
     ----------
@@ -49,13 +49,12 @@ def get_parser(project, confdir, layoutdir):
 
 
 def listify(obj):
-    """ Wraps all non-list or tuple objects in a list.
-    """
+    """Wraps all non-list or tuple objects in a list."""
     return obj if isinstance(obj, (list, tuple, type(None))) else [obj]
 
 
 def _expand_keys(entities):
-    """ Generate multiple replacement queries based on all combinations
+    """Generate multiple replacement queries based on all combinations
     of values.
 
     Examples
@@ -87,12 +86,11 @@ def _expand_keys(entities):
     return [dict(zip(keys, combs)) for combs in values]
 
 
-_PATTERN_FIND = re.compile(
-    r"({([\w\d]*?)(?:<([^>]+)>)?(?:\|((?:\.?[\w])+))?\})")
+_PATTERN_FIND = re.compile(r"({([\w\d]*?)(?:<([^>]+)>)?(?:\|((?:\.?[\w])+))?\})")
 
 
 def build_path(keys, path_patterns, strict=False):
-    """ Constructs a path given a set of keys and a list of potential filename
+    """Constructs a path given a set of keys and a list of potential filename
     patterns to use.
 
     Parameters
@@ -139,43 +137,50 @@ def build_path(keys, path_patterns, strict=False):
         # check whether keys provided have acceptable value
         tmp_keys = keys.copy()
         for fmt, name, valid, defval in keys_matched:
-            valid_expanded = valid.split('|')
+            valid_expanded = valid.split("|")
             if valid_expanded and defval and defval not in valid_expanded:
-                warnings.warn(f"Pattern '{fmt}' is inconsistent as it defines "
-                              "an invalid default value.")
-            if (valid_expanded and name in keys and
-                    set(keys[name]) - set(valid_expanded)):
+                warnings.warn(
+                    f"Pattern '{fmt}' is inconsistent as it defines "
+                    "an invalid default value."
+                )
+            if (
+                valid_expanded
+                and name in keys
+                and set(keys[name]) - set(valid_expanded)
+            ):
                 continue
             if defval and name not in tmp_keys:
                 tmp_keys[name] = [defval]
 
             # At this point, valid & default values are checked &
             # set - simplify pattern
-            new_path = new_path.replace(fmt, f'{{{name}}}')
+            new_path = new_path.replace(fmt, f"{{{name}}}")
 
-        optional_patterns = re.findall(r'(\[.*?\])', new_path)
+        optional_patterns = re.findall(r"(\[.*?\])", new_path)
         # Optional patterns with selector are cast to mandatory or removed
         for op in optional_patterns:
-            for ent_name in {k for k, v in keys.items() if (v is not None)
-                             and not (v[0] != v[0])}:  # noqa: SIM202 FIXME?
-                if (f'{{{ent_name}}}') in op:
+            for ent_name in {
+                k
+                for k, v in keys.items()
+                if (v is not None) and not (v[0] != v[0])  # noqa: SIM202 FIXME?
+            }:
+                if (f"{{{ent_name}}}") in op:
                     new_path = new_path.replace(op, op[1:-1])
                     continue
 
             # Surviving optional patterns are removed
-            new_path = new_path.replace(op, '')
+            new_path = new_path.replace(op, "")
         # Replace keys
-        fields = {pat[1] for pat in Formatter().parse(new_path)
-                  if pat[1] and not pat[1].isdigit()}
+        fields = {
+            pat[1]
+            for pat in Formatter().parse(new_path)
+            if pat[1] and not pat[1].isdigit()
+        }
         if fields - set(tmp_keys.keys()):
             continue
 
-        tmp_keys = {k: v for k, v in tmp_keys.items()
-                    if k in fields}
-        new_path = [
-            new_path.format(**e)
-            for e in _expand_keys(tmp_keys)
-        ]
+        tmp_keys = {k: v for k, v in tmp_keys.items() if k in fields}
+        new_path = [new_path.format(**e) for e in _expand_keys(tmp_keys)]
         if new_path:
             if len(new_path) == 1:
                 new_path = new_path[0]

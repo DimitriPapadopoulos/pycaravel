@@ -9,8 +9,7 @@ logger = logging.getLogger("rlink")
 
 
 class NextCloudConnectionError(Exception):
-    """ A connection error occurred.
-    """
+    """A connection error occurred."""
 
 
 def catch_connection_error(func):
@@ -21,7 +20,10 @@ def catch_connection_error(func):
         except requests.RequestException as e:
             raise NextCloudConnectionError(
                 "Failed to establish connection to NextCloud",
-                getattr(e.request, 'url', None), e)
+                getattr(e.request, "url", None),
+                e,
+            )
+
     return wrapper
 
 
@@ -32,8 +34,10 @@ class Requester:
         self.verify = verify
         self.base_url = endpoint
         self.h_get = {"OCS-APIRequest": "true"}
-        self.h_post = {"OCS-APIRequest": "true",
-                       "Content-Type": "application/x-www-form-urlencoded"}
+        self.h_post = {
+            "OCS-APIRequest": "true",
+            "Content-Type": "application/x-www-form-urlencoded",
+        }
         self.auth_pk = (user, passwd)
         self.API_URL = None
         self.SUCCESS_CODE = None
@@ -50,8 +54,12 @@ class Requester:
         logger.debug(url)
         logger.debug(params)
         res = requests.get(
-            url, auth=self.auth_pk, headers=self.h_get, params=params,
-            verify=self.verify)
+            url,
+            auth=self.auth_pk,
+            headers=self.h_get,
+            params=params,
+            verify=self.verify,
+        )
         return self.rtn(res)
 
     @catch_connection_error
@@ -60,8 +68,8 @@ class Requester:
         logger.debug(url)
         logger.debug(data)
         res = requests.post(
-            url, auth=self.auth_pk, data=data, headers=self.h_post,
-            verify=self.verify)
+            url, auth=self.auth_pk, data=data, headers=self.h_post, verify=self.verify
+        )
         return self.rtn(res)
 
     @catch_connection_error
@@ -69,8 +77,8 @@ class Requester:
         url = self.get_full_url(url)
         logger.debug(url)
         res = requests.put(
-            url, auth=self.auth_pk, data=data, headers=self.h_post,
-            verify=self.verify)
+            url, auth=self.auth_pk, data=data, headers=self.h_post, verify=self.verify
+        )
         return self.rtn(res)
 
     @catch_connection_error
@@ -79,8 +87,8 @@ class Requester:
         logger.debug(url)
         logger.debug(data)
         res = requests.delete(
-            url, auth=self.auth_pk, data=data, headers=self.h_post,
-            verify=self.verify)
+            url, auth=self.auth_pk, data=data, headers=self.h_post, verify=self.verify
+        )
         return self.rtn(res)
 
     def get_full_url(self, additional_url=""):
@@ -108,17 +116,17 @@ class Requester:
 
 
 class OCSRequester(Requester):
-    """ Requester for OCS API.
-    """
+    """Requester for OCS API."""
+
     def rtn(self, resp):
-        return OCSResponse(response=resp,
-                           json_output=self.json_output,
-                           success_code=self.SUCCESS_CODE)
+        return OCSResponse(
+            response=resp, json_output=self.json_output, success_code=self.SUCCESS_CODE
+        )
 
 
 class WebDAVRequester(Requester):
-    """ Requester for WebDAV API.
-    """
+    """Requester for WebDAV API."""
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
@@ -129,21 +137,27 @@ class WebDAVRequester(Requester):
     def propfind(self, additional_url="", headers=None, data=None):
         url = self.get_full_url(additional_url=additional_url)
         res = requests.request(
-            'PROPFIND', url, auth=self.auth_pk, headers=headers, data=data,
-            verify=self.verify)
+            "PROPFIND",
+            url,
+            auth=self.auth_pk,
+            headers=headers,
+            data=data,
+            verify=self.verify,
+        )
         return self.rtn(res)
 
     @catch_connection_error
     def proppatch(self, additional_url="", data=None):
         url = self.get_full_url(additional_url=additional_url)
-        res = requests.request('PROPPATCH', url, auth=self.auth_pk, data=data)
+        res = requests.request("PROPPATCH", url, auth=self.auth_pk, data=data)
         return self.rtn(resp=res)
 
     @catch_connection_error
     def report(self, additional_url="", data=None):
         url = self.get_full_url(additional_url=additional_url)
         res = requests.request(
-            'REPORT', url, auth=self.auth_pk, data=data, verify=self.verify)
+            "REPORT", url, auth=self.auth_pk, data=data, verify=self.verify
+        )
         return self.rtn(resp=res)
 
     @catch_connection_error
@@ -152,15 +166,18 @@ class WebDAVRequester(Requester):
         logger.debug(url)
         logger.debug(params)
         res = requests.get(
-            url, auth=self.auth_pk, headers=self.h_get, params=params,
-            verify=self.verify)
+            url,
+            auth=self.auth_pk,
+            headers=self.h_get,
+            params=params,
+            verify=self.verify,
+        )
         return self.rtn(resp=res, data=res.content)
 
     @catch_connection_error
     def make_collection(self, additional_url=""):
         url = self.get_full_url(additional_url=additional_url)
-        res = requests.request(
-            "MKCOL", url=url, auth=self.auth_pk, verify=self.verify)
+        res = requests.request("MKCOL", url=url, auth=self.auth_pk, verify=self.verify)
         return self.rtn(resp=res)
 
     @catch_connection_error
@@ -169,12 +186,12 @@ class WebDAVRequester(Requester):
         destination_url = self.get_full_url(additional_url=destination)
         logger.debug(f"{url} -> {destination_url}")
         headers = {
-            "Destination": destination_url.encode('utf-8'),
-            "Overwrite": "T" if overwrite else "F"
+            "Destination": destination_url.encode("utf-8"),
+            "Overwrite": "T" if overwrite else "F",
         }
         res = requests.request(
-            "MOVE", url=url, auth=self.auth_pk, headers=headers,
-            verify=self.verify)
+            "MOVE", url=url, auth=self.auth_pk, headers=headers, verify=self.verify
+        )
         return self.rtn(resp=res)
 
     @catch_connection_error
@@ -184,9 +201,9 @@ class WebDAVRequester(Requester):
         logger.debug(f"{url} -> {destination_url}")
         headers = {
             "Destination": destination_url,
-            "Overwrite": "T" if overwrite else "F"
+            "Overwrite": "T" if overwrite else "F",
         }
         res = requests.request(
-            "COPY", url=url, auth=self.auth_pk, headers=headers,
-            verify=self.verify)
+            "COPY", url=url, auth=self.auth_pk, headers=headers, verify=self.verify
+        )
         return self.rtn(resp=res)

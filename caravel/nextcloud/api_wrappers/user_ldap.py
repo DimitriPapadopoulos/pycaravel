@@ -63,32 +63,26 @@ class UserLDAP(WithRequester):
     ]
 
     def create_ldap_config(self):
-        """ Create a new and empty LDAP configuration.
-        """
+        """Create a new and empty LDAP configuration."""
         return self.requester.post()
 
     def get_ldap_config(self, config_id, show_password=None):
-        """ Get all keys and values of the specified LDAP configuration.
-        """
+        """Get all keys and values of the specified LDAP configuration."""
         params = {"showPassword": show_password}
         return self.requester.get(config_id, params=params)
 
     def edit_ldap_config(self, config_id, data):
-        """ Update a configuration with the provided values.
-        """
-        prepared_data = {f'configData[{key}]': value
-                         for key, value in data.items()}
+        """Update a configuration with the provided values."""
+        prepared_data = {f"configData[{key}]": value for key, value in data.items()}
         return self.requester.put(config_id, data=prepared_data)
 
     def delete_ldap_config(self, config_id):
-        """ Delete a given LDAP configuration.
-        """
+        """Delete a given LDAP configuration."""
         return self.requester.delete(config_id)
 
 
 for ldap_key in UserLDAP.CONFIG_KEYS:
-    key_name = ldap_key.replace('ldap', '')
-    key_name = re.sub(r'([a-z0-9])([A-Z])', r'\1_\2', key_name).lower()
+    key_name = ldap_key.replace("ldap", "")
 
     # create and add getter method
     getter_name = f"get_ldap_{key_name}"
@@ -98,6 +92,7 @@ for ldap_key in UserLDAP.CONFIG_KEYS:
             res = self.get_ldap_config(config_id)
             data = res.data
             return data[param]
+
         getter.__name__ = getter_name
         return getter
 
@@ -110,6 +105,7 @@ for ldap_key in UserLDAP.CONFIG_KEYS:
         def setter(self, config_id, value):
             res = self.edit_ldap_config(config_id, data={param: value})
             return res
+
         setter.__name__ = setter_name
         return setter
 

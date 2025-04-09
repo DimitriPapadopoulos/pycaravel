@@ -18,12 +18,12 @@ from .loader_base import LoaderBase
 
 
 class PDF(LoaderBase):
-    """ Define the PDF loader.
-    """
+    """Define the PDF loader."""
+
     allowed_extensions = [".pdf"]
 
     def load(self, path):
-        """ A method that load the table data.
+        """A method that load the table data.
 
         Parameters
         ----------

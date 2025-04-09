@@ -25,12 +25,12 @@ from caravel.io import load
 
 
 class ParserBase:
-    """ Base parser to retrieve data from a BIDS directory.
-    """
+    """Base parser to retrieve data from a BIDS directory."""
+
     AVAILABLE_LAYOUTS = ("sourcedata", "rawdata", "derivatives", "phenotype")
 
     def __init__(self, project, confdir, layoutdir):
-        """ Initialize the Caravel class.
+        """Initialize the Caravel class.
 
         Parameters
         ----------
@@ -48,21 +48,23 @@ class ParserBase:
         if project not in _conf:
             raise ValueError(
                 f"Unknown configuration for project '{project}'. Available projects "
-                f"are: {_conf.keys()}.")
+                f"are: {_conf.keys()}."
+            )
         self.conf = _conf[project]
         if layoutdir is not None:
             _repr = self._get_repr(layoutdir)
             if project not in _repr:
                 raise ValueError(
                     f"Unknown representation for project '{project}'. "
-                    f"Available projects are: {_repr.keys()}.")
+                    f"Available projects are: {_repr.keys()}."
+                )
             self.representation = _repr[project]
         else:
             self.representation = {"manager": [{"path": "to_be_created.pkl"}]}
         self.connection = None
 
     def can_load(self):
-        """ A method checking the dataset type.
+        """A method checking the dataset type.
 
         Returns
         -------
@@ -75,17 +77,16 @@ class ParserBase:
         return all(elem.endswith(self.EXT) for elem in checks)
 
     def _check_layout(self, name):
-        """ Check if the layout name is supported.
-        """
+        """Check if the layout name is supported."""
         if name not in self.AVAILABLE_LAYOUTS:
             raise ValueError(
                 f"Layout '{name}' is not yet supported. "
-                f"Available layouts are: {self.AVAILABLE_LAYOUTS}.")
+                f"Available layouts are: {self.AVAILABLE_LAYOUTS}."
+            )
 
     @classmethod
     def _get_conf(cls, confdir):
-        """ List all the configurations available and sort them by project.
-        """
+        """List all the configurations available and sort them by project."""
         conf = {}
         for path in glob.glob(os.path.join(confdir, "*.conf")):
             basename = os.path.basename(path).replace(".conf", "")
@@ -96,7 +97,7 @@ class ParserBase:
         return conf
 
     def _get_repr(self, layoutdir):
-        """ List all the layout representation available and sort them by
+        """List all the layout representation available and sort them by
         dates.
         """
         representations = {}
@@ -107,44 +108,45 @@ class ParserBase:
             if project not in representations:
                 representations[project] = {}
             representations[project].setdefault(name, []).append(
-                {"date": timestamp, "path": path})
+                {"date": timestamp, "path": path}
+            )
         for project_data in representations.values():
             for name_data in project_data.values():
-                name_data.sort(key=lambda x: datetime.datetime.strptime(
-                    x["date"], "%Y-%m-%d"))
+                name_data.sort(
+                    key=lambda x: datetime.datetime.strptime(x["date"], "%Y-%m-%d")
+                )
         return representations
 
     def _check_conf(self, name):
-        """ Check if configuration is declared for the layout.
-        """
+        """Check if configuration is declared for the layout."""
         if name not in self.conf:
             raise ValueError(
                 "No configuration available for layout '{0}'. Please contact "
-                "the module developers to add the support for your project.")
+                "the module developers to add the support for your project."
+            )
 
     def _load_layout(self, name):
-        """ Load a layout from its pre-generated representation.
-        """
+        """Load a layout from its pre-generated representation."""
         if name not in self.layouts:
             if name not in self.representation:
                 raise ValueError(
                     f"A pre-generated '{name}' layout for your project "
                     f"'{self.project}' is expected in user mode. Please "
-                    "contact the developers of the module.")
+                    "contact the developers of the module."
+                )
             path = self.representation[name][-1]["path"]
             with open(path, "rb") as open_file:
                 self.layouts[name] = pickle.load(open_file)
         return self.layouts[name]
 
     def _load_conf(self, name):
-        """ Load the configuration associated to a layout.
-        """
+        """Load the configuration associated to a layout."""
         if not isinstance(self.conf[name], dict):
             with open(self.conf[name], "rt") as open_file:
                 self.conf[name] = json.load(open_file)
 
     def export_layout(self, name):
-        """ Export a layout as a pandas DataFrame.
+        """Export a layout as a pandas DataFrame.
 
         Parameters
         ----------
@@ -156,11 +158,12 @@ class ParserBase:
         df: pandas DataFrame
             the converted layout.
         """
-        raise NotImplementedError("This function has to be defined in child "
-                                  "child class.")
+        raise NotImplementedError(
+            "This function has to be defined in child child class."
+        )
 
     def list_keys(self, name):
-        """ List all the filtering keys available in the layout.
+        """List all the filtering keys available in the layout.
 
         Parameters
         ----------
@@ -172,11 +175,12 @@ class ParserBase:
         keys: list
             the layout keys.
         """
-        raise NotImplementedError("This function has to be defined in child "
-                                  "child class.")
+        raise NotImplementedError(
+            "This function has to be defined in child child class."
+        )
 
     def list_values(self, name, key):
-        """ List all the filtering key values available in the layout.
+        """List all the filtering key values available in the layout.
 
         Parameters
         ----------
@@ -190,11 +194,12 @@ class ParserBase:
         values: list
             the key associated values in the layout.
         """
-        raise NotImplementedError("This function has to be defined in child "
-                                  "child class.")
+        raise NotImplementedError(
+            "This function has to be defined in child child class."
+        )
 
     def filter_layout(self, name, extensions=None, **kwargs):
-        """ Filter the layout by using a combination of key-values rules.
+        """Filter the layout by using a combination of key-values rules.
 
         Parameters
         ----------
@@ -210,11 +215,12 @@ class ParserBase:
         df: pandas DataFrame
             the filtered layout.
         """
-        raise NotImplementedError("This function has to be defined in child "
-                                  "child class.")
+        raise NotImplementedError(
+            "This function has to be defined in child child class."
+        )
 
     def load_data(self, name, df, replace=None):
-        """ Load the data contained in the filename column of a pandas
+        """Load the data contained in the filename column of a pandas
         DataFrame.
 
         Note:
@@ -243,9 +249,11 @@ class ParserBase:
         for index, path in enumerate(df["filename"]):
             if isinstance(path, dict):
                 _data = pd.DataFrame.from_records([path])
-                path = [f"{key}-{val}"
-                        for key, val in zip(df.columns, df.to_numpy()[index])
-                        if key != "filename"]
+                path = [
+                    f"{key}-{val}"
+                    for key, val in zip(df.columns, df.to_numpy()[index])
+                    if key != "filename"
+                ]
                 path = "_".join(path)
             else:
                 if replace is not None:
@@ -262,7 +270,8 @@ class ParserBase:
                             _data[ent_name] = ent_val
                     _data["dtype"] = name
                     if "participant_id" in _data:
-                        _data["participant_id"] = _data[
-                            "participant_id"].str.replace("sub-", "")
+                        _data["participant_id"] = _data["participant_id"].str.replace(
+                            "sub-", ""
+                        )
             data[path] = _data
         return data
