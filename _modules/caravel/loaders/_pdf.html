@@ -155,12 +155,16 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">.loader_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">LoaderBase</span>
 
 
-<div class="viewcode-block" id="PDF"><a class="viewcode-back" href="../../../generated/caravel.loaders._pdf.PDF.html#caravel.loaders.PDF">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">PDF</span><span class="p">(</span><span class="n">LoaderBase</span><span class="p">):</span>
+<div class="viewcode-block" id="PDF">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._pdf.PDF.html#caravel.loaders.PDF">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">PDF</span><span class="p">(</span><span class="n">LoaderBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Define the PDF loader.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">allowed_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.pdf&quot;</span><span class="p">]</span>
 
-<div class="viewcode-block" id="PDF.load"><a class="viewcode-back" href="../../../generated/caravel.loaders._pdf.PDF.html#caravel.loaders.PDF.load">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<div class="viewcode-block" id="PDF.load">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._pdf.PDF.html#caravel.loaders.PDF.load">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; A method that load the table data.</span>
 
 <span class="sd">        Parameters</span>
@@ -176,7 +180,9 @@
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
             <span class="n">file_reader</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfReader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 
-        <span class="k">return</span> <span class="n">file_reader</span></div></div>
+        <span class="k">return</span> <span class="n">file_reader</span></div>
+</div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

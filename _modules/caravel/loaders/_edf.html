@@ -155,12 +155,16 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">.loader_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">LoaderBase</span>
 
 
-<div class="viewcode-block" id="EDF"><a class="viewcode-back" href="../../../generated/caravel.loaders._edf.EDF.html#caravel.loaders.EDF">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">EDF</span><span class="p">(</span><span class="n">LoaderBase</span><span class="p">):</span>
+<div class="viewcode-block" id="EDF">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._edf.EDF.html#caravel.loaders.EDF">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EDF</span><span class="p">(</span><span class="n">LoaderBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Define the mp4 loader.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">allowed_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.edf&quot;</span><span class="p">]</span>
 
-<div class="viewcode-block" id="EDF.load"><a class="viewcode-back" href="../../../generated/caravel.loaders._edf.EDF.html#caravel.loaders.EDF.load">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<div class="viewcode-block" id="EDF.load">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._edf.EDF.html#caravel.loaders.EDF.load">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; A method that load the edf data.</span>
 
 <span class="sd">        Parameters</span>
@@ -174,13 +178,18 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pyedflib</span><span class="o">.</span><span class="n">EdfReader</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="EDF.save"><a class="viewcode-back" href="../../../generated/caravel.loaders._edf.EDF.html#caravel.loaders.EDF.save">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">signals</span><span class="p">,</span> <span class="n">signal_headers</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="EDF.save">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._edf.EDF.html#caravel.loaders.EDF.save">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">signals</span><span class="p">,</span> <span class="n">signal_headers</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; A method that save the image in edf.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">pyedflib</span><span class="o">.</span><span class="n">highlevel</span><span class="o">.</span><span class="n">write_edf</span><span class="p">(</span><span class="n">path</span><span class="p">,</span>
                                      <span class="n">signals</span><span class="o">=</span><span class="n">signals</span><span class="p">,</span>
                                      <span class="n">signal_headers</span><span class="o">=</span><span class="n">signal_headers</span><span class="p">,</span>
-                                     <span class="n">header</span><span class="o">=</span><span class="n">header</span><span class="p">)</span></div></div>
+                                     <span class="n">header</span><span class="o">=</span><span class="n">header</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

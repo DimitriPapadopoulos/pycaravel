@@ -9,7 +9,7 @@
 .. autoclass:: caravel.loaders._plink.PLINK
      :members:
 
-.. minigallery:: caravel.loaders._plink.PLINK caravel.loaders.PLINK
+.. minigallery:: caravel.loaders.PLINK caravel.loaders._plink.PLINK
     :add-heading: Examples
     :heading-level: -
 

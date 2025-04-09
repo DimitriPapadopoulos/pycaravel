@@ -141,7 +141,9 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">..base</span><span class="w"> </span><span class="kn">import</span> <span class="n">WithRequester</span>
 
 
-<div class="viewcode-block" id="UserLDAP"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user_ldap.UserLDAP.html#caravel.nextcloud.api_wrappers.UserLDAP">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">UserLDAP</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
+<div class="viewcode-block" id="UserLDAP">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user_ldap.UserLDAP.html#caravel.nextcloud.api_wrappers.UserLDAP">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">UserLDAP</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
     <span class="n">API_URL</span> <span class="o">=</span> <span class="s2">&quot;/ocs/v2.php/apps/user_ldap/api/v1/config&quot;</span>
     <span class="n">SUCCESS_CODE</span> <span class="o">=</span> <span class="mi">200</span>
 
@@ -200,38 +202,53 @@
         <span class="s2">&quot;ldapDefaultPPolicyDN&quot;</span><span class="p">,</span>
     <span class="p">]</span>
 
-<div class="viewcode-block" id="UserLDAP.create_ldap_config"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user_ldap.UserLDAP.html#caravel.nextcloud.api_wrappers.UserLDAP.create_ldap_config">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">create_ldap_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="UserLDAP.create_ldap_config">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user_ldap.UserLDAP.html#caravel.nextcloud.api_wrappers.UserLDAP.create_ldap_config">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_ldap_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Create a new and empty LDAP configuration.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">post</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="UserLDAP.get_ldap_config"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user_ldap.UserLDAP.html#caravel.nextcloud.api_wrappers.UserLDAP.get_ldap_config">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_ldap_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config_id</span><span class="p">,</span> <span class="n">show_password</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UserLDAP.get_ldap_config">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user_ldap.UserLDAP.html#caravel.nextcloud.api_wrappers.UserLDAP.get_ldap_config">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_ldap_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config_id</span><span class="p">,</span> <span class="n">show_password</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Get all keys and values of the specified LDAP configuration.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;showPassword&quot;</span><span class="p">:</span> <span class="n">show_password</span><span class="p">}</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">config_id</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UserLDAP.edit_ldap_config"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user_ldap.UserLDAP.html#caravel.nextcloud.api_wrappers.UserLDAP.edit_ldap_config">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">edit_ldap_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config_id</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UserLDAP.edit_ldap_config">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user_ldap.UserLDAP.html#caravel.nextcloud.api_wrappers.UserLDAP.edit_ldap_config">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">edit_ldap_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config_id</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Update a configuration with the provided values.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">prepared_data</span> <span class="o">=</span> <span class="p">{</span><span class="sa">f</span><span class="s1">&#39;configData[</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s1">]&#39;</span><span class="p">:</span> <span class="n">value</span>
                          <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">config_id</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">prepared_data</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="UserLDAP.delete_ldap_config"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user_ldap.UserLDAP.html#caravel.nextcloud.api_wrappers.UserLDAP.delete_ldap_config">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">delete_ldap_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config_id</span><span class="p">):</span>
+
+<div class="viewcode-block" id="UserLDAP.delete_ldap_config">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user_ldap.UserLDAP.html#caravel.nextcloud.api_wrappers.UserLDAP.delete_ldap_config">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_ldap_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config_id</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Delete a given LDAP configuration.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">config_id</span><span class="p">)</span></div></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">config_id</span><span class="p">)</span></div>
+</div>
+
 
 
 <span class="k">for</span> <span class="n">ldap_key</span> <span class="ow">in</span> <span class="n">UserLDAP</span><span class="o">.</span><span class="n">CONFIG_KEYS</span><span class="p">:</span>
     <span class="n">key_name</span> <span class="o">=</span> <span class="n">ldap_key</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ldap&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-    <span class="n">key_name</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;([a-z0-9])([A-Z])&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\1_\2&#39;</span><span class="p">,</span> <span class="n">key_name</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">key_name</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;([a-z0-9])([A-Z])&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\1_\2&#39;</span><span class="p">,</span> <span class="n">key_name</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 
     <span class="c1"># create and add getter method</span>
     <span class="n">getter_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;get_ldap_</span><span class="si">{</span><span class="n">key_name</span><span class="si">}</span><span class="s2">&quot;</span>
 
-<div class="viewcode-block" id="getter_method"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user_ldap.getter_method.html#caravel.nextcloud.api_wrappers.getter_method">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">getter_method</span><span class="p">(</span><span class="n">param</span><span class="p">):</span>
+<div class="viewcode-block" id="getter_method">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user_ldap.getter_method.html#caravel.nextcloud.api_wrappers.getter_method">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">getter_method</span><span class="p">(</span><span class="n">param</span><span class="p">):</span>
         <span class="k">def</span><span class="w"> </span><span class="nf">getter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config_id</span><span class="p">):</span>
             <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_ldap_config</span><span class="p">(</span><span class="n">config_id</span><span class="p">)</span>
             <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">data</span>
@@ -239,17 +256,21 @@
         <span class="n">getter</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="n">getter_name</span>
         <span class="k">return</span> <span class="n">getter</span></div>
 
+
     <span class="nb">setattr</span><span class="p">(</span><span class="n">UserLDAP</span><span class="p">,</span> <span class="n">getter_name</span><span class="p">,</span> <span class="n">getter_method</span><span class="p">(</span><span class="n">ldap_key</span><span class="p">))</span>
 
     <span class="c1"># create and add setter method</span>
     <span class="n">setter_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;set_ldap_</span><span class="si">{</span><span class="n">key_name</span><span class="si">}</span><span class="s2">&quot;</span>
 
-<div class="viewcode-block" id="setter_method"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user_ldap.setter_method.html#caravel.nextcloud.api_wrappers.setter_method">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">setter_method</span><span class="p">(</span><span class="n">param</span><span class="p">):</span>
+<div class="viewcode-block" id="setter_method">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user_ldap.setter_method.html#caravel.nextcloud.api_wrappers.setter_method">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setter_method</span><span class="p">(</span><span class="n">param</span><span class="p">):</span>
         <span class="k">def</span><span class="w"> </span><span class="nf">setter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config_id</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
             <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">edit_ldap_config</span><span class="p">(</span><span class="n">config_id</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="n">param</span><span class="p">:</span> <span class="n">value</span><span class="p">})</span>
             <span class="k">return</span> <span class="n">res</span>
         <span class="n">setter</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="n">setter_name</span>
         <span class="k">return</span> <span class="n">setter</span></div>
+
 
     <span class="nb">setattr</span><span class="p">(</span><span class="n">UserLDAP</span><span class="p">,</span> <span class="n">setter_name</span><span class="p">,</span> <span class="n">setter_method</span><span class="p">(</span><span class="n">ldap_key</span><span class="p">))</span>
 </pre></div>

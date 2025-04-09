@@ -155,12 +155,16 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">.loader_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">LoaderBase</span>
 
 
-<div class="viewcode-block" id="CSV"><a class="viewcode-back" href="../../../generated/caravel.loaders._csv.CSV.html#caravel.loaders.CSV">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">CSV</span><span class="p">(</span><span class="n">LoaderBase</span><span class="p">):</span>
+<div class="viewcode-block" id="CSV">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._csv.CSV.html#caravel.loaders.CSV">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CSV</span><span class="p">(</span><span class="n">LoaderBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Define the CSV loader.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">allowed_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.csv&quot;</span><span class="p">]</span>
 
-<div class="viewcode-block" id="CSV.load"><a class="viewcode-back" href="../../../generated/caravel.loaders._csv.CSV.html#caravel.loaders.CSV.load">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">header_type</span><span class="o">=</span><span class="s2">&quot;infer&quot;</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="CSV.load">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._csv.CSV.html#caravel.loaders.CSV.load">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">header_type</span><span class="o">=</span><span class="s2">&quot;infer&quot;</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
              <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; A method that load the table data.</span>
 
@@ -179,7 +183,10 @@
         <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">header_type</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="n">separator</span><span class="p">,</span>
                            <span class="n">usecols</span><span class="o">=</span><span class="n">usecols</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="n">nrows</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">skiprows</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="CSV.save"><a class="viewcode-back" href="../../../generated/caravel.loaders._csv.CSV.html#caravel.loaders.CSV.save">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">outpath</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CSV.save">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._csv.CSV.html#caravel.loaders.CSV.save">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">outpath</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; A method that save the table.</span>
 
 <span class="sd">        Parameters</span>
@@ -189,7 +196,9 @@
 <span class="sd">        outpath: str</span>
 <span class="sd">            the path where the the table will be saved.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">outpath</span><span class="p">)</span></div></div>
+        <span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">outpath</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

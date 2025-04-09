@@ -9,7 +9,7 @@
 .. autoclass:: caravel.loaders._tsv.TSV
      :members:
 
-.. minigallery:: caravel.loaders.TSV caravel.loaders._tsv.TSV
+.. minigallery:: caravel.loaders._tsv.TSV caravel.loaders.TSV
     :add-heading: Examples
     :heading-level: -
 

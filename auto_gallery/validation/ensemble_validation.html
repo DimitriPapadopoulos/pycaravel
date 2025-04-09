@@ -204,19 +204,19 @@
                     <div class="document">
                         <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-gallery-validation-ensemble-validation-py"><span class="std std-ref">here</span></a>
-to download the full example code</p>
+<p><a class="reference internal" href="#sphx-glr-download-auto-gallery-validation-ensemble-validation-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code.</p>
 </div>
-<div class="sphx-glr-example-title section" id="validation">
-<span id="sphx-glr-auto-gallery-validation-ensemble-validation-py"></span><h1>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h1><div class='divider-1 wow fadeInUp'><span></span></div>
+<section class="sphx-glr-example-title" id="validation">
+<span id="sphx-glr-auto-gallery-validation-ensemble-validation-py"></span><h1>Validation<a class="headerlink" href="#validation" title="Link to this heading">¶</a></h1><div class='divider-1 wow fadeInUp'><span></span></div>
 <p>Credit: A Grigis</p>
 <p>pycaravel is a Python package that enables you to apply validators.
 In this tutorial you will learn how to get and apply validators.</p>
-<div class="section" id="first-checks">
-<h2>First checks<a class="headerlink" href="#first-checks" title="Permalink to this headline">¶</a><i class='fas fa-angle-right'></i></h2>
+<section id="first-checks">
+<h2>First checks<a class="headerlink" href="#first-checks" title="Link to this heading">¶</a><i class='fas fa-angle-right'></i></h2>
 <p>In order to test if pycaravel package is installed on your machine, you can
 check the package version.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pprint</span><span class="w"> </span><span class="kn">import</span> <span class="n">pprint</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">ensemble</span>
@@ -229,23 +229,23 @@ check the package version.</p>
 <span class="nb">print</span><span class="p">(</span><a href="../../generated/caravel.info.html#caravel.info" title="caravel.info" class="sphx-glr-backref-module-caravel sphx-glr-backref-type-py-function"><span class="n">caravel</span><span class="o">.</span><span class="n">info</span></a><span class="p">())</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="load-the-validators">
-<h2>Load the validators<a class="headerlink" href="#load-the-validators" title="Permalink to this headline">¶</a><i class='fas fa-angle-right'></i></h2>
+</section>
+<section id="load-the-validators">
+<h2>Load the validators<a class="headerlink" href="#load-the-validators" title="Link to this heading">¶</a><i class='fas fa-angle-right'></i></h2>
 <p>First load the validators of the ‘ensemble’ project that only check the
 VIDEO data.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ValidationBase</span><span class="o">.</span><span class="n">__level__</span> <span class="o">=</span> <span class="s2">&quot;debug&quot;</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">ValidationBase</span><span class="o">.</span><span class="n">__level__</span> <span class="o">=</span> <span class="s2">&quot;debug&quot;</span>
 <span class="n">ValidationBase</span><span class="o">.</span><span class="n">setup_logging</span><span class="p">()</span>
 
 <span class="n">validators</span> <span class="o">=</span> <span class="n">get_validators</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s2">&quot;video.*&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">validators</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="apply-validators">
-<h2>Apply validators<a class="headerlink" href="#apply-validators" title="Permalink to this headline">¶</a><i class='fas fa-angle-right'></i></h2>
+</section>
+<section id="apply-validators">
+<h2>Apply validators<a class="headerlink" href="#apply-validators" title="Link to this heading">¶</a><i class='fas fa-angle-right'></i></h2>
 <p>Apply the loaded validators and generate a report.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datadir</span> <span class="o">=</span> <span class="s2">&quot;/neurospin/rlink/workspace/ci_toy/ensemble/ensemble-videoraw-upload&quot;</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">datadir</span> <span class="o">=</span> <span class="s2">&quot;/neurospin/rlink/workspace/ci_toy/ensemble/ensemble-videoraw-upload&quot;</span>
 <span class="n">projectdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">ensemble</span><span class="o">.</span><span class="vm">__file__</span><span class="p">))</span>
 <span class="n">parser</span> <span class="o">=</span> <a href="../../generated/caravel.get_parser.html#caravel.get_parser" title="caravel.get_parser" class="sphx-glr-backref-module-caravel sphx-glr-backref-type-py-function"><span class="n">caravel</span><span class="o">.</span><span class="n">get_parser</span></a><span class="p">(</span>
     <span class="n">project</span><span class="o">=</span><span class="s2">&quot;ensemble-videoraw&quot;</span><span class="p">,</span> <span class="n">confdir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">projectdir</span><span class="p">,</span> <span class="s2">&quot;conf&quot;</span><span class="p">),</span>
@@ -260,19 +260,21 @@ VIDEO data.</p>
 <span class="n">pprint</span><span class="p">(</span><span class="n">report</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <p><strong>Estimated memory usage:</strong>  0 MB</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-gallery-validation-ensemble-validation-py">
-<div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/b7fa8331f9875a43c6ed790eaa5fd1e8/ensemble_validation.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">ensemble_validation.py</span></code></a></p>
-</div>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-gallery-validation-ensemble-validation-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/8aec8a4c9153e09db815307ae6cc03e7/ensemble_validation.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">ensemble_validation.ipynb</span></code></a></p>
 </div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/b7fa8331f9875a43c6ed790eaa5fd1e8/ensemble_validation.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">ensemble_validation.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/34e4e38b12624f5ba1653452fdcaa00b/ensemble_validation.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">ensemble_validation.zip</span></code></a></p>
+</div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</div>
-</div>
+</section>
+</section>
 
                     </div>
                 <div class="spacer"></div>

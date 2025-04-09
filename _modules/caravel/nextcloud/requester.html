@@ -146,12 +146,17 @@
 <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;rlink&quot;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="NextCloudConnectionError"><a class="viewcode-back" href="../../../generated/caravel.nextcloud.requester.NextCloudConnectionError.html#caravel.nextcloud.requester.NextCloudConnectionError">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">NextCloudConnectionError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<div class="viewcode-block" id="NextCloudConnectionError">
+<a class="viewcode-back" href="../../../generated/caravel.nextcloud.requester.NextCloudConnectionError.html#caravel.nextcloud.requester.NextCloudConnectionError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">NextCloudConnectionError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; A connection error occurred.</span>
 <span class="sd">    &quot;&quot;&quot;</span></div>
 
 
-<div class="viewcode-block" id="catch_connection_error"><a class="viewcode-back" href="../../../generated/caravel.nextcloud.requester.catch_connection_error.html#caravel.nextcloud.requester.catch_connection_error">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">catch_connection_error</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+
+<div class="viewcode-block" id="catch_connection_error">
+<a class="viewcode-back" href="../../../generated/caravel.nextcloud.requester.catch_connection_error.html#caravel.nextcloud.requester.catch_connection_error">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">catch_connection_error</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
     <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
@@ -163,7 +168,10 @@
     <span class="k">return</span> <span class="n">wrapper</span></div>
 
 
-<div class="viewcode-block" id="Requester"><a class="viewcode-back" href="../../../generated/caravel.nextcloud.requester.Requester.html#caravel.nextcloud.requester.Requester">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">Requester</span><span class="p">:</span>
+
+<div class="viewcode-block" id="Requester">
+<a class="viewcode-back" href="../../../generated/caravel.nextcloud.requester.Requester.html#caravel.nextcloud.requester.Requester">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Requester</span><span class="p">:</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">passwd</span><span class="p">,</span> <span class="n">json_output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">query_components</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">json_output</span> <span class="o">=</span> <span class="n">json_output</span>
@@ -221,7 +229,9 @@
             <span class="n">verify</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">verify</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rtn</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Requester.get_full_url"><a class="viewcode-back" href="../../../generated/caravel.nextcloud.requester.Requester.html#caravel.nextcloud.requester.Requester.get_full_url">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_full_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">additional_url</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+<div class="viewcode-block" id="Requester.get_full_url">
+<a class="viewcode-back" href="../../../generated/caravel.nextcloud.requester.Requester.html#caravel.nextcloud.requester.Requester.get_full_url">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_full_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">additional_url</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Build full url for request to NextCloud api</span>
 
@@ -242,10 +252,14 @@
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">json_output</span><span class="p">:</span>
             <span class="n">ret</span> <span class="o">+=</span> <span class="s2">&quot;?format=json&quot;</span>
-        <span class="k">return</span> <span class="n">ret</span></div></div>
+        <span class="k">return</span> <span class="n">ret</span></div>
+</div>
 
 
-<div class="viewcode-block" id="OCSRequester"><a class="viewcode-back" href="../../../generated/caravel.nextcloud.requester.OCSRequester.html#caravel.nextcloud.requester.OCSRequester">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">OCSRequester</span><span class="p">(</span><span class="n">Requester</span><span class="p">):</span>
+
+<div class="viewcode-block" id="OCSRequester">
+<a class="viewcode-back" href="../../../generated/caravel.nextcloud.requester.OCSRequester.html#caravel.nextcloud.requester.OCSRequester">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">OCSRequester</span><span class="p">(</span><span class="n">Requester</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Requester for OCS API.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">rtn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resp</span><span class="p">):</span>
@@ -254,7 +268,10 @@
                            <span class="n">success_code</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">SUCCESS_CODE</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="WebDAVRequester"><a class="viewcode-back" href="../../../generated/caravel.nextcloud.requester.WebDAVRequester.html#caravel.nextcloud.requester.WebDAVRequester">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">WebDAVRequester</span><span class="p">(</span><span class="n">Requester</span><span class="p">):</span>
+
+<div class="viewcode-block" id="WebDAVRequester">
+<a class="viewcode-back" href="../../../generated/caravel.nextcloud.requester.WebDAVRequester.html#caravel.nextcloud.requester.WebDAVRequester">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WebDAVRequester</span><span class="p">(</span><span class="n">Requester</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Requester for WebDAV API.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -328,6 +345,7 @@
             <span class="s2">&quot;COPY&quot;</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">auth_pk</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
             <span class="n">verify</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">verify</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rtn</span><span class="p">(</span><span class="n">resp</span><span class="o">=</span><span class="n">res</span><span class="p">)</span></div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

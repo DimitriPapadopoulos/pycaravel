@@ -139,11 +139,15 @@
 <span></span><span class="kn">from</span><span class="w"> </span><span class="nn">..base</span><span class="w"> </span><span class="kn">import</span> <span class="n">WithRequester</span>
 
 
-<div class="viewcode-block" id="Apps"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.apps.Apps.html#caravel.nextcloud.api_wrappers.Apps">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">Apps</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
+<div class="viewcode-block" id="Apps">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.apps.Apps.html#caravel.nextcloud.api_wrappers.Apps">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Apps</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
     <span class="n">API_URL</span> <span class="o">=</span> <span class="s2">&quot;/ocs/v1.php/cloud/apps&quot;</span>
     <span class="n">SUCCESS_CODE</span> <span class="o">=</span> <span class="mi">100</span>
 
-<div class="viewcode-block" id="Apps.get_apps"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.apps.Apps.html#caravel.nextcloud.api_wrappers.Apps.get_apps">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_apps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Apps.get_apps">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.apps.Apps.html#caravel.nextcloud.api_wrappers.Apps.get_apps">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_apps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Get a list of apps installed on the Nextcloud server.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
@@ -151,20 +155,31 @@
         <span class="p">}</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Apps.get_app"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.apps.Apps.html#caravel.nextcloud.api_wrappers.Apps.get_app">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_app</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app_id</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Apps.get_app">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.apps.Apps.html#caravel.nextcloud.api_wrappers.Apps.get_app">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_app</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app_id</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Provide information on a specific application.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">app_id</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Apps.enable_app"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.apps.Apps.html#caravel.nextcloud.api_wrappers.Apps.enable_app">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">enable_app</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app_id</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Apps.enable_app">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.apps.Apps.html#caravel.nextcloud.api_wrappers.Apps.enable_app">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">enable_app</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app_id</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Enable an app.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">app_id</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Apps.disable_app"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.apps.Apps.html#caravel.nextcloud.api_wrappers.Apps.disable_app">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">disable_app</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app_id</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Apps.disable_app">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.apps.Apps.html#caravel.nextcloud.api_wrappers.Apps.disable_app">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">disable_app</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app_id</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Disable the specified app.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">app_id</span><span class="p">)</span></div></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">app_id</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

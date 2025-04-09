@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_gallery_bids_bids_users.py>`
-        to download the full example code
+        :ref:`Go to the end <sphx_glr_download_auto_gallery_bids_bids_users.py>`
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -34,7 +34,7 @@ check the package version.
 
 .. GENERATED FROM PYTHON SOURCE LINES 16-25
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import os
@@ -58,7 +58,7 @@ possible to specify these rules via the API.
 
 .. GENERATED FROM PYTHON SOURCE LINES 33-39
 
-.. code-block:: default
+.. code-block:: Python
 
 
     cwdir = os.path.dirname(os.path.realpath(__file__))
@@ -75,7 +75,7 @@ representations are sorted by dates, and that the latest one will be used.
 
 .. GENERATED FROM PYTHON SOURCE LINES 43-47
 
-.. code-block:: default
+.. code-block:: Python
 
 
     pprint(parser.conf)
@@ -88,7 +88,7 @@ You can export the whole 'sourcedata' layout in a pandas DataFrame.
 
 .. GENERATED FROM PYTHON SOURCE LINES 49-52
 
-.. code-block:: default
+.. code-block:: Python
 
 
     print(parser.export_layout("sourcedata"))
@@ -102,7 +102,7 @@ filtering key(s) of interest, and finally filter your dataset.
 
 .. GENERATED FROM PYTHON SOURCE LINES 56-66
 
-.. code-block:: default
+.. code-block:: Python
 
 
     print(parser.list_keys("sourcedata"))
@@ -123,7 +123,7 @@ filename is returned
 
 .. GENERATED FROM PYTHON SOURCE LINES 70-77
 
-.. code-block:: default
+.. code-block:: Python
 
     if not search1.empty:
         data1 = parser.load_data("sourcedata", search1)
@@ -142,7 +142,7 @@ We can do the same for the derivatives
 
 .. GENERATED FROM PYTHON SOURCE LINES 82-99
 
-.. code-block:: default
+.. code-block:: Python
 
 
 
@@ -171,7 +171,7 @@ We can do the same for the clinical data denoted in BIDS phenotype
 
 .. GENERATED FROM PYTHON SOURCE LINES 104-110
 
-.. code-block:: default
+.. code-block:: Python
 
 
     print(parser.export_layout("phenotype"))
@@ -180,33 +180,26 @@ We can do the same for the clinical data denoted in BIDS phenotype
     data4 = parser.load_data("phenotype", search4)
     pprint(data4)
 
-
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** ( 0 minutes  0.000 seconds)
-
 **Estimated memory usage:**  0 MB
 
 
 .. _sphx_glr_download_auto_gallery_bids_bids_users.py:
 
+.. only:: html
 
-.. only :: html
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
+      :download:`Download Jupyter notebook: bids_users.ipynb <bids_users.ipynb>`
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: bids_users.py <bids_users.py>`
 
-     :download:`Download Python source code: bids_users.py <bids_users.py>`
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: bids_users.ipynb <bids_users.ipynb>`
+      :download:`Download zipped: bids_users.zip <bids_users.zip>`
 
 
 .. only:: html

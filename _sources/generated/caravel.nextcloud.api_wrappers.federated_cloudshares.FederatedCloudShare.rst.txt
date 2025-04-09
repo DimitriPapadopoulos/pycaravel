@@ -9,7 +9,7 @@
 .. autoclass:: caravel.nextcloud.api_wrappers.federated_cloudshares.FederatedCloudShare
      :members:
 
-.. minigallery:: caravel.nextcloud.api_wrappers.federated_cloudshares.FederatedCloudShare caravel.nextcloud.api_wrappers.FederatedCloudShare
+.. minigallery:: caravel.nextcloud.api_wrappers.FederatedCloudShare caravel.nextcloud.api_wrappers.federated_cloudshares.FederatedCloudShare
     :add-heading: Examples
     :heading-level: -
 

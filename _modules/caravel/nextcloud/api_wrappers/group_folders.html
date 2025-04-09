@@ -139,59 +139,89 @@
 <span></span><span class="kn">from</span><span class="w"> </span><span class="nn">..base</span><span class="w"> </span><span class="kn">import</span> <span class="n">WithRequester</span>
 
 
-<div class="viewcode-block" id="GroupFolders"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">GroupFolders</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
+<div class="viewcode-block" id="GroupFolders">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">GroupFolders</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
     <span class="n">API_URL</span> <span class="o">=</span> <span class="s2">&quot;/apps/groupfolders/folders&quot;</span>
     <span class="n">SUCCESS_CODE</span> <span class="o">=</span> <span class="mi">100</span>
 
-<div class="viewcode-block" id="GroupFolders.get_group_folders"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.get_group_folders">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_group_folders</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="GroupFolders.get_group_folders">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.get_group_folders">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_group_folders</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Return a list of call configured folders and their settings.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="GroupFolders.get_group_folder"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.get_group_folder">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="GroupFolders.get_group_folder">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.get_group_folder">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Return a specific configured folder and it&#39;s settings.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">fid</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="GroupFolders.create_group_folder"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.create_group_folder">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">create_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mountpoint</span><span class="p">):</span>
+
+<div class="viewcode-block" id="GroupFolders.create_group_folder">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.create_group_folder">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mountpoint</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Create a new group folder.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;mountpoint&quot;</span><span class="p">:</span> <span class="n">mountpoint</span><span class="p">})</span></div>
 
-<div class="viewcode-block" id="GroupFolders.delete_group_folder"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.delete_group_folder">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">delete_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="GroupFolders.delete_group_folder">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.delete_group_folder">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Delete a group folder.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">fid</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="GroupFolders.grant_access_to_group_folder"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.grant_access_to_group_folder">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">grant_access_to_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="GroupFolders.grant_access_to_group_folder">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.grant_access_to_group_folder">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">grant_access_to_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Give a group access to a folder.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">fid</span><span class="p">),</span> <span class="s2">&quot;groups&quot;</span><span class="p">])</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;group&quot;</span><span class="p">:</span> <span class="n">gid</span><span class="p">})</span></div>
 
-<div class="viewcode-block" id="GroupFolders.revoke_access_to_group_folder"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.revoke_access_to_group_folder">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">revoke_access_to_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="GroupFolders.revoke_access_to_group_folder">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.revoke_access_to_group_folder">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">revoke_access_to_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Remove access from a group to a folder.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">fid</span><span class="p">),</span> <span class="s2">&quot;groups&quot;</span><span class="p">,</span> <span class="n">gid</span><span class="p">])</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="GroupFolders.set_permissions_to_group_folder"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.set_permissions_to_group_folder">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">set_permissions_to_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">gid</span><span class="p">,</span> <span class="n">permissions</span><span class="p">):</span>
+
+<div class="viewcode-block" id="GroupFolders.set_permissions_to_group_folder">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.set_permissions_to_group_folder">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_permissions_to_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">gid</span><span class="p">,</span> <span class="n">permissions</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Set the permissions a group has in a folder.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">fid</span><span class="p">),</span> <span class="s2">&quot;groups&quot;</span><span class="p">,</span> <span class="n">gid</span><span class="p">])</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;permissions&quot;</span><span class="p">:</span> <span class="n">permissions</span><span class="p">})</span></div>
 
-<div class="viewcode-block" id="GroupFolders.set_quota_of_group_folder"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.set_quota_of_group_folder">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">set_quota_of_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">quota</span><span class="p">):</span>
+
+<div class="viewcode-block" id="GroupFolders.set_quota_of_group_folder">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.set_quota_of_group_folder">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_quota_of_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">quota</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Set the quota for a folder in bytes.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">fid</span><span class="p">),</span> <span class="s2">&quot;quota&quot;</span><span class="p">])</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;quota&quot;</span><span class="p">:</span> <span class="n">quota</span><span class="p">})</span></div>
 
-<div class="viewcode-block" id="GroupFolders.rename_group_folder"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.rename_group_folder">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">rename_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">mountpoint</span><span class="p">):</span>
+
+<div class="viewcode-block" id="GroupFolders.rename_group_folder">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group_folders.GroupFolders.html#caravel.nextcloud.api_wrappers.GroupFolders.rename_group_folder">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rename_group_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">mountpoint</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Change the name of a folder.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">fid</span><span class="p">),</span> <span class="s2">&quot;mountpoint&quot;</span><span class="p">])</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;mountpoint&quot;</span><span class="p">:</span> <span class="n">mountpoint</span><span class="p">})</span></div></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;mountpoint&quot;</span><span class="p">:</span> <span class="n">mountpoint</span><span class="p">})</span></div>
+</div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

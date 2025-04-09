@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_gallery_validation_rlink_validation.py>`
-        to download the full example code
+        :ref:`Go to the end <sphx_glr_download_auto_gallery_validation_rlink_validation.py>`
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -34,7 +34,7 @@ check the package version.
 
 .. GENERATED FROM PYTHON SOURCE LINES 16-29
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import os
@@ -60,7 +60,7 @@ MRI structure.
 
 .. GENERATED FROM PYTHON SOURCE LINES 35-40
 
-.. code-block:: default
+.. code-block:: Python
 
 
     validators = get_validators(family="mri.structure")
@@ -77,7 +77,7 @@ Apply the loaded validators and generate a report.
 
 .. GENERATED FROM PYTHON SOURCE LINES 45-61
 
-.. code-block:: default
+.. code-block:: Python
 
 
     datadir = "/neurospin/rlink/workspace/ci_toy/rlink-mri-upload"
@@ -96,33 +96,26 @@ Apply the loaded validators and generate a report.
     report = run_validation(data, validators=validators, logfile=None)
     pprint(report)
 
-
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** ( 0 minutes  0.000 seconds)
-
 **Estimated memory usage:**  0 MB
 
 
 .. _sphx_glr_download_auto_gallery_validation_rlink_validation.py:
 
+.. only:: html
 
-.. only :: html
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
+      :download:`Download Jupyter notebook: rlink_validation.ipynb <rlink_validation.ipynb>`
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: rlink_validation.py <rlink_validation.py>`
 
-     :download:`Download Python source code: rlink_validation.py <rlink_validation.py>`
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: rlink_validation.ipynb <rlink_validation.ipynb>`
+      :download:`Download zipped: rlink_validation.zip <rlink_validation.zip>`
 
 
 .. only:: html

@@ -155,12 +155,16 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">.loader_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">LoaderBase</span>
 
 
-<div class="viewcode-block" id="PLINK"><a class="viewcode-back" href="../../../generated/caravel.loaders._plink.PLINK.html#caravel.loaders.PLINK">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">PLINK</span><span class="p">(</span><span class="n">LoaderBase</span><span class="p">):</span>
+<div class="viewcode-block" id="PLINK">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._plink.PLINK.html#caravel.loaders.PLINK">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">PLINK</span><span class="p">(</span><span class="n">LoaderBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Define the TSV loader.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">allowed_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.bed&quot;</span><span class="p">]</span>
 
-<div class="viewcode-block" id="PLINK.load"><a class="viewcode-back" href="../../../generated/caravel.loaders._plink.PLINK.html#caravel.loaders.PLINK.load">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<div class="viewcode-block" id="PLINK.load">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._plink.PLINK.html#caravel.loaders.PLINK.load">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; A method that load the table data.</span>
 
 <span class="sd">        Parameters</span>
@@ -175,7 +179,9 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">data_array</span> <span class="o">=</span> <span class="n">read_plink1_bin</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-        <span class="k">return</span> <span class="n">data_array</span></div></div>
+        <span class="k">return</span> <span class="n">data_array</span></div>
+</div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

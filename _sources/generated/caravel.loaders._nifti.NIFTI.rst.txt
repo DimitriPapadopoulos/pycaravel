@@ -9,7 +9,7 @@
 .. autoclass:: caravel.loaders._nifti.NIFTI
      :members:
 
-.. minigallery:: caravel.loaders.NIFTI caravel.loaders._nifti.NIFTI
+.. minigallery:: caravel.loaders._nifti.NIFTI caravel.loaders.NIFTI
     :add-heading: Examples
     :heading-level: -
 

@@ -9,7 +9,7 @@
 .. autoclass:: caravel.nextcloud.api_wrappers.group_folders.GroupFolders
      :members:
 
-.. minigallery:: caravel.nextcloud.api_wrappers.GroupFolders caravel.nextcloud.api_wrappers.group_folders.GroupFolders
+.. minigallery:: caravel.nextcloud.api_wrappers.group_folders.GroupFolders caravel.nextcloud.api_wrappers.GroupFolders
     :add-heading: Examples
     :heading-level: -
 

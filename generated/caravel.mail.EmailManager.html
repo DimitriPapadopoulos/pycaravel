@@ -60,6 +60,8 @@
                 <!-- links -->
                 
                 
+                    
+                
 				<ul class="list-unstyled menu-elements">
 					<li class="active">
 						<a href="../index.html"><i class="fas fa-home"></i> Home</a>
@@ -85,6 +87,43 @@
 						</a>
 						<ul class="collapse list-unstyled" id="otherSections">
                             
+                            
+                                
+                                
+                                    
+                                        
+                                        
+                                        
+                                    
+                                        
+                                        
+                                        
+                                    
+                                        
+                                        
+                                        
+                                            
+                                            
+                                    
+                                
+                                    
+                                        
+                                        
+                                        
+                                    
+                                
+                                    
+                                        
+                                        
+                                        
+                                    
+                                
+                                
+                                    <li>SECTIONS</li>
+                                    
+						                <li> <a href='#caravel.mail.EmailManager.send_mail'>Emailmanager.send_mail()</a> </li>                                    
+                                    
+                                
                             
                             <li>API</li>
                             <li><a href="caravel.html">caravel</a></li><li><a href="caravel.loaders.html">caravel.loaders</a></li><li><a href="caravel.nextcloud.html">caravel.nextcloud</a></li><li><a href="caravel.nextcloud.api_wrappers.html">caravel.nextcloud.api_wrappers</a></li><li><a href="caravel.parsers.html">caravel.parsers</a></li>
@@ -140,12 +179,12 @@
 <p>This page is a reference documentation. It only explains the class signature, and not how to use it. Please refer to the <a class="reference internal" href="../auto_gallery/index.html#sphx-glr-auto-gallery"><span class="std std-ref">gallery</span></a> for the big picture.</p>
 </div>
 <dl class="py class">
-<dt id="caravel.mail.EmailManager">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">caravel.mail.</span></code><code class="sig-name descname"><span class="pre">EmailManager</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">smtp_host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smtp_port</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/caravel/mail.html#EmailManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#caravel.mail.EmailManager" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="caravel.mail.EmailManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">caravel.mail.</span></span><span class="sig-name descname"><span class="pre">EmailManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">smtp_host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smtp_port</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/caravel/mail.html#EmailManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#caravel.mail.EmailManager" title="Link to this definition">¶</a></dt>
 <dd><p>Define a class to simplify emails sending.</p>
 <p>Initialize the EmailManager class.</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>smtp_host</strong> : str</p>
 <blockquote>
 <div><p>the SMTP host.</p>
@@ -157,11 +196,11 @@
 </dd>
 </dl>
 <dl class="py method">
-<dt id="caravel.mail.EmailManager.send_mail">
-<code class="sig-name descname"><span class="pre">send_mail</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_addrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'noreply&#64;cea.fr'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/caravel/mail.html#EmailManager.send_mail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#caravel.mail.EmailManager.send_mail" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="caravel.mail.EmailManager.send_mail">
+<span class="sig-name descname"><span class="pre">send_mail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_addrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_addr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'noreply&#64;cea.fr'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/caravel/mail.html#EmailManager.send_mail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#caravel.mail.EmailManager.send_mail" title="Link to this definition">¶</a></dt>
 <dd><p>Send an email.</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>to_addrs</strong> : list of str</p>
 <blockquote>
 <div><p>the destination emails</p>

@@ -149,12 +149,16 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="LoaderBase"><a class="viewcode-back" href="../../../generated/caravel.loaders.loader_base.LoaderBase.html#caravel.loaders.loader_base.LoaderBase">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">LoaderBase</span><span class="p">:</span>
+<div class="viewcode-block" id="LoaderBase">
+<a class="viewcode-back" href="../../../generated/caravel.loaders.loader_base.LoaderBase.html#caravel.loaders.loader_base.LoaderBase">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">LoaderBase</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Base class for all loaders.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">allowed_extensions</span> <span class="o">=</span> <span class="p">[]</span>
 
-<div class="viewcode-block" id="LoaderBase.can_load"><a class="viewcode-back" href="../../../generated/caravel.loaders.loader_base.LoaderBase.html#caravel.loaders.loader_base.LoaderBase.can_load">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">can_load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<div class="viewcode-block" id="LoaderBase.can_load">
+<a class="viewcode-back" href="../../../generated/caravel.loaders.loader_base.LoaderBase.html#caravel.loaders.loader_base.LoaderBase.can_load">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">can_load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; A method checking the file extension.</span>
 
 <span class="sd">        Parameters</span>
@@ -169,7 +173,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">any</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">ext</span><span class="p">)</span> <span class="k">for</span> <span class="n">ext</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">allowed_extensions</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="LoaderBase.load"><a class="viewcode-back" href="../../../generated/caravel.loaders.loader_base.LoaderBase.html#caravel.loaders.loader_base.LoaderBase.load">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+
+<div class="viewcode-block" id="LoaderBase.load">
+<a class="viewcode-back" href="../../../generated/caravel.loaders.loader_base.LoaderBase.html#caravel.loaders.loader_base.LoaderBase.load">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; A method that load the data and associated metadata.</span>
 
 <span class="sd">        Parameters</span>
@@ -185,7 +192,10 @@
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
             <span class="s2">&quot;The &#39;load&#39; method must be implemented in subclasses.&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="LoaderBase.can_save"><a class="viewcode-back" href="../../../generated/caravel.loaders.loader_base.LoaderBase.html#caravel.loaders.loader_base.LoaderBase.can_save">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">can_save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">outpath</span><span class="p">):</span>
+
+<div class="viewcode-block" id="LoaderBase.can_save">
+<a class="viewcode-back" href="../../../generated/caravel.loaders.loader_base.LoaderBase.html#caravel.loaders.loader_base.LoaderBase.can_save">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">can_save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">outpath</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; A method checking the output file extension.</span>
 
 <span class="sd">        Parameters</span>
@@ -200,7 +210,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">any</span><span class="p">(</span><span class="n">outpath</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">ext</span><span class="p">)</span> <span class="k">for</span> <span class="n">ext</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">allowed_extensions</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="LoaderBase.save"><a class="viewcode-back" href="../../../generated/caravel.loaders.loader_base.LoaderBase.html#caravel.loaders.loader_base.LoaderBase.save">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">outpath</span><span class="p">):</span>
+
+<div class="viewcode-block" id="LoaderBase.save">
+<a class="viewcode-back" href="../../../generated/caravel.loaders.loader_base.LoaderBase.html#caravel.loaders.loader_base.LoaderBase.save">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">outpath</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; A method that save the data and associated metadata.</span>
 
 <span class="sd">        Parameters</span>
@@ -211,7 +224,9 @@
 <span class="sd">            the path where the the data will be saved.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
-            <span class="s2">&quot;The &#39;save&#39; method must be implemented in subclasses.&quot;</span><span class="p">)</span></div></div>
+            <span class="s2">&quot;The &#39;save&#39; method must be implemented in subclasses.&quot;</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

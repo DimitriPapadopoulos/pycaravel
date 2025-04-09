@@ -139,7 +139,9 @@
 <span></span><span class="kn">from</span><span class="w"> </span><span class="nn">..base</span><span class="w"> </span><span class="kn">import</span> <span class="n">ShareType</span><span class="p">,</span> <span class="n">WithRequester</span>
 
 
-<div class="viewcode-block" id="Share"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">Share</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
+<div class="viewcode-block" id="Share">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Share</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
     <span class="n">API_URL</span> <span class="o">=</span> <span class="s2">&quot;/ocs/v2.php/apps/files_sharing/api/v1&quot;</span>
     <span class="n">LOCAL</span> <span class="o">=</span> <span class="s2">&quot;shares&quot;</span>
     <span class="n">SUCCESS_CODE</span> <span class="o">=</span> <span class="mi">200</span>
@@ -149,7 +151,9 @@
             <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">LOCAL</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">additional_url</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">LOCAL</span>
 
-<div class="viewcode-block" id="Share.validate_share_parameters"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share.validate_share_parameters">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="Share.validate_share_parameters">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share.validate_share_parameters">[docs]</a>
+    <span class="nd">@staticmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">validate_share_parameters</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">share_type</span><span class="p">,</span> <span class="n">share_with</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Check if share parameters make sense.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -162,12 +166,18 @@
             <span class="p">})</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Share.get_shares"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share.get_shares">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_shares</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Share.get_shares">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share.get_shares">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_shares</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Get all shares from the user.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_local_url</span><span class="p">())</span></div>
 
-<div class="viewcode-block" id="Share.get_shares_from_path"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share.get_shares_from_path">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_shares_from_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">reshares</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">subfiles</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Share.get_shares_from_path">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share.get_shares_from_path">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_shares_from_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">reshares</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">subfiles</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Get all shares from a given file/folder.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_url</span><span class="p">()</span>
@@ -181,12 +191,18 @@
         <span class="p">}</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Share.get_share_info"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share.get_share_info">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_share_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Share.get_share_info">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share.get_share_info">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_share_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Get information about a given share.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_local_url</span><span class="p">(</span><span class="n">sid</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Share.create_share"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share.create_share">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">create_share</span><span class="p">(</span>
+
+<div class="viewcode-block" id="Share.create_share">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share.create_share">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_share</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">share_type</span><span class="p">,</span> <span class="n">share_with</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">public_upload</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
             <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">permissions</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Share a file/folder with a user/group or as public link.</span>
@@ -213,12 +229,18 @@
             <span class="n">data</span><span class="p">[</span><span class="s2">&quot;permissions&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">permissions</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Share.delete_share"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share.delete_share">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">delete_share</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Share.delete_share">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share.delete_share">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_share</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Remove the given share.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_local_url</span><span class="p">(</span><span class="n">sid</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Share.update_share"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share.update_share">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">update_share</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sid</span><span class="p">,</span> <span class="n">permissions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+
+<div class="viewcode-block" id="Share.update_share">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.share.Share.html#caravel.nextcloud.api_wrappers.Share.update_share">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_share</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sid</span><span class="p">,</span> <span class="n">permissions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                      <span class="n">public_upload</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">expire_date</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Update a given share, only one value can be updated per request.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -242,7 +264,9 @@
                              <span class="s2">&quot;per request&quot;</span><span class="p">)</span>
 
         <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_url</span><span class="p">(</span><span class="n">sid</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_gallery_bids_bids_managers.py>`
-        to download the full example code
+        :ref:`Go to the end <sphx_glr_download_auto_gallery_bids_bids_managers.py>`
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -36,7 +36,7 @@ check the package version.
 
 .. GENERATED FROM PYTHON SOURCE LINES 18-26
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import os
@@ -60,7 +60,7 @@ in order to switch to the managers mode.
 
 .. GENERATED FROM PYTHON SOURCE LINES 35-41
 
-.. code-block:: default
+.. code-block:: Python
 
 
     cwdir = os.path.dirname(os.path.realpath(__file__))
@@ -83,7 +83,7 @@ This name must have a conresponding configuration file.
 
 .. GENERATED FROM PYTHON SOURCE LINES 51-68
 
-.. code-block:: default
+.. code-block:: Python
 
 
     parser.pickling_layout(
@@ -103,33 +103,26 @@ This name must have a conresponding configuration file.
         outdir=cwdir)
     print(parser.list_keys("phenotype"))
 
-
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** ( 0 minutes  0.000 seconds)
-
 **Estimated memory usage:**  0 MB
 
 
 .. _sphx_glr_download_auto_gallery_bids_bids_managers.py:
 
+.. only:: html
 
-.. only :: html
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
+      :download:`Download Jupyter notebook: bids_managers.ipynb <bids_managers.ipynb>`
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: bids_managers.py <bids_managers.py>`
 
-     :download:`Download Python source code: bids_managers.py <bids_managers.py>`
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: bids_managers.ipynb <bids_managers.ipynb>`
+      :download:`Download zipped: bids_managers.zip <bids_managers.zip>`
 
 
 .. only:: html

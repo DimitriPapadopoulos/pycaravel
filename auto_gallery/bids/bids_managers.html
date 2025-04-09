@@ -204,21 +204,21 @@
                     <div class="document">
                         <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-gallery-bids-bids-managers-py"><span class="std std-ref">here</span></a>
-to download the full example code</p>
+<p><a class="reference internal" href="#sphx-glr-download-auto-gallery-bids-bids-managers-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code.</p>
 </div>
-<div class="sphx-glr-example-title section" id="bids-directory-parsing-manager-mode">
-<span id="sphx-glr-auto-gallery-bids-bids-managers-py"></span><h1>BIDS directory parsing (manager mode)<a class="headerlink" href="#bids-directory-parsing-manager-mode" title="Permalink to this headline">¶</a></h1><div class='divider-1 wow fadeInUp'><span></span></div>
+<section class="sphx-glr-example-title" id="bids-directory-parsing-manager-mode">
+<span id="sphx-glr-auto-gallery-bids-bids-managers-py"></span><h1>BIDS directory parsing (manager mode)<a class="headerlink" href="#bids-directory-parsing-manager-mode" title="Link to this heading">¶</a></h1><div class='divider-1 wow fadeInUp'><span></span></div>
 <p>Credit: A Grigis</p>
 <p>pycaravel is a Python package that enables you to parse various source of data.
 In this tutorial you will learn how to parse and search a BIDS directory, and
 then create a representation of this parser. Using the described representation
 will speed up the search for users.</p>
-<div class="section" id="first-checks">
-<h2>First checks<a class="headerlink" href="#first-checks" title="Permalink to this headline">¶</a><i class='fas fa-angle-right'></i></h2>
+<section id="first-checks">
+<h2>First checks<a class="headerlink" href="#first-checks" title="Link to this heading">¶</a><i class='fas fa-angle-right'></i></h2>
 <p>In order to test if pycaravel package is installed on your machine, you can
 check the package version.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">caravel</span>
 
@@ -226,30 +226,30 @@ check the package version.</p>
 <span class="nb">print</span><span class="p">(</span><a href="../../generated/caravel.info.html#caravel.info" title="caravel.info" class="sphx-glr-backref-module-caravel sphx-glr-backref-type-py-function"><span class="n">caravel</span><span class="o">.</span><span class="n">info</span></a><span class="p">())</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="create-a-parser-for-your-project">
-<h2>Create a parser for your project<a class="headerlink" href="#create-a-parser-for-your-project" title="Permalink to this headline">¶</a><i class='fas fa-angle-right'></i></h2>
+</section>
+<section id="create-a-parser-for-your-project">
+<h2>Create a parser for your project<a class="headerlink" href="#create-a-parser-for-your-project" title="Link to this heading">¶</a><i class='fas fa-angle-right'></i></h2>
 <p>The package provides a common interface to parse a BIDS directory. The
 parsing rules are defined by projects in the module, so we will need to
 specify the project name you are working on. For the moment it is not
 possible to specify these rules via the API. Set the layoutdir to None
 in order to switch to the managers mode.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cwdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">cwdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
 <span class="n">parser</span> <span class="o">=</span> <a href="../../generated/caravel.get_parser.html#caravel.get_parser" title="caravel.get_parser" class="sphx-glr-backref-module-caravel sphx-glr-backref-type-py-function"><span class="n">caravel</span><span class="o">.</span><span class="n">get_parser</span></a><span class="p">(</span>
     <span class="n">project</span><span class="o">=</span><span class="s2">&quot;hbn&quot;</span><span class="p">,</span> <span class="n">confdir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cwdir</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">pardir</span><span class="p">,</span> <span class="s2">&quot;conf&quot;</span><span class="p">),</span>
     <span class="n">layoutdir</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="create-representation-of-your-bids-directory">
-<h2>Create representation of your BIDS directory<a class="headerlink" href="#create-representation-of-your-bids-directory" title="Permalink to this headline">¶</a><i class='fas fa-angle-right'></i></h2>
+</section>
+<section id="create-representation-of-your-bids-directory">
+<h2>Create representation of your BIDS directory<a class="headerlink" href="#create-representation-of-your-bids-directory" title="Link to this heading">¶</a><i class='fas fa-angle-right'></i></h2>
 <p>You will now parse your BIDS directory. As this step may be time consuming,
 the managers are in charge of creating a representation of the final
 parser that will be used during the user search steps. This can be done by
 using the following function, specifying the BIDS root directory and
 the subfolder name to be parsed (sourcedata, derivatives, phenotype, …).
 This name must have a conresponding configuration file.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parser</span><span class="o">.</span><span class="n">pickling_layout</span><span class="p">(</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">parser</span><span class="o">.</span><span class="n">pickling_layout</span><span class="p">(</span>
     <span class="n">bids_root</span><span class="o">=</span><span class="s2">&quot;/neurospin/psy/hbn&quot;</span><span class="p">,</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sourcedata&quot;</span><span class="p">,</span>
     <span class="n">outdir</span><span class="o">=</span><span class="n">cwdir</span><span class="p">)</span>
@@ -267,19 +267,21 @@ This name must have a conresponding configuration file.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">parser</span><span class="o">.</span><span class="n">list_keys</span><span class="p">(</span><span class="s2">&quot;phenotype&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <p><strong>Estimated memory usage:</strong>  0 MB</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-gallery-bids-bids-managers-py">
-<div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/765da4615c3107965fbe9f3f2666cf88/bids_managers.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">bids_managers.py</span></code></a></p>
-</div>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-gallery-bids-bids-managers-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/2f22b861a03a6137f5a5093b26037bc5/bids_managers.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">bids_managers.ipynb</span></code></a></p>
 </div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/765da4615c3107965fbe9f3f2666cf88/bids_managers.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">bids_managers.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/3a2d17f2b993c80d42ea449708a48861/bids_managers.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">bids_managers.zip</span></code></a></p>
+</div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</div>
-</div>
+</section>
+</section>
 
                     </div>
                 <div class="spacer"></div>

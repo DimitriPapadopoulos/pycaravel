@@ -139,7 +139,9 @@
 <span></span><span class="kn">from</span><span class="w"> </span><span class="nn">..base</span><span class="w"> </span><span class="kn">import</span> <span class="n">WithRequester</span>
 
 
-<div class="viewcode-block" id="FederatedCloudShare"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.federated_cloudshares.FederatedCloudShare.html#caravel.nextcloud.api_wrappers.FederatedCloudShare">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">FederatedCloudShare</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
+<div class="viewcode-block" id="FederatedCloudShare">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.federated_cloudshares.FederatedCloudShare.html#caravel.nextcloud.api_wrappers.FederatedCloudShare">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">FederatedCloudShare</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
     <span class="n">API_URL</span> <span class="o">=</span> <span class="s2">&quot;/ocs/v2.php/apps/files_sharing/api/v1&quot;</span>
     <span class="n">FEDERATED</span> <span class="o">=</span> <span class="s2">&quot;remote_shares&quot;</span>
 
@@ -171,6 +173,7 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">decline_pending_federated_cloudshare</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sid</span><span class="p">):</span>
         <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_federated_url</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pending/</span><span class="si">{</span><span class="n">sid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">)</span></div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

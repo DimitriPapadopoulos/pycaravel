@@ -1,7 +1,5 @@
 :orphan:
 
-
-
 .. _sphx_glr_auto_gallery:
 
 pycaravel usage examples
@@ -13,13 +11,18 @@ pycaravel usage examples
 
 
 
+
 .. raw:: html
 
-    <div class="sphx-glr-clear"></div>
+    <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
+.. thumbnail-parent-div-close
 
-.. _sphx_glr_auto_gallery_bids:
+.. raw:: html
+
+    </div>
 
 BIDS directory use cases
 ------------------------
@@ -31,24 +34,9 @@ available in the module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Credit: A Grigis">
+    <div class="sphx-glr-thumbnails">
 
-.. only:: html
-
- .. figure:: /auto_gallery/bids/images/thumb/sphx_glr_bids_managers_thumb.png
-     :alt: BIDS directory parsing (manager mode)
-
-     :ref:`sphx_glr_auto_gallery_bids_bids_managers.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /auto_gallery/bids/bids_managers
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -56,27 +44,39 @@ available in the module.
 
 .. only:: html
 
- .. figure:: /auto_gallery/bids/images/thumb/sphx_glr_bids_users_thumb.png
-     :alt: BIDS directory parsing (user mode)
+  .. image:: /auto_gallery/bids/images/thumb/sphx_glr_bids_managers_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_gallery_bids_bids_users.py`
+  :ref:`sphx_glr_auto_gallery_bids_bids_managers.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">BIDS directory parsing (manager mode)</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Credit: A Grigis">
+
+.. only:: html
+
+  .. image:: /auto_gallery/bids/images/thumb/sphx_glr_bids_users_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_gallery_bids_bids_users.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">BIDS directory parsing (user mode)</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
     </div>
-
-
-.. toctree::
-   :hidden:
-
-   /auto_gallery/bids/bids_users
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
-
-
-
-.. _sphx_glr_auto_gallery_validation:
 
 Validation use cases
 --------------------
@@ -88,14 +88,45 @@ available in the module.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Credit: A Grigis">
 
 .. only:: html
 
- .. figure:: /auto_gallery/validation/images/thumb/sphx_glr_rlink_validation_thumb.png
-     :alt: Validation
+  .. image:: /auto_gallery/validation/images/thumb/sphx_glr_rlink_validation_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_gallery_validation_rlink_validation.py`
+  :ref:`sphx_glr_auto_gallery_validation_rlink_validation.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Validation</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Credit: A Grigis">
+
+.. only:: html
+
+  .. image:: /auto_gallery/validation/images/thumb/sphx_glr_ensemble_validation_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_gallery_validation_ensemble_validation.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Validation</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
@@ -104,50 +135,24 @@ available in the module.
 
 .. toctree::
    :hidden:
+   :includehidden:
 
-   /auto_gallery/validation/rlink_validation
 
-.. raw:: html
+   /auto_gallery/bids/index.rst
+   /auto_gallery/validation/index.rst
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Credit: A Grigis">
 
 .. only:: html
 
- .. figure:: /auto_gallery/validation/images/thumb/sphx_glr_ensemble_validation_thumb.png
-     :alt: Validation
+  .. container:: sphx-glr-footer sphx-glr-footer-gallery
 
-     :ref:`sphx_glr_auto_gallery_validation_ensemble_validation.py`
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-.. raw:: html
+      :download:`Download all examples in Python source code: auto_gallery_python.zip </auto_gallery/auto_gallery_python.zip>`
 
-    </div>
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-.. toctree::
-   :hidden:
-
-   /auto_gallery/validation/ensemble_validation
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
-
-
-
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-gallery
-
-
-  .. container:: sphx-glr-download sphx-glr-download-python
-
-    :download:`Download all examples in Python source code: auto_gallery_python.zip </auto_gallery/auto_gallery_python.zip>`
-
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-    :download:`Download all examples in Jupyter notebooks: auto_gallery_jupyter.zip </auto_gallery/auto_gallery_jupyter.zip>`
+      :download:`Download all examples in Jupyter notebooks: auto_gallery_jupyter.zip </auto_gallery/auto_gallery_jupyter.zip>`
 
 
 .. only:: html

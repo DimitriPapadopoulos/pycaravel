@@ -9,7 +9,7 @@
 .. autoclass:: caravel.loaders._csv.CSV
      :members:
 
-.. minigallery:: caravel.loaders.CSV caravel.loaders._csv.CSV
+.. minigallery:: caravel.loaders._csv.CSV caravel.loaders.CSV
     :add-heading: Examples
     :heading-level: -
 

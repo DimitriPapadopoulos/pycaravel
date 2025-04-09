@@ -139,17 +139,24 @@
 <span></span><span class="kn">from</span><span class="w"> </span><span class="nn">..base</span><span class="w"> </span><span class="kn">import</span> <span class="n">WithRequester</span>
 
 
-<div class="viewcode-block" id="User"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
+<div class="viewcode-block" id="User">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
     <span class="n">API_URL</span> <span class="o">=</span> <span class="s2">&quot;/ocs/v1.php/cloud/users&quot;</span>
     <span class="n">SUCCESS_CODE</span> <span class="o">=</span> <span class="mi">100</span>
 
-<div class="viewcode-block" id="User.add_user"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.add_user">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">add_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">passwd</span><span class="p">):</span>
+<div class="viewcode-block" id="User.add_user">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.add_user">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">passwd</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Create a new user on the Nextcloud server.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;userid&#39;</span><span class="p">:</span> <span class="n">uid</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="n">passwd</span><span class="p">}</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="User.get_users"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.get_users">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_users</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">search</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="User.get_users">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.get_users">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_users</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">search</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Retrieve a list of users from the Nextcloud server.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
@@ -159,12 +166,18 @@
         <span class="p">}</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="User.get_user"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.get_user">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="User.get_user">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.get_user">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Retrieve information about a single user.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="User.edit_user"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.edit_user">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">edit_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">what</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+
+<div class="viewcode-block" id="User.edit_user">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.edit_user">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">edit_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">what</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Edit attributes related to a user.</span>
 
 <span class="sd">        Users are able to edit email, displayname and password; admins can</span>
@@ -187,45 +200,66 @@
         <span class="p">}</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="User.disable_user"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.disable_user">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">disable_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="User.disable_user">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.disable_user">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">disable_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Disable a user on the Nextcloud server so that the user cannot</span>
 <span class="sd">        login anymore.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/disable&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="User.enable_user"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.enable_user">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">enable_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="User.enable_user">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.enable_user">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">enable_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Enable a user on the Nextcloud server so that the user can login</span>
 <span class="sd">        again.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/enable&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="User.delete_user"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.delete_user">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">delete_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="User.delete_user">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.delete_user">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Delete a user from the Nextcloud server.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="User.add_to_group"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.add_to_group">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">add_to_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="User.add_to_group">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.add_to_group">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_to_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Add the specified user to the specified group.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/groups&quot;</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;groupid&#39;</span><span class="p">:</span> <span class="n">gid</span><span class="p">}</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="User.remove_from_group"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.remove_from_group">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">remove_from_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="User.remove_from_group">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.remove_from_group">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remove_from_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Remove the specified user from the specified group.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/groups&quot;</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;groupid&#39;</span><span class="p">:</span> <span class="n">gid</span><span class="p">}</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="User.create_subadmin"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.create_subadmin">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">create_subadmin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="User.create_subadmin">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.create_subadmin">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_subadmin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Make a user the subadmin of a group.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/subadmins&quot;</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;groupid&#39;</span><span class="p">:</span> <span class="n">gid</span><span class="p">}</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="User.remove_subadmin"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.remove_subadmin">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">remove_subadmin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="User.remove_subadmin">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.remove_subadmin">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remove_subadmin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Remove the subadmin rights for the user specified from the group</span>
 <span class="sd">        specified.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -233,17 +267,25 @@
         <span class="n">msg</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;groupid&#39;</span><span class="p">:</span> <span class="n">gid</span><span class="p">}</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="User.get_subadmin_groups"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.get_subadmin_groups">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_subadmin_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="User.get_subadmin_groups">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.get_subadmin_groups">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_subadmin_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Get the groups in which the user is a subadmin.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/subadmins&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="User.resend_welcome_mail"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.resend_welcome_mail">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">resend_welcome_mail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="User.resend_welcome_mail">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.user.User.html#caravel.nextcloud.api_wrappers.User.resend_welcome_mail">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">resend_welcome_mail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Trigger the welcome email for this user again.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">/welcome&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">)</span></div></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

@@ -140,7 +140,9 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">.requester</span><span class="w"> </span><span class="kn">import</span> <span class="n">OCSRequester</span><span class="p">,</span> <span class="n">WebDAVRequester</span>
 
 
-<div class="viewcode-block" id="NextCloud"><a class="viewcode-back" href="../../../generated/caravel.nextcloud.nextcloud.NextCloud.html#caravel.nextcloud.NextCloud">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">NextCloud</span><span class="p">:</span>
+<div class="viewcode-block" id="NextCloud">
+<a class="viewcode-back" href="../../../generated/caravel.nextcloud.nextcloud.NextCloud.html#caravel.nextcloud.NextCloud">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">NextCloud</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; NextCloud API class: allows OCS and WebDav requests.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">json_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -165,6 +167,7 @@
                     <span class="k">continue</span>
                 <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">potential_method</span><span class="p">,</span>
                         <span class="nb">getattr</span><span class="p">(</span><span class="n">functionality_class</span><span class="p">,</span> <span class="n">potential_method</span><span class="p">))</span></div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

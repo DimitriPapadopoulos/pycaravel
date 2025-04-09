@@ -139,29 +139,44 @@
 <span></span><span class="kn">from</span><span class="w"> </span><span class="nn">..base</span><span class="w"> </span><span class="kn">import</span> <span class="n">WithRequester</span>
 
 
-<div class="viewcode-block" id="Notifications"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.notifications.Notifications.html#caravel.nextcloud.api_wrappers.Notifications">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">Notifications</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
+<div class="viewcode-block" id="Notifications">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.notifications.Notifications.html#caravel.nextcloud.api_wrappers.Notifications">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Notifications</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
     <span class="n">API_URL</span> <span class="o">=</span> <span class="s2">&quot;/ocs/v2.php/apps/notifications/api/v2/notifications&quot;</span>
     <span class="n">SUCCESS_CODE</span> <span class="o">=</span> <span class="mi">200</span>
 
-<div class="viewcode-block" id="Notifications.get_notifications"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.notifications.Notifications.html#caravel.nextcloud.api_wrappers.Notifications.get_notifications">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_notifications</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Notifications.get_notifications">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.notifications.Notifications.html#caravel.nextcloud.api_wrappers.Notifications.get_notifications">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_notifications</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Get list of notifications for a logged in user.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Notifications.get_notification"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.notifications.Notifications.html#caravel.nextcloud.api_wrappers.Notifications.get_notification">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_notification</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">notification_id</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Notifications.get_notification">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.notifications.Notifications.html#caravel.nextcloud.api_wrappers.Notifications.get_notification">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_notification</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">notification_id</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Get single notification by id for a user.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">notification_id</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Notifications.delete_notification"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.notifications.Notifications.html#caravel.nextcloud.api_wrappers.Notifications.delete_notification">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">delete_notification</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">notification_id</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Notifications.delete_notification">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.notifications.Notifications.html#caravel.nextcloud.api_wrappers.Notifications.delete_notification">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_notification</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">notification_id</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Delete single notification by id for a user.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">notification_id</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Notifications.delete_all_notifications"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.notifications.Notifications.html#caravel.nextcloud.api_wrappers.Notifications.delete_all_notifications">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">delete_all_notifications</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Notifications.delete_all_notifications">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.notifications.Notifications.html#caravel.nextcloud.api_wrappers.Notifications.delete_all_notifications">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_all_notifications</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Delete all notification for a logged in user.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span></div></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span></div>
+</div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

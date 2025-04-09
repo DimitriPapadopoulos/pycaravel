@@ -9,7 +9,7 @@
 .. autoclass:: caravel.nextcloud.api_wrappers.share.Share
      :members:
 
-.. minigallery:: caravel.nextcloud.api_wrappers.share.Share caravel.nextcloud.api_wrappers.Share
+.. minigallery:: caravel.nextcloud.api_wrappers.Share caravel.nextcloud.api_wrappers.share.Share
     :add-heading: Examples
     :heading-level: -
 

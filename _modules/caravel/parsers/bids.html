@@ -160,13 +160,17 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">.parser_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">ParserBase</span>
 
 
-<div class="viewcode-block" id="BIDSParser"><a class="viewcode-back" href="../../../generated/caravel.parsers.bids.BIDSParser.html#caravel.parser.BIDSParser">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">BIDSParser</span><span class="p">(</span><span class="n">ParserBase</span><span class="p">):</span>
+<div class="viewcode-block" id="BIDSParser">
+<a class="viewcode-back" href="../../../generated/caravel.parsers.bids.BIDSParser.html#caravel.parser.BIDSParser">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">BIDSParser</span><span class="p">(</span><span class="n">ParserBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Object to retrieve data from a BIDS directory.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">BASE_ENTITIES</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;subject&quot;</span><span class="p">,</span> <span class="s2">&quot;session&quot;</span><span class="p">,</span> <span class="s2">&quot;task&quot;</span><span class="p">,</span> <span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;suffix&quot;</span><span class="p">]</span>
     <span class="n">EXT</span> <span class="o">=</span> <span class="s2">&quot;.pkl&quot;</span>
 
-<div class="viewcode-block" id="BIDSParser.export_layout"><a class="viewcode-back" href="../../../generated/caravel.parsers.bids.BIDSParser.html#caravel.parser.BIDSParser.export_layout">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">export_layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<div class="viewcode-block" id="BIDSParser.export_layout">
+<a class="viewcode-back" href="../../../generated/caravel.parsers.bids.BIDSParser.html#caravel.parser.BIDSParser.export_layout">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">export_layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Export a layout as a pandas DataFrame.</span>
 
 <span class="sd">        Parameters</span>
@@ -182,7 +186,10 @@
         <span class="n">layout</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_layout</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">layout</span><span class="o">.</span><span class="n">as_data_frame</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="BIDSParser.list_keys"><a class="viewcode-back" href="../../../generated/caravel.parsers.bids.BIDSParser.html#caravel.parser.BIDSParser.list_keys">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">list_keys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BIDSParser.list_keys">
+<a class="viewcode-back" href="../../../generated/caravel.parsers.bids.BIDSParser.html#caravel.parser.BIDSParser.list_keys">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_keys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; List all the filtering keys available in the layout.</span>
 
 <span class="sd">        Parameters</span>
@@ -199,7 +206,10 @@
         <span class="k">return</span> <span class="p">[</span><span class="n">elem</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
                 <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">layout</span><span class="o">.</span><span class="n">entities</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="BIDSParser.list_values"><a class="viewcode-back" href="../../../generated/caravel.parsers.bids.BIDSParser.html#caravel.parser.BIDSParser.list_values">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">list_values</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BIDSParser.list_values">
+<a class="viewcode-back" href="../../../generated/caravel.parsers.bids.BIDSParser.html#caravel.parser.BIDSParser.list_values">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_values</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; List all the filtering key values available in the layout.</span>
 
 <span class="sd">        Parameters</span>
@@ -220,7 +230,10 @@
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unrecognize layout key &#39;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">layout</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">_key</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="BIDSParser.filter_layout"><a class="viewcode-back" href="../../../generated/caravel.parsers.bids.BIDSParser.html#caravel.parser.BIDSParser.filter_layout">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">filter_layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">extension</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BIDSParser.filter_layout">
+<a class="viewcode-back" href="../../../generated/caravel.parsers.bids.BIDSParser.html#caravel.parser.BIDSParser.filter_layout">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">filter_layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">extension</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Filter the layout by using a combination of key-values rules.</span>
 
 <span class="sd">        Parameters</span>
@@ -255,7 +268,10 @@
         <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;columns&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">df</span></div>
 
-<div class="viewcode-block" id="BIDSParser.pickling_layout"><a class="viewcode-back" href="../../../generated/caravel.parsers.bids.BIDSParser.html#caravel.parser.BIDSParser.pickling_layout">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">pickling_layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bids_root</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">outdir</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BIDSParser.pickling_layout">
+<a class="viewcode-back" href="../../../generated/caravel.parsers.bids.BIDSParser.html#caravel.parser.BIDSParser.pickling_layout">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pickling_layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bids_root</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">outdir</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Load the requested BIDS layout and save it as a pickle.</span>
 
 <span class="sd">        Parameters</span>
@@ -292,7 +308,9 @@
             <span class="n">outdir</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">project</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">.pkl&quot;</span><span class="p">)</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
             <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">layout</span><span class="p">,</span> <span class="n">open_file</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">outfile</span></div></div>
+        <span class="k">return</span> <span class="n">outfile</span></div>
+</div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

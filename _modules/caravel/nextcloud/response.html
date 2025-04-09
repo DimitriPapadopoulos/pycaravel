@@ -141,7 +141,9 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">.api_wrappers.webdav</span><span class="w"> </span><span class="kn">import</span> <span class="n">WebDAVStatusCodes</span>
 
 
-<div class="viewcode-block" id="NextCloudResponse"><a class="viewcode-back" href="../../../generated/caravel.nextcloud.response.NextCloudResponse.html#caravel.nextcloud.response.NextCloudResponse">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">NextCloudResponse</span><span class="p">:</span>
+<div class="viewcode-block" id="NextCloudResponse">
+<a class="viewcode-back" href="../../../generated/caravel.nextcloud.response.NextCloudResponse.html#caravel.nextcloud.response.NextCloudResponse">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">NextCloudResponse</span><span class="p">:</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">json_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">raw</span> <span class="o">=</span> <span class="n">response</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
@@ -152,7 +154,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span></div>
 
 
-<div class="viewcode-block" id="WebDAVResponse"><a class="viewcode-back" href="../../../generated/caravel.nextcloud.response.WebDAVResponse.html#caravel.nextcloud.response.WebDAVResponse">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">WebDAVResponse</span><span class="p">(</span><span class="n">NextCloudResponse</span><span class="p">):</span>
+
+<div class="viewcode-block" id="WebDAVResponse">
+<a class="viewcode-back" href="../../../generated/caravel.nextcloud.response.WebDAVResponse.html#caravel.nextcloud.response.WebDAVResponse">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WebDAVResponse</span><span class="p">(</span><span class="n">NextCloudResponse</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Response class for WebDAV api methods.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">METHODS_SUCCESS_CODES</span> <span class="o">=</span> <span class="p">{</span>
@@ -182,7 +187,10 @@
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;OCSResponse: Status: </span><span class="si">{</span><span class="n">is_ok_str</span><span class="si">}</span><span class="s2">&gt;&quot;</span></div>
 
 
-<div class="viewcode-block" id="OCSResponse"><a class="viewcode-back" href="../../../generated/caravel.nextcloud.response.OCSResponse.html#caravel.nextcloud.response.OCSResponse">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">OCSResponse</span><span class="p">(</span><span class="n">NextCloudResponse</span><span class="p">):</span>
+
+<div class="viewcode-block" id="OCSResponse">
+<a class="viewcode-back" href="../../../generated/caravel.nextcloud.response.OCSResponse.html#caravel.nextcloud.response.OCSResponse">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">OCSResponse</span><span class="p">(</span><span class="n">NextCloudResponse</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Response class for OCS api methods.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">json_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">success_code</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -208,6 +216,7 @@
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">is_ok_str</span> <span class="o">=</span> <span class="s2">&quot;OK&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_ok</span> <span class="k">else</span> <span class="s2">&quot;Failed&quot;</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;OCSResponse: Status: </span><span class="si">{</span><span class="n">is_ok_str</span><span class="si">}</span><span class="s2">&gt;&quot;</span></div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

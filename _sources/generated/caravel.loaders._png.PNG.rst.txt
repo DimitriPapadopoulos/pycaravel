@@ -9,7 +9,7 @@
 .. autoclass:: caravel.loaders._png.PNG
      :members:
 
-.. minigallery:: caravel.loaders._png.PNG caravel.loaders.PNG
+.. minigallery:: caravel.loaders.PNG caravel.loaders._png.PNG
     :add-heading: Examples
     :heading-level: -
 

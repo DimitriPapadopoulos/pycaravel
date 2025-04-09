@@ -155,12 +155,16 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">.loader_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">LoaderBase</span>
 
 
-<div class="viewcode-block" id="JSON"><a class="viewcode-back" href="../../../generated/caravel.loaders._json.JSON.html#caravel.loaders.JSON">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">JSON</span><span class="p">(</span><span class="n">LoaderBase</span><span class="p">):</span>
+<div class="viewcode-block" id="JSON">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._json.JSON.html#caravel.loaders.JSON">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">JSON</span><span class="p">(</span><span class="n">LoaderBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Define the JSON loader.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">allowed_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.json&quot;</span><span class="p">,</span> <span class="p">]</span>
 
-<div class="viewcode-block" id="JSON.load"><a class="viewcode-back" href="../../../generated/caravel.loaders._json.JSON.html#caravel.loaders.JSON.load">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<div class="viewcode-block" id="JSON.load">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._json.JSON.html#caravel.loaders.JSON.load">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; A method that loads a JSON file.</span>
 
 <span class="sd">        Parameters</span>
@@ -177,7 +181,10 @@
             <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">open_file</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">data</span></div>
 
-<div class="viewcode-block" id="JSON.save"><a class="viewcode-back" href="../../../generated/caravel.loaders._json.JSON.html#caravel.loaders.JSON.save">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+
+<div class="viewcode-block" id="JSON.save">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._json.JSON.html#caravel.loaders.JSON.save">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; A method that saves data into a JSON file.</span>
 
 <span class="sd">        Parameters</span>
@@ -188,7 +195,9 @@
 <span class="sd">            the path to the JSON file to save data into.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;wt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
-            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">open_file</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span></div></div>
+            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">open_file</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

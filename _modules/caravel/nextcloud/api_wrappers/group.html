@@ -139,11 +139,15 @@
 <span></span><span class="kn">from</span><span class="w"> </span><span class="nn">..base</span><span class="w"> </span><span class="kn">import</span> <span class="n">WithRequester</span>
 
 
-<div class="viewcode-block" id="Group"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group.Group.html#caravel.nextcloud.api_wrappers.Group">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">Group</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
+<div class="viewcode-block" id="Group">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group.Group.html#caravel.nextcloud.api_wrappers.Group">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Group</span><span class="p">(</span><span class="n">WithRequester</span><span class="p">):</span>
     <span class="n">API_URL</span> <span class="o">=</span> <span class="s2">&quot;/ocs/v1.php/cloud/groups&quot;</span>
     <span class="n">SUCCESS_CODE</span> <span class="o">=</span> <span class="mi">100</span>
 
-<div class="viewcode-block" id="Group.get_groups"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group.Group.html#caravel.nextcloud.api_wrappers.Group.get_groups">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">search</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Group.get_groups">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group.Group.html#caravel.nextcloud.api_wrappers.Group.get_groups">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">search</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Retrieve a list of groups from the Nextcloud server.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
@@ -153,26 +157,40 @@
         <span class="p">}</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Group.add_group"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group.Group.html#caravel.nextcloud.api_wrappers.Group.add_group">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">add_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Group.add_group">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group.Group.html#caravel.nextcloud.api_wrappers.Group.add_group">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Add a new group.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;groupid&quot;</span><span class="p">:</span> <span class="n">gid</span><span class="p">}</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Group.get_group"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group.Group.html#caravel.nextcloud.api_wrappers.Group.get_group">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Group.get_group">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group.Group.html#caravel.nextcloud.api_wrappers.Group.get_group">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Retrieve a list of group members.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">gid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Group.get_subadmins"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group.Group.html#caravel.nextcloud.api_wrappers.Group.get_subadmins">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_subadmins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Group.get_subadmins">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group.Group.html#caravel.nextcloud.api_wrappers.Group.get_subadmins">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_subadmins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; List subadmins of the group.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">gid</span><span class="si">}</span><span class="s2">/subadmins&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Group.delete_group"><a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group.Group.html#caravel.nextcloud.api_wrappers.Group.delete_group">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">delete_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Group.delete_group">
+<a class="viewcode-back" href="../../../../generated/caravel.nextcloud.api_wrappers.group.Group.html#caravel.nextcloud.api_wrappers.Group.delete_group">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gid</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Remove a group.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">gid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">requester</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">gid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

@@ -155,12 +155,16 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">.loader_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">LoaderBase</span>
 
 
-<div class="viewcode-block" id="NIFTI"><a class="viewcode-back" href="../../../generated/caravel.loaders._nifti.NIFTI.html#caravel.loaders.NIFTI">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">NIFTI</span><span class="p">(</span><span class="n">LoaderBase</span><span class="p">):</span>
+<div class="viewcode-block" id="NIFTI">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._nifti.NIFTI.html#caravel.loaders.NIFTI">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">NIFTI</span><span class="p">(</span><span class="n">LoaderBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Define the Nifti loader.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">allowed_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.nii&quot;</span><span class="p">,</span> <span class="s2">&quot;.nii.gz&quot;</span><span class="p">]</span>
 
-<div class="viewcode-block" id="NIFTI.load"><a class="viewcode-back" href="../../../generated/caravel.loaders._nifti.NIFTI.html#caravel.loaders.NIFTI.load">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<div class="viewcode-block" id="NIFTI.load">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._nifti.NIFTI.html#caravel.loaders.NIFTI.load">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; A method that load the image.</span>
 
 <span class="sd">        Parameters</span>
@@ -175,7 +179,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">nibabel</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="NIFTI.save"><a class="viewcode-back" href="../../../generated/caravel.loaders._nifti.NIFTI.html#caravel.loaders.NIFTI.save">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">outpath</span><span class="p">):</span>
+
+<div class="viewcode-block" id="NIFTI.save">
+<a class="viewcode-back" href="../../../generated/caravel.loaders._nifti.NIFTI.html#caravel.loaders.NIFTI.save">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">outpath</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; A method that save the image.</span>
 
 <span class="sd">        Parameters</span>
@@ -185,7 +192,9 @@
 <span class="sd">        outpath: str</span>
 <span class="sd">            the path where the the image will be saved.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">nibabel</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">outpath</span><span class="p">)</span></div></div>
+        <span class="n">nibabel</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">outpath</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
                     </div>
                 <div class="spacer"></div>

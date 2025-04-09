@@ -1,0 +1,65 @@
+
+
+.. _sphx_glr_auto_gallery_bids:
+
+BIDS directory use cases
+------------------------
+
+Introductory examples that teach how to use the BIDS directory parser
+available in the module.
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Credit: A Grigis">
+
+.. only:: html
+
+  .. image:: /auto_gallery/bids/images/thumb/sphx_glr_bids_managers_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_gallery_bids_bids_managers.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">BIDS directory parsing (manager mode)</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Credit: A Grigis">
+
+.. only:: html
+
+  .. image:: /auto_gallery/bids/images/thumb/sphx_glr_bids_users_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_gallery_bids_bids_users.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">BIDS directory parsing (user mode)</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_gallery/bids/bids_managers
+   /auto_gallery/bids/bids_users
+
