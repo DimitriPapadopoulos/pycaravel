@@ -8,7 +8,7 @@
 
 .. autofunction:: caravel.configure.info
 
-.. minigallery:: caravel.configure.info caravel.info
+.. minigallery:: caravel.info caravel.configure.info
     :add-heading: Examples
     :heading-level: -
 

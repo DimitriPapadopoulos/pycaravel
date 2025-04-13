@@ -9,7 +9,7 @@
 .. autoclass:: caravel.nextcloud.api_wrappers.forms.Forms
      :members:
 
-.. minigallery:: caravel.nextcloud.api_wrappers.forms.Forms caravel.nextcloud.api_wrappers.Forms
+.. minigallery:: caravel.nextcloud.api_wrappers.Forms caravel.nextcloud.api_wrappers.forms.Forms
     :add-heading: Examples
     :heading-level: -
 
