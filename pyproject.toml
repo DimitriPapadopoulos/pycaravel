@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=64", "setuptools-scm"]
+requires = ["setuptools>=77.0.3", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -9,7 +9,7 @@ requires-python = ">=3.8"
 authors = [
     {name = "pycaravel developers", email = "antoine.grigis@cea.fr"},
 ]
-license = {text = "CeCILL-B"}
+license = "CECILL-B"
 classifiers = [
     "Development Status :: 1 - Planning",
     "Environment :: Console",
