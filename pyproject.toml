@@ -10,6 +10,7 @@ authors = [
     {name = "pycaravel developers", email = "antoine.grigis@cea.fr"},
 ]
 license = {text = "CeCILL-B"}
+scripts = ["caravel/scripts/project-ci"]
 classifiers = [
     "Development Status :: 1 - Planning",
     "Environment :: Console",
@@ -39,7 +40,6 @@ Source = "https://github.com/neurospin-cloud/pycaravel/"
 Tracker = "https://github.com/neurospin-cloud/pycaravel/issues"
 
 [tool.setuptools]
-script-files = ["caravel/scripts/project-ci"]
 platforms = ["Linux", "OSX"]
 include-package-data = false
 
